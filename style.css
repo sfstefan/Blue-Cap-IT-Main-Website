@@ -461,3 +461,50 @@ footer {
   .form-row { grid-template-columns: 1fr; }
   .nav-center { display: none; }
 }
+
+/* ─── PRODUCT IMAGES ─── */
+.product-hero-img {
+  width: 100%; max-width: 700px;
+  border-radius: 16px;
+  display: block; margin: 2.5rem auto 0;
+  filter: drop-shadow(0 24px 60px rgba(0,0,0,0.5));
+}
+.feature-img {
+  width: 100%; border-radius: 14px;
+  display: block;
+  filter: drop-shadow(0 16px 48px rgba(0,0,0,0.45));
+}
+.feature-visual img {
+  width: 100%; max-width: 420px;
+  border-radius: 12px;
+  filter: drop-shadow(0 12px 36px rgba(0,0,0,0.5));
+}
+.img-hero-band {
+  width: 100%; max-width: 900px;
+  display: block; margin: 3rem auto;
+  border-radius: 20px;
+  filter: drop-shadow(0 30px 80px rgba(0,0,0,0.6));
+}
+.partner-seal-img {
+  height: 64px; width: auto;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
+.verkada-gold-section {
+  display: flex; align-items: center; gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.03));
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 14px; padding: 1.4rem 1.8rem;
+  margin-top: 2rem;
+}
+.verkada-gold-section p { color: var(--light-gray); font-size: 0.88rem; line-height: 1.65; }
+.verkada-gold-section strong { color: #d4af37; }
+.img-grid-2 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem;
+}
+.img-grid-2 img {
+  width: 100%; border-radius: 14px;
+  filter: drop-shadow(0 12px 36px rgba(0,0,0,0.5));
+}
+@media (max-width: 600px) {
+  .img-grid-2 { grid-template-columns: 1fr; }
+}
