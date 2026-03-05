@@ -1,0 +1,74 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+<MainLayout title="Contact Blue Cap IT | Verkada Gold Partner — (410) 858-4031" description="Contact Blue Cap IT for Verkada security solutions. Call (410) 858-4031 or email info@bluecapit.com. Official Verkada Gold Partner.">
+  <div class="inner-hero">
+    <div class="section-inner">
+      <div class="crumbs"><a href="index.html">Home</a> <span>/</span> Contact</div>
+      <div class="section-label">Get in Touch</div>
+      <h1>Let's Talk <span class="grad">Security.</span></h1>
+      <p class="section-sub">Reach out for a free site consultation, product quote, or to ask any questions about Verkada solutions. We respond fast — because your security matters.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div>
+          <div class="section-label">Contact Information</div>
+          <h2 style="margin-bottom:1.5rem;">Blue Cap IT<br/><span class="grad">Is Here to Help.</span></h2>
+          <div class="contact-detail"><span class="ci">📞</span><div><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.2rem;">Phone</div><a href="tel:4108584031">(410) 858-4031</a></div></div>
+          <div class="contact-detail"><span class="ci">🌐</span><div><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.2rem;">Website</div><a href="https://bluecapit.com">bluecapit.com</a></div></div>
+          <div class="contact-detail"><span class="ci">📧</span><div><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.2rem;">Email</div><a href="mailto:info@bluecapit.com">info@bluecapit.com</a></div></div>
+          <div class="contact-detail"><span class="ci">★</span><div><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.2rem;">Partner Status</div><span style="color:var(--blue);font-weight:600;">Official Verkada Partner</span></div></div>
+
+          <div style="margin-top:2.5rem;padding:1.8rem;background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);border-radius:14px;">
+            <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:1rem;margin-bottom:0.7rem;">🚀 What to Expect</div>
+            <ul class="feature-bullets">
+              <li>Free, no-obligation consultation</li>
+              <li>Site assessment &amp; system design</li>
+              <li>Detailed itemized quote</li>
+              <li>Professional installation scheduling</li>
+              <li>Ongoing support after go-live</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:2.5rem;">
+            <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:0.4rem;">Request a Free Quote</div>
+            <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:2rem;">We'll get back to you within one business day.</div>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+              <div class="form-row">
+                <input type="text" placeholder="First Name" required/>
+                <input type="text" placeholder="Last Name" required/>
+              </div>
+              <input type="email" placeholder="Email Address" required/>
+              <input type="tel" placeholder="Phone Number"/>
+              <input type="text" placeholder="Company / Organization"/>
+              <select>
+                <option value="" disabled selected>What are you interested in?</option>
+                <option>Video Security Cameras</option>
+                <option>Access Control</option>
+                <option>Environmental Sensors</option>
+                <option>Alarms &amp; Intrusion</option>
+                <option>Intercom &amp; Visitor Management</option>
+                <option>Verkada Command Platform</option>
+                <option>Full Verkada System (Multiple Products)</option>
+                <option>License Renewal / Support</option>
+                <option>General Inquiry</option>
+              </select>
+              <textarea placeholder="Tell us about your security needs — number of locations, approximate number of cameras, any specific requirements..."></textarea>
+              <button type="submit">Send My Request →</button>
+            </form>
+            <div id="form-success" style="display:none;text-align:center;padding:2rem;color:var(--blue);">
+              <div style="font-size:2rem;margin-bottom:0.7rem;">✅</div>
+              <div style="font-family:'Sora',sans-serif;font-weight:700;">Message Sent!</div>
+              <div style="color:var(--text-muted);font-size:0.85rem;margin-top:0.4rem;">We'll be in touch within one business day.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
