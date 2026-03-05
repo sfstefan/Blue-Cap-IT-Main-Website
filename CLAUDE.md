@@ -12,7 +12,8 @@ This is the marketing website for Blue Cap IT, an IT services business and offic
 - **Fonts:** Google Fonts (Sora for headings, DM Sans for body text)
 - **Styling:** Single `src/styles/style.css` imported in the layout
 - **Analytics:** Google Analytics (gtag.js, ID: G-HN39P8Z2HR)
-- **Hosting/Deployment:** Static files (the `dist/` folder is the deployable output)
+- **Hosting:** Netlify (auto-deploys from `main` branch, config in `netlify.toml`)
+- **Domain:** bluecapit.com (DNS managed through GoDaddy)
 
 ## Common Commands
 
@@ -27,6 +28,7 @@ This is the marketing website for Blue Cap IT, an IT services business and offic
   astro.config.mjs        — Astro configuration (outputs .html file extensions)
   package.json             — Project dependencies (just Astro)
   tsconfig.json            — TypeScript config (required by Astro)
+  netlify.toml             — Netlify build settings (build command + publish dir)
 
   src/
     layouts/
