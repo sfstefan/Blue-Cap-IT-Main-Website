@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(npm run:*)",
+      "Bash(do touch:*)",
+      "Bash(wc:*)",
+      "Bash(cp:*)",
+      "Bash(grep:*)",
+      "Bash(awk NR>=1 && NR<=15:*)",
+      "Bash(sed:*)",
+      "Bash(do node:*)"
+    ]
+  }
+}
