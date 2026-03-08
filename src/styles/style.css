@@ -1,47 +1,48 @@
 /* ═══════════════════════════════════════════════════
    BLUE CAP IT — BOLD & TECHY
-   Palette: Pure white · Electric blue · Sky blue
+   Palette: Pure white · Blue Cap dark (#062A78) · Blue Cap light (#3C9BED)
             · Steel slate footer · Gold partner accent
    Fonts:   Barlow Condensed (display) · DM Sans (body)
    ═══════════════════════════════════════════════════ */
 
 :root {
-  --elec:         #0057FF;
-  --elec-dark:    #0041CC;
-  --elec-mid:     #2979FF;
-  --elec-light:   #E8F0FF;
-  --elec-xlight:  #F2F6FF;
-  --sky:          #38B6FF;
-  --sky-light:    #D6EFFF;
-  --sky-xlight:   #EBF7FF;
-  --steel:        #1B3A6B;
-  --steel-deep:   #0F2548;
-  --steel-mid:    #2E5299;
+  /* Blue Cap IT brand blues */
+  --elec:         #062A78;
+  --elec-dark:    #041D55;
+  --elec-mid:     #3C9BED;
+  --elec-light:   #E1EFF9;
+  --elec-xlight:  #F0F6FC;
+  --sky:          #3C9BED;
+  --sky-light:    #D0E7FA;
+  --sky-xlight:   #E8F3FD;
+  --steel:        #062A78;
+  --steel-deep:   #041D55;
+  --steel-mid:    #3C9BED;
   --white:        #FFFFFF;
   --off-white:    #F8FAFF;
   --surface:      #F0F4FC;
   --surface-2:    #E4ECF8;
-  --border:       #CBD8F0;
-  --border-mid:   #A3B8E0;
+  --border:       #C5D6EC;
+  --border-mid:   #9CB5D8;
   --text:         #0A1530;
-  --text-mid:     #243560;
-  --text-muted:   #566A9A;
+  --text-mid:     #1E3458;
+  --text-muted:   #4D6590;
   --text-light:   #8898BB;
   --gold:         #C9960A;
   --gold-light:   #FFF3CC;
-  --shadow-sm:    0 1px 4px rgba(0,57,255,0.08);
-  --shadow-md:    0 4px 20px rgba(0,57,255,0.12);
-  --shadow-lg:    0 12px 48px rgba(0,57,255,0.16);
-  --shadow-elec:  0 6px 28px rgba(0,87,255,0.35);
-  --shadow-sky:   0 6px 24px rgba(56,182,255,0.30);
+  --shadow-sm:    0 1px 4px rgba(6,42,120,0.08);
+  --shadow-md:    0 4px 20px rgba(6,42,120,0.12);
+  --shadow-lg:    0 12px 48px rgba(6,42,120,0.16);
+  --shadow-elec:  0 6px 28px rgba(6,42,120,0.35);
+  --shadow-sky:   0 6px 24px rgba(60,155,237,0.30);
   /* keep these for compatibility */
-  --navy:         #1B3A6B;
-  --blue:         #0057FF;
-  --blue-mid:     #2979FF;
-  --blue-light:   #E8F0FF;
-  --blue-xlight:  #F2F6FF;
-  --teal:         #38B6FF;
-  --teal-light:   #D6EFFF;
+  --navy:         #062A78;
+  --blue:         #062A78;
+  --blue-mid:     #3C9BED;
+  --blue-light:   #E1EFF9;
+  --blue-xlight:  #F0F6FC;
+  --teal:         #3C9BED;
+  --teal-light:   #D0E7FA;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -96,7 +97,7 @@ nav {
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(20px);
   border-bottom: 2.5px solid var(--elec);
-  box-shadow: 0 2px 24px rgba(0,57,255,0.10);
+  box-shadow: 0 2px 24px rgba(6,42,120,0.10);
 }
 .logo-link { display:flex; align-items:center; text-decoration:none; }
 .logo-link img { height: 56px; width: auto; object-fit: contain; }
@@ -114,7 +115,7 @@ nav {
 .nav-dropdown > a:hover,
 .nav-links-plain > li > a:hover {
   color: var(--elec); background: var(--elec-light);
-  box-shadow: 0 2px 8px rgba(0,87,255,0.10);
+  box-shadow: 0 2px 8px rgba(6,42,120,0.10);
 }
 .nav-dropdown > a { display: flex; align-items: center; gap: 0.3rem; }
 .nav-dropdown > a::after { content: '▾'; font-size: 0.65rem; opacity: 0.5; transition: opacity 0.15s; }
@@ -182,7 +183,7 @@ nav {
 /* dot grid */
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background-image: radial-gradient(circle, rgba(0,87,255,0.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(6,42,120,0.12) 1px, transparent 1px);
   background-size: 28px 28px; opacity: 0.55;
 }
 .grid-overlay { display: none; }
@@ -230,7 +231,7 @@ nav {
   box-shadow: var(--shadow-elec); display: inline-block;
   transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
 }
-.btn-primary:hover { background: var(--elec-dark); transform: translateY(-2px); box-shadow: 0 10px 36px rgba(0,87,255,0.38); }
+.btn-primary:hover { background: var(--elec-dark); transform: translateY(-2px); box-shadow: 0 10px 36px rgba(6,42,120,0.38); }
 .btn-ghost {
   background: transparent; color: var(--elec);
   font-family: 'Sora', sans-serif; font-weight: 700; letter-spacing: 0.04em;
@@ -321,8 +322,8 @@ section { padding: 6rem 4%; }
   content: '';
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 60% 70% at 50% 110%, rgba(0,87,255,0.22) 0%, transparent 65%),
-    radial-gradient(ellipse 30% 40% at 10% 0%, rgba(56,182,255,0.10) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 70% at 50% 110%, rgba(6,42,120,0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 30% 40% at 10% 0%, rgba(60,155,237,0.10) 0%, transparent 60%);
   pointer-events: none;
 }
 .cta-band .section-label { color: var(--sky); justify-content: center; position: relative; }
@@ -354,7 +355,7 @@ section { padding: 6rem 4%; }
 }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-light); }
 .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
-  border-color: var(--elec); box-shadow: 0 0 0 3px rgba(0,87,255,0.1);
+  border-color: var(--elec); box-shadow: 0 0 0 3px rgba(6,42,120,0.1);
 }
 .contact-form select option { background: #fff; color: var(--text); }
 .contact-form textarea { resize: vertical; min-height: 130px; }
@@ -400,7 +401,7 @@ section { padding: 6rem 4%; }
 .feature-visual .big-icon { font-size: 5rem; }
 .feature-visual-bg {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(0,87,255,0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(6,42,120,0.05) 0%, transparent 70%);
 }
 .feature-content h3 { font-size: 1.4rem; color: var(--text); margin-bottom: 0.9rem; }
 .feature-content p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.78; margin-bottom: 1rem; }
@@ -461,11 +462,11 @@ footer {
 .footer-bottom p { color: rgba(255,255,255,0.36); font-size: 0.78rem; }
 
 /* ─── PRODUCT IMAGES ─── */
-.feature-img { width: 100%; border-radius: 14px; display: block; filter: drop-shadow(0 12px 36px rgba(0,57,255,0.13)); }
-.img-hero-band { width: 100%; max-width: 900px; display: block; margin: 3rem auto; border-radius: 18px; filter: drop-shadow(0 20px 56px rgba(0,57,255,0.14)); }
+.feature-img { width: 100%; border-radius: 14px; display: block; filter: drop-shadow(0 12px 36px rgba(6,42,120,0.13)); }
+.img-hero-band { width: 100%; max-width: 900px; display: block; margin: 3rem auto; border-radius: 18px; filter: drop-shadow(0 20px 56px rgba(6,42,120,0.14)); }
 .img-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
-.img-grid-2 img { width: 100%; border-radius: 12px; filter: drop-shadow(0 8px 24px rgba(0,57,255,0.11)); }
-.product-hero-img { width: 100%; border-radius: 14px; display: block; filter: drop-shadow(0 16px 40px rgba(0,57,255,0.14)); }
+.img-grid-2 img { width: 100%; border-radius: 12px; filter: drop-shadow(0 8px 24px rgba(6,42,120,0.11)); }
+.product-hero-img { width: 100%; border-radius: 14px; display: block; filter: drop-shadow(0 16px 40px rgba(6,42,120,0.14)); }
 .partner-seal-img { display: block; }
 
 /* ─── HAMBURGER / MOBILE NAV ─── */
