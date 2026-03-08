@@ -9,7 +9,11 @@
       "Bash(grep:*)",
       "Bash(awk NR>=1 && NR<=15:*)",
       "Bash(sed:*)",
-      "Bash(do node:*)"
+      "Bash(do node:*)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebSearch",
+      "WebFetch(domain:www.verkada.com)",
+      "WebFetch(domain:pages.verkada.com)"
     ]
   }
 }
