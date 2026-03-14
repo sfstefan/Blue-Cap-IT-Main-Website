@@ -18,4 +18,8 @@ As your trusted Verkada Gold Partner, we'll be covering topics like:
 
 ## Stay Connected
 
-Have a topic you'd like us to cover? Reach out to us at [info@bluecapit.com](mailto:info@bluecapit.com) or call us at [(410) 858-4031](tel:4108584031).
+Have a topic you'd like us to cover, or want to learn how Verkada's security platform can work for your business? **Reach out to the Blue Cap IT Sales Team** — we're here to help.
+
+- **Phone:** [(410) 858-4031](tel:4108584031)
+- **Email:** [info@bluecapit.com](mailto:info@bluecapit.com)
+- **Online:** [Contact Us](../contact.html)
