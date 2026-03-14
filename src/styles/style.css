@@ -143,6 +143,15 @@ nav {
   text-decoration: none; white-space: nowrap;
 }
 .nav-phone:hover { color: var(--elec); }
+.nav-subscribe {
+  color: var(--elec); font-family: 'Sora', sans-serif;
+  font-weight: 700; font-size: 0.82rem; letter-spacing: 0.04em;
+  padding: 0.52rem 1.3rem; border-radius: 5px; text-decoration: none;
+  border: 2px solid var(--elec);
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+  white-space: nowrap;
+}
+.nav-subscribe:hover { background: var(--elec); color: #fff; transform: translateY(-1px); }
 .nav-cta {
   background: var(--elec);
   color: #fff; font-family: 'Sora', sans-serif;
@@ -454,6 +463,17 @@ footer {
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
 .footer-col ul li a { color: rgba(255,255,255,0.52); text-decoration: none; font-size: 0.84rem; transition: color 0.2s; }
 .footer-col ul li a:hover { color: var(--sky); }
+.footer-subscribe-btn {
+  display: inline-block; margin-top: 1.2rem;
+  background: transparent; color: #fff !important;
+  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.78rem;
+  letter-spacing: 0.04em; padding: 0.5rem 1.2rem; border-radius: 5px;
+  border: 1.5px solid var(--sky); text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+.footer-subscribe-btn:hover {
+  background: var(--sky); color: #fff !important; transform: translateY(-1px);
+}
 .footer-bottom {
   max-width: 1200px; margin: 3rem auto 0;
   padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12);
@@ -511,8 +531,15 @@ footer {
   text-transform: uppercase; color: var(--text-muted);
   padding: 1.2rem 0 0.3rem; border-bottom: none;
 }
-.mobile-nav .mobile-cta {
+.mobile-nav .mobile-subscribe {
   display: block; margin-top: 1.5rem;
+  color: var(--elec) !important; text-align: center;
+  padding: 0.9rem 1.5rem !important; border-radius: 5px;
+  border: 2px solid var(--elec) !important; border-bottom: 2px solid var(--elec) !important;
+  font-weight: 700;
+}
+.mobile-nav .mobile-cta {
+  display: block; margin-top: 0.6rem;
   background: var(--elec); color: #fff !important;
   text-align: center; padding: 0.9rem 1.5rem !important;
   border-radius: 5px; border-bottom: none !important;
@@ -640,6 +667,7 @@ footer {
   .nav-center { display: none; }
   .nav-right { gap: 0.5rem; }
   .nav-phone { display: none; }
+  .nav-subscribe { display: none; }
   .nav-cta { display: none; }
   .hamburger { display: flex; }
   .mobile-nav { display: flex; }
