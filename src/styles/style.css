@@ -574,6 +574,61 @@ footer {
 }
 .blog-content blockquote p { color: var(--text-mid); margin-bottom: 0; }
 
+/* ─── SUBSCRIBE FORM ─── */
+.subscribe-band {
+  background: var(--white);
+  padding: 3rem 4% 0;
+}
+.subscribe-box {
+  background: linear-gradient(135deg, var(--elec) 0%, #1a4fa0 100%);
+  border-radius: 12px; padding: 2.5rem 3rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  box-shadow: var(--shadow-lg);
+}
+.subscribe-text h2 {
+  color: #fff; font-size: 1.6rem; margin-bottom: 0.6rem;
+}
+.subscribe-text p {
+  color: rgba(255,255,255,0.75); font-size: 0.92rem; line-height: 1.7;
+}
+.subscribe-form {
+  display: flex; flex-direction: column; gap: 0.7rem;
+}
+.subscribe-fields {
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+.subscribe-form input {
+  background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.25);
+  color: #fff; font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+  padding: 0.75rem 1rem; border-radius: 6px; outline: none;
+  transition: border-color 0.18s, background 0.18s;
+}
+.subscribe-form input::placeholder { color: rgba(255,255,255,0.5); }
+.subscribe-form input:focus {
+  border-color: var(--sky); background: rgba(255,255,255,0.18);
+}
+.subscribe-form .btn-primary {
+  background: #fff; color: var(--elec); box-shadow: var(--shadow-md);
+  width: 100%; text-align: center;
+}
+.subscribe-form .btn-primary:hover {
+  background: var(--elec-light); color: var(--elec-dark); transform: translateY(-2px);
+}
+.subscribe-note {
+  font-size: 0.72rem; color: rgba(255,255,255,0.45); text-align: center;
+}
+.subscribe-message {
+  font-size: 0.85rem; text-align: center; padding: 0.5rem; border-radius: 6px;
+  min-height: 0;
+}
+.subscribe-message:empty { display: none; }
+.subscribe-message.success {
+  background: rgba(255,255,255,0.15); color: #90EE90;
+}
+.subscribe-message.error {
+  background: rgba(255,80,80,0.15); color: #FFB4B4;
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 960px) {
   .hero-inner, .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -581,6 +636,7 @@ footer {
   .feature-row { grid-template-columns: 1fr; direction: ltr; }
   .feature-row.rev { direction: ltr; }
   .form-row { grid-template-columns: 1fr; }
+  .subscribe-box { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem; }
   .nav-center { display: none; }
   .nav-right { gap: 0.5rem; }
   .nav-phone { display: none; }
