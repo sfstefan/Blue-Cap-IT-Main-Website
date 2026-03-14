@@ -1,0 +1,51 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const formattedDate = new Date(post.data.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+<MainLayout title={`${post.data.title} | Blue Cap IT`} description={post.data.description}>
+
+  <section class="inner-hero">
+    <div class="section-inner">
+      <span class="crumbs">
+        <a href="../index.html">Home</a> <span>/</span>
+        <a href="../blog.html">News</a> <span>/</span>
+        {post.data.title}
+      </span>
+      <h1>{post.data.title}</h1>
+      <div class="blog-meta">
+        <span>{formattedDate}</span>
+        <span class="blog-meta-sep">·</span>
+        <span>{post.data.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner blog-content">
+      <Content />
+    </div>
+  </section>
+
+  <section style="background:var(--surface);padding:3rem 4%;">
+    <div class="section-inner" style="text-align:center;">
+      <a href="../blog.html" class="btn-ghost">&larr; Back to All News</a>
+    </div>
+  </section>
+
+</MainLayout>

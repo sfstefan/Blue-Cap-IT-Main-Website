@@ -1,0 +1,46 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+<MainLayout title="News & Blog | Blue Cap IT" description="Latest news, security insights, and product updates from Blue Cap IT — your official Verkada Gold Partner.">
+
+  <section class="inner-hero">
+    <div class="section-inner">
+      <span class="crumbs"><a href="index.html">Home</a> <span>/</span> News</span>
+      <h1>News & <span class="grad">Blog</span></h1>
+      <p class="hero-sub" style="margin-top:1rem;">Security insights, product updates, and company news from Blue Cap IT.</p>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);">
+    <div class="section-inner">
+      {posts.length === 0 && <p style="color:var(--text-muted);text-align:center;">No posts yet — check back soon!</p>}
+      <div class="blog-grid">
+        {posts.map((post) => (
+          <a href={`blog/${post.id}.html`} class="blog-card">
+            <div class="blog-card-date">
+              {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </div>
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="section-label">Stay Connected</div>
+    <h2>Have a Question or Topic Suggestion?</h2>
+    <p>We'd love to hear from you. Reach out and let us know what security topics matter most to your business.</p>
+    <div style="display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center;">
+      <a href="contact.html" class="btn-primary">Contact Us</a>
+    </div>
+  </section>
+
+</MainLayout>
