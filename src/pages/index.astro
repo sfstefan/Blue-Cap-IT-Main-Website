@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 ---
-<MainLayout title="Blue Cap IT | Official Verkada Gold Partner — Security Solutions" description="Blue Cap IT is an official Verkada Gold Partner. We resell, install, and support the full Verkada security platform including cameras, access control, sensors, and alarms.">
+<MainLayout title="Blue Cap IT | Managed IT, Cybersecurity & Verkada Security Solutions" description="Blue Cap IT is a managed service provider, Coro cybersecurity partner, and official Verkada Gold Partner. We deliver IT management, cybersecurity, and physical security solutions for businesses.">
 
   <!-- HERO -->
   <section class="hero">
@@ -10,19 +10,21 @@ import MainLayout from '../layouts/MainLayout.astro';
     <div class="hero-inner" style="grid-template-columns:1fr;">
       <div class="hero-content" style="max-width:740px;">
         <div class="hero-badges">
-          <span class="badge-pill badge-partner">Verkada Gold Partner</span>
-          <span class="badge-pill" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text-muted);">Full-Service Installation &amp; Support</span>
+          <span class="badge-pill badge-partner">Managed Service Provider</span>
+          <span class="badge-pill" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text-muted);">Verkada Gold Partner</span>
+          <span class="badge-pill" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text-muted);">Coro Partner</span>
         </div>
-        <h1>Enterprise Security,<br/><span class="grad">Simply Delivered.</span></h1>
-        <p class="hero-sub">Blue Cap IT is your trusted official Verkada Gold Partner — we resell, install, and fully support the complete Verkada platform. From a single camera to enterprise-wide deployments, we handle everything end-to-end.</p>
+        <h1>IT Services &amp; Security,<br/><span class="grad">Simply Delivered.</span></h1>
+        <p class="hero-sub">Blue Cap IT is your complete technology partner — managed IT services, cybersecurity powered by Coro, and physical security through Verkada. From helpdesk support to enterprise security deployments, we handle everything.</p>
         <div class="hero-btns">
-          <a href="#products" class="btn-primary">Explore Verkada Solutions</a>
+          <a href="managed-services.html" class="btn-primary">Managed IT Services</a>
+          <a href="cybersecurity.html" class="btn-primary" style="background:var(--navy);">Cybersecurity</a>
           <a href="contact.html" class="btn-ghost">Get a Free Quote</a>
         </div>
         <div class="hero-stats">
-          <div><div class="stat-num">100%</div><div class="stat-label">Cloud-Managed</div></div>
-          <div><div class="stat-num">24/7</div><div class="stat-label">Support Available</div></div>
-          <div><div class="stat-num">Gold</div><div class="stat-label">Partner Status</div></div>
+          <div><div class="stat-num">24/7</div><div class="stat-label">Monitoring &amp; Support</div></div>
+          <div><div class="stat-num">MSP</div><div class="stat-label">Managed Services</div></div>
+          <div><div class="stat-num">Gold</div><div class="stat-label">Verkada Partner</div></div>
         </div>
       </div>
     </div>
@@ -38,8 +40,35 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </div>
 
+  <!-- MANAGED IT & CYBERSECURITY -->
+  <section style="background:var(--surface);">
+    <div class="section-inner">
+      <div style="text-align:center;max-width:640px;margin:0 auto 1rem;">
+        <div class="section-label">IT Services &amp; Cybersecurity</div>
+        <h2>More Than Security Hardware.<br/><span class="grad">A Complete IT Partner.</span></h2>
+        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;">Blue Cap IT goes beyond physical security. We provide managed IT services and enterprise-grade cybersecurity to keep your business running and protected.</p>
+      </div>
+      <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:900px;margin:0 auto;">
+        <a href="managed-services.html" class="product-card">
+          <div class="pcard-tag">Managed Services</div>
+          <div class="pcard-icon">🖥️</div>
+          <h3>Managed IT Services</h3>
+          <p>Your complete outsourced IT department. Remote monitoring, helpdesk support, patch management, backup &amp; disaster recovery, Microsoft 365 management, network management, and vCIO services.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="cybersecurity.html" class="product-card">
+          <div class="pcard-tag">Coro Partner</div>
+          <div class="pcard-icon">🛡️</div>
+          <h3>Coro Cybersecurity</h3>
+          <p>All-in-one cybersecurity platform built for small and mid-sized businesses. Endpoint protection, email security, cloud app security, network protection, data governance, and security awareness training.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- VERKADA PRODUCT LINEUP -->
-  <section id="products" style="background:var(--surface);">
+  <section id="products">
     <div class="section-inner">
       <div style="text-align:center;max-width:640px;margin:0 auto 1rem;">
         <div class="section-label">Complete Verkada Product Suite</div>
@@ -102,7 +131,7 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div>
           <div class="section-label">Why Blue Cap IT</div>
           <h2>Local Expertise.<br/><span class="grad">Enterprise Results.</span></h2>
-          <p class="section-sub">We're not just a reseller — we're a full-service Verkada Gold Partner who guides you from product selection through installation, onboarding, and long-term support.</p>
+          <p class="section-sub">We're not just a vendor — we're a full-service managed IT provider, Coro cybersecurity partner, and Verkada Gold Partner who guides you from strategy through implementation and long-term support.</p>
           <div class="verkada-gold-section">
             <img src="/verkada-gold-partner-badge.png" alt="Verkada Gold Partner" style="height:48px;width:auto;flex-shrink:0;"/>
             <p><strong>Verkada Gold Partner status</strong> means you get factory-direct pricing, full product access, manufacturer warranties, and co-support from both Blue Cap IT and Verkada's own engineering team.</p>
@@ -147,8 +176,8 @@ import MainLayout from '../layouts/MainLayout.astro';
   <!-- CTA BAND -->
   <div class="cta-band">
     <div class="section-label">Ready to Get Started?</div>
-    <h2>Build Your Security System<br/><span class="grad">with Blue Cap IT</span></h2>
-    <p>Whether you're securing one location or a multi-site enterprise, we'll design the perfect Verkada solution for your needs and budget — with zero pressure.</p>
+    <h2>Build Your IT Strategy<br/><span class="grad">with Blue Cap IT</span></h2>
+    <p>Whether you need managed IT services, cybersecurity, or physical security — we'll design the right solution for your needs and budget, with zero pressure.</p>
     <div class="btn-group">
       <a href="contact.html" class="btn-primary">Request a Free Quote</a>
       <a href="tel:4108584031" class="btn-ghost">📞 Call (410) 858-4031</a>
