@@ -4,41 +4,33 @@ import MainLayout from '../layouts/MainLayout.astro';
 <MainLayout title="Blue Cap IT | Managed IT, Cybersecurity & Verkada Security Solutions" description="Blue Cap IT is a managed service provider, Coro cybersecurity partner, and official Verkada Gold Partner. We deliver IT management, cybersecurity, and physical security solutions for businesses.">
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="grid-overlay"></div>
+  <section class="hero" style="background:var(--white);">
+    <style>
+      .hero::before, .hero::after, .hero .hero-bg { display: none !important; }
+    </style>
+    <!-- Hero banner image -->
+    <div style="position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 4%;">
+      <img src="/images/BLUECAPTwitter.jpg" alt="Blue Cap IT" style="width:100%;border-radius:1rem;box-shadow:0 8px 32px rgba(0,0,0,0.25);"/>
+    </div>
     <div class="hero-inner" style="grid-template-columns:1fr;">
-      <div class="hero-content" style="max-width:740px;">
-        <div class="hero-badges">
-          <span class="badge-pill badge-partner">Managed Service Provider</span>
-          <span class="badge-pill" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text-muted);">Verkada Gold Partner</span>
-          <span class="badge-pill" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text-muted);">Coro Partner</span>
+      <div class="hero-content" style="max-width:800px;text-align:center;margin:0 auto;">
+        <div class="hero-badges" style="justify-content:center;">
+          <a href="managed-services.html" class="badge-pill badge-partner" style="text-decoration:none;">Managed Service Provider</a>
+          <a href="verkada.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Verkada Gold Partner</a>
+          <a href="cybersecurity.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Coro Partner</a>
+          <a href="managed-services.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Virtual CIO (vCIO)</a>
         </div>
-        <h1>IT Services &amp; Security,<br/><span class="grad">Simply Delivered.</span></h1>
-        <p class="hero-sub">Blue Cap IT is your complete technology partner — managed IT services, cybersecurity powered by Coro, and physical security through Verkada. From helpdesk support to enterprise security deployments, we handle everything.</p>
-        <div class="hero-btns">
+        <h1>Your Boutique <span class="grad">IT Partner.</span></h1>
+        <p class="hero-sub" style="text-align:center;max-width:700px;margin:0 auto;color:var(--text-mid);">Blue Cap IT is a full-service Managed Service Provider, official Verkada Gold Partner, and Coro cybersecurity partner. We deliver managed IT, enterprise-grade cybersecurity, and physical security solutions — all backed by the kind of personal, responsive customer support that big providers simply can't match. When you call Blue Cap IT, you get a real person who knows your business, your systems, and your goals. Give Blue Cap IT a try and see the difference customer service makes!</p>
+        <div class="hero-btns" style="justify-content:center;">
           <a href="managed-services.html" class="btn-primary">Managed IT Services</a>
           <a href="cybersecurity.html" class="btn-primary" style="background:var(--navy);">Cybersecurity</a>
+          <a href="verkada.html" class="btn-primary" style="background:#0a2540;">Verkada Solutions</a>
           <a href="contact.html" class="btn-ghost">Get a Free Quote</a>
-        </div>
-        <div class="hero-stats">
-          <div><div class="stat-num">24/7</div><div class="stat-label">Monitoring &amp; Support</div></div>
-          <div><div class="stat-num">MSP</div><div class="stat-label">Managed Services</div></div>
-          <div><div class="stat-num">Gold</div><div class="stat-label">Verkada Partner</div></div>
         </div>
       </div>
     </div>
-    <!-- Hero product image -->
-    <div style="position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 4%;">
-      <img src="/logo.svg" alt="Blue Cap IT" class="img-hero-band"/>
-    </div>
   </section>
-
-  <!-- GOLD PARTNER BAND -->
-  
-      <a href="contact.html" class="btn-primary btn-sm" style="margin-left:auto;">Get Partner Pricing →</a>
-    </div>
-  </div>
 
   <!-- MANAGED IT & CYBERSECURITY -->
   <section style="background:var(--surface);">
