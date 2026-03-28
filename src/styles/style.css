@@ -657,6 +657,7 @@ footer {
 }
 
 /* ─── RESPONSIVE ─── */
+/* ─── RESPONSIVE ─── */
 @media (max-width: 960px) {
   .hero-inner, .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -678,6 +679,14 @@ footer {
   .cta-band { padding: 3.5rem 4%; }
   .gold-band { padding: 2.5rem 4%; flex-direction: column; text-align: center; gap: 1.5rem; }
   .gold-band > div { flex-direction: column; align-items: center; }
+  .section-sub { margin-left: auto; margin-right: auto; }
+  .inner-hero { text-align: center; }
+  .inner-hero .crumbs { text-align: center; }
+  .hero-badges { flex-wrap: wrap; }
+  .hero-btns { flex-wrap: wrap; }
+  .why-grid > div { text-align: center; }
+  .why-grid .btn-primary, .why-grid .btn-ghost { width: auto; }
+  .verkada-gold-section { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
 }
 
 @media (max-width: 600px) {
@@ -687,7 +696,13 @@ footer {
   .logo-link img { height: 38px; }
   .nav-partner-badge { display: none; }
   .img-grid-2 { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+  .footer-brand { text-align: center; }
+  .footer-brand p { max-width: 100%; margin-left: auto; margin-right: auto; }
+  .footer-brand > div { justify-content: center; }
+  .footer-col { text-align: center; }
+  .footer-col ul { align-items: center; }
+  .footer-subscribe-btn { margin-left: auto; margin-right: auto; }
   .footer-bottom { flex-direction: column; text-align: center; }
   section { padding: 2.8rem 5%; }
   h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
@@ -696,10 +711,14 @@ footer {
   .hero h1 { font-size: clamp(1.8rem, 8vw, 2.6rem); }
   .btn-primary, .btn-ghost { padding: 0.85rem 1.5rem; font-size: 0.88rem; width: 100%; text-align: center; }
   .hero-actions { flex-direction: column; }
+  .hero-btns { flex-direction: column; align-items: center; }
   .specs-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .stats-row { grid-template-columns: 1fr 1fr; }
-  .cta-band { padding: 3rem 5%; }
+  .cta-band { padding: 3rem 5%; text-align: center; }
   .cta-band h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
   .cta-band .btn-primary, .cta-band .btn-ghost { width: auto; }
+  .cta-band .btn-group { flex-direction: column; align-items: center; }
+  .products-grid { grid-template-columns: 1fr; }
+  .product-card { text-align: center; }
 }
