@@ -15,11 +15,36 @@ import '../styles/style.css';
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{title}</title>
   {description && <meta name="description" content={description}/>}
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content={title}/>
+  {description && <meta property="og:description" content={description}/>}
+  <meta property="og:image" content="https://bluecapit.com/images/BLUECAPTwitter.jpg"/>
+  <meta property="og:url" content={`https://bluecapit.com${Astro.url.pathname}`}/>
+  <meta property="og:site_name" content="Blue Cap IT"/>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content={title}/>
+  {description && <meta name="twitter:description" content={description}/>}
+  <meta name="twitter:image" content="https://bluecapit.com/images/BLUECAPTwitter.jpg"/>
   <link rel="icon" href="/favicon.ico" sizes="any"/>
   <link rel="icon" href="/icon.svg" type="image/svg+xml"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Blue Cap IT",
+    "url": "https://bluecapit.com",
+    "telephone": "+1-410-858-4031",
+    "email": "info@bluecapit.com",
+    "description": "Managed IT services, cybersecurity, physical security, and enterprise networking solutions. Verkada Gold Partner, Coro Partner, and Meter Partner.",
+    "image": "https://bluecapit.com/images/BLUECAPTwitter.jpg",
+    "areaServed": "United States",
+    "serviceType": ["Managed IT Services", "Cybersecurity", "Physical Security", "Enterprise Networking"]
+  })}></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN39P8Z2HR"></script>
   <script is:inline>
@@ -165,7 +190,7 @@ import '../styles/style.css';
           <a href="verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Authorized Reseller" style="height:36px;width:auto;"/></a>
           <a href="cybersecurity.html"><img src="/Coro/coro-partner-transparent.png" alt="Coro Official Partner" style="height:60px;width:auto;"/></a>
           <img src="/Channel_Select_87px_225_BW.png" alt="Cisco Select Partner" style="height:52px;width:auto;"/>
-          <img src="/MicorosftSilverPartnerLogo1.png" alt="Microsoft Silver Partner" style="height:52px;width:auto;"/>
+          <img src="/MicrosoftSilverPartnerLogo.png" alt="Microsoft Silver Partner" style="height:52px;width:auto;"/>
           <img src="/cisco-meraki-logo.png" alt="Cisco Meraki" style="height:40px;width:auto;"/>
           <a href="meter.html"><img src="/meter/Meter.png" alt="Meter Network Partner" style="height:40px;width:auto;"/></a>
         </div>

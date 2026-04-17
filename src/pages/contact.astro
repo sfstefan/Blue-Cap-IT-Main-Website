@@ -20,7 +20,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           <div class="contact-detail"><span class="ci">📞</span><div><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.2rem;">Phone</div><a href="tel:4108584031">(410) 858-4031</a></div></div>
           <div class="contact-detail"><span class="ci">🌐</span><div><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.2rem;">Website</div><a href="https://bluecapit.com">bluecapit.com</a></div></div>
           <div class="contact-detail"><span class="ci">📧</span><div><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.2rem;">Email</div><a href="mailto:info@bluecapit.com">info@bluecapit.com</a></div></div>
-          <div class="contact-detail"><span class="ci">★</span><div><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.2rem;">Partner Status</div><span style="color:var(--blue);font-weight:600;">MSP &bull; Coro Partner &bull; Verkada Gold Partner</span></div></div>
+          <div class="contact-detail"><span class="ci">★</span><div><div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.2rem;">Partner Status</div><span style="color:var(--blue);font-weight:600;">MSP &bull; Coro Partner &bull; Verkada Gold Partner &bull; Meter Partner</span></div></div>
 
           <div style="margin-top:2.5rem;padding:1.8rem;background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);border-radius:14px;">
             <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:1rem;margin-bottom:0.7rem;">🚀 What to Expect</div>
@@ -38,15 +38,17 @@ import MainLayout from '../layouts/MainLayout.astro';
           <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:2.5rem;">
             <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:0.4rem;">Request a Free Quote</div>
             <div style="font-size:0.84rem;color:var(--text-muted);margin-bottom:2rem;">We'll get back to you within one business day.</div>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
+            <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact" />
+              <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
               <div class="form-row">
-                <input type="text" placeholder="First Name" required/>
-                <input type="text" placeholder="Last Name" required/>
+                <input type="text" name="first-name" placeholder="First Name" required/>
+                <input type="text" name="last-name" placeholder="Last Name" required/>
               </div>
-              <input type="email" placeholder="Email Address" required/>
-              <input type="tel" placeholder="Phone Number"/>
-              <input type="text" placeholder="Company / Organization"/>
-              <select>
+              <input type="email" name="email" placeholder="Email Address" required/>
+              <input type="tel" name="phone" placeholder="Phone Number"/>
+              <input type="text" name="company" placeholder="Company / Organization"/>
+              <select name="interest">
                 <option value="" disabled selected>What are you interested in?</option>
                 <optgroup label="Managed IT Services">
                   <option>Managed IT Services (Full Package)</option>
@@ -70,9 +72,16 @@ import MainLayout from '../layouts/MainLayout.astro';
                   <option>Intercom &amp; Visitor Management</option>
                   <option>Full Verkada System (Multiple Products)</option>
                 </optgroup>
+                <optgroup label="Networking — Meter">
+                  <option>Meter Networking (Full Solution)</option>
+                  <option>Switches</option>
+                  <option>Wi-Fi Access Points</option>
+                  <option>Firewalls</option>
+                  <option>5G Gateway</option>
+                </optgroup>
                 <option>General Inquiry</option>
               </select>
-              <textarea placeholder="Tell us about your needs — managed IT, cybersecurity, physical security, number of users/locations, or any specific requirements..."></textarea>
+              <textarea name="message" placeholder="Tell us about your needs — managed IT, cybersecurity, physical security, number of users/locations, or any specific requirements..."></textarea>
               <button type="submit">Send My Request →</button>
             </form>
             <div id="form-success" style="display:none;text-align:center;padding:2rem;color:var(--blue);">
