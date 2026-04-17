@@ -1,12 +1,15 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 ---
-<MainLayout title="Blue Cap IT | Managed IT, Cybersecurity & Verkada Security Solutions" description="Blue Cap IT is a managed service provider, Verkada Gold Partner, Coro cybersecurity partner, and Meter networking partner. We deliver managed IT, cybersecurity, physical security, and enterprise networking solutions.">
+<MainLayout title="Blue Cap IT | Managed IT, Cybersecurity, Verkada & Meter Networking" description="Blue Cap IT is a managed service provider, Verkada Gold Partner, Coro cybersecurity partner, and Meter networking partner. We deliver managed IT, cybersecurity, physical security, and enterprise networking solutions.">
 
   <!-- HERO -->
   <section class="hero" style="background:var(--white);">
     <style>
       .hero::before, .hero::after, .hero .hero-bg { display: none !important; }
+      .partner-section-header { display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:0.5rem; flex-wrap:wrap; }
+      .partner-section-header img { height:40px; width:auto; }
+      .partner-divider { border:none; height:3px; border-radius:2px; margin:0; }
     </style>
     <!-- Hero banner image -->
     <div style="position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 4%;">
@@ -15,7 +18,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     <div class="hero-inner" style="grid-template-columns:1fr;">
       <div class="hero-content" style="max-width:800px;text-align:center;margin:0 auto;">
         <div class="hero-badges" style="justify-content:center;">
-          <a href="managed-services.html" class="badge-pill badge-partner" style="text-decoration:none;">Managed Service Provider</a>
+          <a href="managed-services.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Managed IT</a>
           <a href="verkada.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Verkada Gold Partner</a>
           <a href="cybersecurity.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Coro Partner</a>
           <a href="meter.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Meter Partner</a>
@@ -23,136 +26,249 @@ import MainLayout from '../layouts/MainLayout.astro';
         <h1>Your Boutique <span class="grad">IT Partner.</span></h1>
         <p class="hero-sub" style="text-align:center;max-width:700px;margin:0 auto;color:var(--text-mid);">Blue Cap IT is a full-service Managed Service Provider, official Verkada Gold Partner, Coro cybersecurity partner, and Meter networking partner. We deliver managed IT, enterprise-grade cybersecurity, physical security, and network infrastructure solutions — all backed by the kind of personal, responsive customer support that big providers simply can't match. When you call Blue Cap IT, you get a real person who knows your business, your systems, and your goals.</p>
         <div class="hero-btns" style="justify-content:center;">
-          <a href="managed-services.html" class="btn-primary">Managed IT Services</a>
-          <a href="cybersecurity.html" class="btn-primary" style="background:var(--navy);">Cybersecurity</a>
-          <a href="verkada.html" class="btn-primary" style="background:#0a2540;">Verkada Solutions</a>
-          <a href="meter.html" class="btn-primary" style="background:#4a1d96;">Networking</a>
+          <a href="managed-services.html" class="btn-primary">Managed IT</a>
+          <a href="cybersecurity.html" class="btn-primary" style="background:var(--navy);">Coro</a>
+          <a href="verkada.html" class="btn-primary" style="background:#0a2540;">Verkada</a>
+          <a href="meter.html" class="btn-primary" style="background:#4a1d96;">Meter</a>
           <a href="contact.html" class="btn-ghost">Get a Free Quote</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MANAGED IT & CYBERSECURITY -->
+  <!-- OUR SOLUTIONS — 4 cards overview -->
   <section style="background:var(--surface);">
     <div class="section-inner">
-      <div style="text-align:center;max-width:640px;margin:0 auto 1rem;">
-        <div class="section-label">IT Services &amp; Cybersecurity</div>
-        <h2>More Than Security Hardware.<br/><span class="grad">A Complete IT Partner.</span></h2>
-        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;">Blue Cap IT goes beyond physical security. We provide managed IT services and enterprise-grade cybersecurity to keep your business running and protected.</p>
+      <div style="text-align:center;max-width:700px;margin:0 auto 1.5rem;">
+        <div class="section-label">Our Solutions</div>
+        <h2>Four Pillars.<br/><span class="grad">One IT Partner.</span></h2>
+        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;">Blue Cap IT brings together managed IT, cybersecurity, physical security, and enterprise networking — so you get one partner for everything.</p>
       </div>
-      <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:900px;margin:0 auto;">
-        <a href="managed-services.html" class="product-card">
-          <div class="pcard-tag">Managed Services</div>
+      <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:1000px;margin:0 auto;">
+        <a href="managed-services.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid var(--elec);">
           <div class="pcard-icon">🖥️</div>
-          <h3>Managed IT Services</h3>
-          <p>Your complete outsourced IT department. Remote monitoring, helpdesk support, patch management, backup &amp; disaster recovery, Microsoft 365 management, network management, and vCIO services.</p>
+          <h3>Managed IT</h3>
+          <p>Your complete outsourced IT department. Helpdesk, monitoring, patching, backup, Microsoft 365, and vCIO services.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
-        <a href="cybersecurity.html" class="product-card">
-          <div class="pcard-tag">Coro Partner</div>
+        <a href="cybersecurity.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #6366f1;">
           <div class="pcard-icon">🛡️</div>
           <h3>Coro Cybersecurity</h3>
-          <p>All-in-one cybersecurity platform built for small and mid-sized businesses. Endpoint protection, email security, cloud app security, network protection, data governance, and security awareness training.</p>
+          <p>All-in-one cybersecurity for SMBs. Endpoint, email, cloud, network, data governance, and security training.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="verkada.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #0a2540;">
+          <div class="pcard-icon">📷</div>
+          <h3>Verkada Security</h3>
+          <p>Cloud-managed cameras, access control, sensors, alarms, intercoms, and more — all in one platform.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="meter.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #4a1d96;">
+          <div class="pcard-icon">🌐</div>
+          <h3>Meter Networking</h3>
+          <p>Full-stack enterprise networking as a service. Switches, Wi-Fi 7, firewalls, and 5G — zero upfront costs.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- METER NETWORKING -->
+  <!-- ═══════════════════════════════════════ -->
+  <!-- MANAGED IT SECTION -->
+  <!-- ═══════════════════════════════════════ -->
   <section>
     <div class="section-inner">
-      <div style="text-align:center;max-width:640px;margin:0 auto 1rem;">
-        <div class="section-label">Enterprise Networking</div>
+      <hr class="partner-divider" style="background:var(--elec);"/>
+      <div style="text-align:center;max-width:640px;margin:1.5rem auto 1rem;">
+        <div class="section-label">Managed IT Services</div>
+        <h2>Your Complete <span class="grad">IT Department.</span></h2>
+        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;">Stop juggling multiple IT vendors. Blue Cap IT provides full-service managed IT — from helpdesk support to strategic planning — so your team can focus on growing the business.</p>
+      </div>
+      <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));max-width:900px;margin:0 auto;">
+        <div class="product-card" style="text-align:center;">
+          <div class="pcard-icon">📡</div>
+          <h3>Remote Monitoring</h3>
+          <p>24/7 monitoring of your servers, workstations, and network devices with proactive alerts.</p>
+        </div>
+        <div class="product-card" style="text-align:center;">
+          <div class="pcard-icon">🎧</div>
+          <h3>Helpdesk Support</h3>
+          <p>Fast, friendly IT support from real people who know your systems and your business.</p>
+        </div>
+        <div class="product-card" style="text-align:center;">
+          <div class="pcard-icon">💾</div>
+          <h3>Backup &amp; Recovery</h3>
+          <p>Automated backups and disaster recovery planning to protect your critical data.</p>
+        </div>
+        <div class="product-card" style="text-align:center;">
+          <div class="pcard-icon">🧠</div>
+          <h3>Virtual CIO</h3>
+          <p>Strategic IT planning, budgeting, and roadmaps — executive-level guidance without the executive-level salary.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="managed-services.html" class="btn-primary">Explore Managed IT Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CORO CYBERSECURITY SECTION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section style="background:var(--surface);">
+    <div class="section-inner">
+      <hr class="partner-divider" style="background:#6366f1;"/>
+      <div style="text-align:center;margin:1.5rem auto 1rem;">
+        <div class="partner-section-header">
+          <img src="/Coro/coro-logo-wide-indigo.png" alt="Coro" />
+        </div>
+        <div class="section-label">Coro Partner</div>
+        <h2>Cybersecurity <span class="grad">Made Simple.</span></h2>
+        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;max-width:640px;">Enterprise-grade cybersecurity built for small and mid-sized businesses. One platform, one agent, complete protection — deployed and managed by Blue Cap IT.</p>
+      </div>
+      <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));max-width:900px;margin:0 auto;">
+        <a href="coro-endpoint.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">💻</div>
+          <h3>Endpoint Protection</h3>
+          <p>Next-gen antivirus and EDR for every device. Detects and remediates malware and ransomware automatically.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="coro-email.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">📧</div>
+          <h3>Email Security</h3>
+          <p>Blocks phishing, business email compromise, and malware before they reach your inbox.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="coro-network.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">🌐</div>
+          <h3>Network Security</h3>
+          <p>Zero Trust Network Access, VPN, firewall, and DNS filtering to control who accesses what.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="cybersecurity.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">🛡️</div>
+          <h3>Full Coro Platform</h3>
+          <p>Cloud security, data governance, and security awareness training — see the complete platform.</p>
+          <span class="pcard-arrow">See all Coro modules →</span>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="cybersecurity.html" class="btn-primary">Explore Coro Cybersecurity</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- METER NETWORKING SECTION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section>
+    <div class="section-inner">
+      <hr class="partner-divider" style="background:#4a1d96;"/>
+      <div style="text-align:center;margin:1.5rem auto 1rem;">
+        <div class="partner-section-header">
+          <img src="/meter/Meter-purple.png" alt="Meter" />
+        </div>
+        <div class="section-label">Meter Partner</div>
         <h2>Network as a Service.<br/><span class="grad">Powered by Meter.</span></h2>
-        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;">Full-stack enterprise networking — switches, access points, firewalls, and 5G gateways — all designed by Meter and delivered as a simple monthly subscription. No upfront hardware costs.</p>
+        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;max-width:640px;">Full-stack enterprise networking — switches, access points, firewalls, and 5G gateways — all designed by Meter and delivered as a simple monthly subscription. No upfront hardware costs.</p>
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:900px;margin:0 auto;">
-        <a href="meter-switches.html" class="product-card">
+        <a href="meter-switches.html" class="product-card" style="text-decoration:none;color:inherit;">
           <div class="pcard-tag">Meter Hardware</div>
           <img src="/meter/hw-s-series.avif" alt="Meter Switches" style="width:100%;border-radius:0.75rem;margin-bottom:0.75rem;" />
           <h3>Switches</h3>
           <p>S-Series switches with PoE++, 2.5GbE, and 25Gbps uplinks. Silent, compact, and cloud-managed.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
-        <a href="meter-access-points.html" class="product-card">
+        <a href="meter-access-points.html" class="product-card" style="text-decoration:none;color:inherit;">
           <div class="pcard-tag">Meter Hardware</div>
           <img src="/meter/hw-a-series.avif" alt="Meter Access Points" style="width:100%;border-radius:0.75rem;margin-bottom:0.75rem;" />
           <h3>Wi-Fi 7 Access Points</h3>
           <p>Tri-band access points with custom circuitry for blazing-fast wireless in any environment.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
-        <a href="meter-firewalls.html" class="product-card">
+        <a href="meter-firewalls.html" class="product-card" style="text-decoration:none;color:inherit;">
           <div class="pcard-tag">Meter Hardware</div>
           <img src="/meter/hw-f-series.avif" alt="Meter Firewalls" style="width:100%;border-radius:0.75rem;margin-bottom:0.75rem;" />
           <h3>Firewalls</h3>
           <p>In-house designed firewalls with automatic failover, VPN, SD-WAN, and DNS security.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
-        <a href="meter.html" class="product-card">
-          <div class="pcard-tag">Meter Partner</div>
+        <a href="meter.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-tag">Meter Software</div>
           <img src="/meter/dashboard-network.webp" alt="Meter Dashboard" style="width:100%;border-radius:0.75rem;margin-bottom:0.75rem;" />
           <h3>Meter Dashboard</h3>
           <p>AI-powered network management with natural language controls and real-time monitoring.</p>
           <span class="pcard-arrow">See all Meter products →</span>
         </a>
       </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="meter.html" class="btn-primary" style="background:#4a1d96;">Explore Meter Networking</a>
+      </div>
     </div>
   </section>
 
-  <!-- VERKADA PRODUCT LINEUP -->
-  <section id="products">
+  <!-- ═══════════════════════════════════════ -->
+  <!-- VERKADA SECURITY SECTION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section style="background:var(--surface);">
     <div class="section-inner">
-      <div style="text-align:center;max-width:640px;margin:0 auto 1rem;">
-        <div class="section-label">Complete Verkada Product Suite</div>
-        <h2>Everything You Need,<br/><span class="grad">One Trusted Partner.</span></h2>
-        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;">As a Verkada Gold Partner, Blue Cap IT provides access to every product in the Verkada portfolio — fully installed and supported.</p>
+      <hr class="partner-divider" style="background:#0a2540;"/>
+      <div style="text-align:center;margin:1.5rem auto 1rem;">
+        <div class="partner-section-header">
+          <img src="/images/verkada-partner.png" alt="Verkada Gold Partner" />
+        </div>
+        <div class="section-label">Verkada Gold Partner</div>
+        <h2>Physical Security.<br/><span class="grad">Cloud Managed.</span></h2>
+        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;max-width:640px;">As a Verkada Gold Partner, Blue Cap IT provides access to every product in the Verkada portfolio — fully installed and supported.</p>
       </div>
       <img src="/250228_Family_Portrait_Square0120_Levels-Edit.png" alt="Verkada Product Family" class="img-hero-band" style="margin-bottom:1rem;"/>
       <div class="products-grid">
-        <a href="cameras.html" class="product-card">
-          <div class="pcard-tag">Verkada Solution</div>
+        <a href="cameras.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-tag">Verkada</div>
           <div class="pcard-icon">📷</div>
           <h3>Video Security Cameras</h3>
-          <p>AI-powered cameras with built-in storage, cloud management, and advanced analytics — person detection, license plate recognition, facial recognition, and more.</p>
+          <p>AI-powered cameras with built-in storage, cloud management, and advanced analytics — person detection, license plate recognition, and more.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
-        <a href="access-control.html" class="product-card">
-          <div class="pcard-tag">Verkada Solution</div>
+        <a href="access-control.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-tag">Verkada</div>
           <div class="pcard-icon">🔑</div>
           <h3>Access Control</h3>
-          <p>Cloud-managed door controllers, smart card readers, and mobile credentials. Grant, revoke, and audit access from anywhere in real time.</p>
+          <p>Cloud-managed door controllers, smart card readers, and mobile credentials. Grant, revoke, and audit access from anywhere.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
-        <a href="sensors.html" class="product-card">
-          <div class="pcard-tag">Verkada Solution</div>
+        <a href="sensors.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-tag">Verkada</div>
           <div class="pcard-icon">🌡️</div>
           <h3>Environmental Sensors</h3>
-          <p>Monitor temperature, humidity, air quality, motion, water leaks, and more. Instant alerts and 90-day historical trends in your dashboard.</p>
+          <p>Monitor temperature, humidity, air quality, motion, and water leaks. Instant alerts and 90-day trends.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
-        <a href="alarms.html" class="product-card">
-          <div class="pcard-tag">Verkada Solution</div>
+        <a href="alarms.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-tag">Verkada</div>
           <div class="pcard-icon">🚨</div>
           <h3>Alarms &amp; Intrusion</h3>
-          <p>Integrated alarm systems that tie directly into your cameras and access control — no isolated alarm panels. One platform, complete coverage.</p>
+          <p>Integrated alarm systems tied directly into your cameras and access control. One platform, complete coverage.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
-        <a href="intercom.html" class="product-card">
-          <div class="pcard-tag">Verkada Solution</div>
-          <div class="pcard-icon">📡</div>
-          <h3>Intercom &amp; Visitor Management</h3>
-          <p>Video intercoms with remote unlock, two-way audio, and digital visitor check-in. Hosts get notified instantly via the Verkada mobile app.</p>
+        <a href="intercom.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-tag">Verkada</div>
+          <div class="pcard-icon">🔔</div>
+          <h3>Intercom &amp; Visitors</h3>
+          <p>Video intercoms with remote unlock, two-way audio, and digital visitor check-in via the Verkada app.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
-        <a href="command.html" class="product-card">
-          <div class="pcard-tag">Verkada Platform</div>
+        <a href="command.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-tag">Verkada</div>
           <div class="pcard-icon">☁️</div>
-          <h3>Verkada Command Platform</h3>
-          <p>The unified cloud software tying every Verkada device together. No VPNs, no on-site servers, no complex IT — just a browser and a login.</p>
+          <h3>Verkada Command</h3>
+          <p>The unified cloud platform tying every Verkada device together. No VPNs, no servers — just a browser and a login.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="verkada.html" class="btn-primary" style="background:#0a2540;">Explore All Verkada Products</a>
       </div>
     </div>
   </section>
@@ -164,10 +280,11 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div>
           <div class="section-label">Why Blue Cap IT</div>
           <h2>Local Expertise.<br/><span class="grad">Enterprise Results.</span></h2>
-          <p class="section-sub">We're not just a vendor — we're a full-service managed IT provider, Coro cybersecurity partner, and Verkada Gold Partner who guides you from strategy through implementation and long-term support.</p>
-          <div class="verkada-gold-section" style="flex-wrap:wrap;justify-content:center;text-align:center;">
-            <img src="/images/verkada-partner.png" alt="Verkada Authorized Reseller" style="height:40px;width:auto;flex-shrink:0;"/>
-            <p><strong>Verkada Gold Partner status</strong> means you get factory-direct pricing, full product access, manufacturer warranties, and co-support from both Blue Cap IT and Verkada's own engineering team.</p>
+          <p class="section-sub">We're not just a vendor — we're a full-service managed IT provider, Coro cybersecurity partner, Verkada Gold Partner, and Meter networking partner who guides you from strategy through implementation and long-term support.</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:1.5rem;">
+            <img src="/images/verkada-partner.png" alt="Verkada Partner" style="height:32px;width:auto;"/>
+            <img src="/Coro/coro-partner-transparent.png" alt="Coro Partner" style="height:48px;width:auto;"/>
+            <img src="/meter/Meter-purple.png" alt="Meter Partner" style="height:28px;width:auto;"/>
           </div>
           <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
             <a href="contact.html" class="btn-primary">Get Started Today</a>
@@ -177,32 +294,22 @@ import MainLayout from '../layouts/MainLayout.astro';
         <ul class="why-list">
           <li class="why-item">
             <div class="why-icon">★</div>
-            <div><h4>Verkada Gold Partner</h4><p>Genuine products, manufacturer warranties, and factory-direct licensing — at competitive pricing direct from an authorized Gold-level Verkada reseller.</p></div>
+            <div><h4>Trusted Partnerships</h4><p>Verkada Gold Partner, Coro Partner, and Meter Partner — factory-direct pricing, full product access, and manufacturer-backed support across all platforms.</p></div>
           </li>
           <li class="why-item">
             <div class="why-icon">🔧</div>
-            <div><h4>End-to-End Installation</h4><p>We handle physical mounting, network configuration, cloud onboarding, and staff training — your team is productive from day one.</p></div>
+            <div><h4>End-to-End Deployment</h4><p>We handle design, installation, configuration, cloud onboarding, and staff training — your team is productive from day one.</p></div>
           </li>
           <li class="why-item">
             <div class="why-icon">📋</div>
-            <div><h4>Ongoing License Management</h4><p>We track renewals, handle Verkada subscription management, and notify you before anything expires. Never worry about lapsing coverage.</p></div>
+            <div><h4>Ongoing Management</h4><p>We track renewals, manage subscriptions, push updates, and monitor your systems — so nothing falls through the cracks.</p></div>
           </li>
           <li class="why-item">
             <div class="why-icon">⚡</div>
-            <div><h4>Fast, Responsive Support</h4><p>Security issues can't wait. Call us at (410) 858-4031 or email <a href="mailto:info@bluecapit.com" style="color:var(--blue);">info@bluecapit.com</a> for fast, dedicated support.</p></div>
+            <div><h4>Fast, Responsive Support</h4><p>Call us at (410) 858-4031 or email <a href="mailto:info@bluecapit.com" style="color:var(--blue);">info@bluecapit.com</a> for fast, dedicated support from people who know your systems.</p></div>
           </li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- FULL PLATFORM IMAGE -->
-  <section style="padding:2rem 4% 5rem;background:var(--off-white);">
-    <div class="section-inner" style="text-align:center;">
-      <div class="section-label">The Complete Platform</div>
-      <h2 style="margin-bottom:0.5rem;">One System. <span class="grad">Total Visibility.</span></h2>
-      <p class="section-sub" style="margin:0 auto 2rem;">Verkada unifies cameras, access control, sensors, alarms, intercom, and wireless networking into a single cloud-managed platform.</p>
-      <img src="/250718_Family_Portrait_Gov_v02_Square0023.png" alt="Verkada Complete Platform" class="img-hero-band"/>
     </div>
   </section>
 
@@ -210,11 +317,11 @@ import MainLayout from '../layouts/MainLayout.astro';
   <div class="cta-band">
     <div class="section-label">Ready to Get Started?</div>
     <h2>Build Your IT Strategy<br/><span class="grad">with Blue Cap IT</span></h2>
-    <p>Whether you need managed IT services, cybersecurity, or physical security — we'll design the right solution for your needs and budget, with zero pressure.</p>
+    <p>Whether you need managed IT, cybersecurity, physical security, or networking — we'll design the right solution for your needs and budget, with zero pressure.</p>
     <div class="btn-group">
       <a href="contact.html" class="btn-primary">Request a Free Quote</a>
-      <a href="tel:4108584031" class="btn-ghost">📞 Call (410) 858-4031</a>
-      <a href="mailto:info@bluecapit.com" class="btn-ghost">✉️ info@bluecapit.com</a>
+      <a href="tel:4108584031" class="btn-ghost">Call (410) 858-4031</a>
+      <a href="mailto:info@bluecapit.com" class="btn-ghost">info@bluecapit.com</a>
     </div>
   </div>
 
