@@ -22,6 +22,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           <a href="verkada.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Verkada Gold Partner</a>
           <a href="cybersecurity.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Coro Partner</a>
           <a href="huntress.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Huntress Partner</a>
+          <a href="spotai.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Spot AI Partner</a>
           <a href="meter.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Meter Partner</a>
         </div>
         <h1>Your Boutique <span class="grad">IT Partner.</span></h1>
@@ -31,6 +32,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           <a href="cybersecurity.html" class="btn-primary" style="background:var(--navy);">Coro</a>
           <a href="verkada.html" class="btn-primary" style="background:#0a2540;">Verkada</a>
           <a href="huntress.html" class="btn-primary" style="background:#00b4a0;">Huntress</a>
+          <a href="spotai.html" class="btn-primary" style="background:#1a1a2e;">Spot AI</a>
           <a href="meter.html" class="btn-primary" style="background:#4a1d96;">Meter</a>
           <a href="contact.html" class="btn-ghost">Get a Free Quote</a>
         </div>
@@ -69,6 +71,12 @@ import MainLayout from '../layouts/MainLayout.astro';
           <div class="pcard-icon">🎯</div>
           <h3>Huntress Security</h3>
           <p>24/7 SOC-backed EDR, identity threat detection, SIEM, and security awareness training.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="spotai.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #1a1a2e;">
+          <div class="pcard-icon">📹</div>
+          <h3>Spot AI Video Intelligence</h3>
+          <p>AI-powered video analytics, intelligent recording, and real-time alerts from your existing cameras.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="meter.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #4a1d96;">
@@ -268,9 +276,55 @@ import MainLayout from '../layouts/MainLayout.astro';
   </section>
 
   <!-- ═══════════════════════════════════════ -->
-  <!-- VERKADA SECURITY SECTION -->
+  <!-- SPOT AI VIDEO INTELLIGENCE SECTION -->
   <!-- ═══════════════════════════════════════ -->
   <section style="background:var(--surface);">
+    <div class="section-inner">
+      <hr class="partner-divider" style="background:#1a1a2e;"/>
+      <div style="text-align:center;margin:1.5rem auto 1rem;">
+        <div class="partner-section-header">
+          <img src="/spotai/spotai-logo.png" alt="Spot AI" />
+        </div>
+        <div class="section-label">Spot AI Partner</div>
+        <h2>Video Intelligence.<br/><span class="grad">Powered by AI.</span></h2>
+        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;max-width:640px;">Transform your cameras from passive recorders into active AI teammates. Spot AI uses deep learning to detect events, surface insights, and alert your team in real time — and works with your existing cameras.</p>
+      </div>
+      <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:900px;margin:0 auto;">
+        <a href="spotai-cameras.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">📷</div>
+          <h3>AI Cameras</h3>
+          <p>Premium IP cameras at no cost, or upgrade your existing cameras with AI. Fully camera-agnostic.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="spotai-ivr.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">💾</div>
+          <h3>Intelligent Video Recorder</h3>
+          <p>Purpose-built hardware with edge AI processing, 30-90 day storage, and support for up to 32 cameras.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="spotai-video-intelligence.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">🧠</div>
+          <h3>Video Intelligence</h3>
+          <p>AI-powered search, object detection, people counting, license plate recognition, and trend reporting.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="spotai-alerts.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">🔔</div>
+          <h3>Real-Time Alerts</h3>
+          <p>Instant notifications for security incidents, safety violations, and custom triggers with video attached.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="spotai.html" class="btn-primary" style="background:#1a1a2e;">Explore Spot AI</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- VERKADA SECURITY SECTION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section>
     <div class="section-inner">
       <hr class="partner-divider" style="background:#0a2540;"/>
       <div style="text-align:center;margin:1.5rem auto 1rem;">
@@ -344,6 +398,7 @@ import MainLayout from '../layouts/MainLayout.astro';
             <img src="/images/verkada-partner.png" alt="Verkada Partner" style="height:32px;width:auto;"/>
             <img src="/Coro/coro-partner-transparent.png" alt="Coro Partner" style="height:48px;width:auto;"/>
             <img src="/Huntress/huntress-logo-teal.png" alt="Huntress Partner" style="height:28px;width:auto;"/>
+            <img src="/spotai/spotai-logo.png" alt="Spot AI Partner" style="height:28px;width:auto;"/>
             <img src="/meter/Meter-purple.png" alt="Meter Partner" style="height:28px;width:auto;"/>
           </div>
           <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
@@ -354,7 +409,7 @@ import MainLayout from '../layouts/MainLayout.astro';
         <ul class="why-list">
           <li class="why-item">
             <div class="why-icon">★</div>
-            <div><h4>Trusted Partnerships</h4><p>Verkada Gold Partner, Coro Partner, Huntress Partner, and Meter Partner — factory-direct pricing, full product access, and manufacturer-backed support across all platforms.</p></div>
+            <div><h4>Trusted Partnerships</h4><p>Verkada Gold Partner, Coro Partner, Huntress Partner, Spot AI Partner, and Meter Partner — factory-direct pricing, full product access, and manufacturer-backed support across all platforms.</p></div>
           </li>
           <li class="why-item">
             <div class="why-icon">🔧</div>
