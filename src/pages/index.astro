@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 ---
-<MainLayout title="Blue Cap IT | Managed IT, Cybersecurity, Verkada & Meter Networking" description="Blue Cap IT is a managed service provider, Verkada Gold Partner, Coro cybersecurity partner, and Meter networking partner. We deliver managed IT, cybersecurity, physical security, and enterprise networking solutions.">
+<MainLayout title="Blue Cap IT | Managed IT, Cybersecurity, Verkada & Meter Networking" description="Blue Cap IT is a managed service provider, Verkada Gold Partner, Coro Partner, Huntress Partner, and Meter Partner. We deliver managed IT, cybersecurity, physical security, managed detection and response, and enterprise networking.">
 
   <!-- HERO -->
   <section class="hero" style="background:var(--white);">
@@ -21,14 +21,16 @@ import MainLayout from '../layouts/MainLayout.astro';
           <a href="managed-services.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Managed IT</a>
           <a href="verkada.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Verkada Gold Partner</a>
           <a href="cybersecurity.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Coro Partner</a>
+          <a href="huntress.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Huntress Partner</a>
           <a href="meter.html" class="badge-pill" style="background:rgba(30,111,230,0.08);border:1px solid rgba(30,111,230,0.2);color:var(--navy);text-decoration:none;">Meter Partner</a>
         </div>
         <h1>Your Boutique <span class="grad">IT Partner.</span></h1>
-        <p class="hero-sub" style="text-align:center;max-width:700px;margin:0 auto;color:var(--text-mid);">Blue Cap IT is a full-service Managed Service Provider, official Verkada Gold Partner, Coro cybersecurity partner, and Meter networking partner. We deliver managed IT, enterprise-grade cybersecurity, physical security, and network infrastructure solutions — all backed by the kind of personal, responsive customer support that big providers simply can't match. When you call Blue Cap IT, you get a real person who knows your business, your systems, and your goals.</p>
+        <p class="hero-sub" style="text-align:center;max-width:700px;margin:0 auto;color:var(--text-mid);">Blue Cap IT is a full-service Managed Service Provider, official Verkada Gold Partner, Coro cybersecurity partner, Huntress managed security partner, and Meter networking partner. We deliver managed IT, enterprise-grade cybersecurity, physical security, and network infrastructure solutions — all backed by the kind of personal, responsive customer support that big providers simply can't match. When you call Blue Cap IT, you get a real person who knows your business, your systems, and your goals.</p>
         <div class="hero-btns" style="justify-content:center;">
           <a href="managed-services.html" class="btn-primary">Managed IT</a>
           <a href="cybersecurity.html" class="btn-primary" style="background:var(--navy);">Coro</a>
           <a href="verkada.html" class="btn-primary" style="background:#0a2540;">Verkada</a>
+          <a href="huntress.html" class="btn-primary" style="background:#00b4a0;">Huntress</a>
           <a href="meter.html" class="btn-primary" style="background:#4a1d96;">Meter</a>
           <a href="contact.html" class="btn-ghost">Get a Free Quote</a>
         </div>
@@ -61,6 +63,12 @@ import MainLayout from '../layouts/MainLayout.astro';
           <div class="pcard-icon">📷</div>
           <h3>Verkada Security</h3>
           <p>Cloud-managed cameras, access control, sensors, alarms, intercoms, and more — all in one platform.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="huntress.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #00b4a0;">
+          <div class="pcard-icon">🎯</div>
+          <h3>Huntress Security</h3>
+          <p>24/7 SOC-backed EDR, identity threat detection, SIEM, and security awareness training.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="meter.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #4a1d96;">
@@ -154,6 +162,52 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div style="text-align:center;margin-top:2rem;">
         <a href="cybersecurity.html" class="btn-primary">Explore Coro Cybersecurity</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HUNTRESS SECURITY SECTION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section>
+    <div class="section-inner">
+      <hr class="partner-divider" style="background:#00b4a0;"/>
+      <div style="text-align:center;margin:1.5rem auto 1rem;">
+        <div class="partner-section-header">
+          <img src="/Huntress/Huntress Primary Logo - Teal.png" alt="Huntress" />
+        </div>
+        <div class="section-label">Huntress Partner</div>
+        <h2>24/7 Managed Security.<br/><span class="grad">SOC-Backed Protection.</span></h2>
+        <p class="section-sub" style="margin:0.8rem auto 0;text-align:center;max-width:640px;">Huntress combines AI-assisted threat detection with a world-class 24/7 Security Operations Center. Threats are found, validated, and eliminated in minutes — not hours. Winner of the 2026 SC Award for Best MDR Service.</p>
+      </div>
+      <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:900px;margin:0 auto;">
+        <a href="huntress-edr.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">💻</div>
+          <h3>Managed EDR</h3>
+          <p>24/7 endpoint detection and response. Behavioral analytics, automated remediation, and 8-minute mean time to respond.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="huntress-itdr.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">🔐</div>
+          <h3>Managed ITDR</h3>
+          <p>Identity threat detection for M365 and Google Workspace. Stops account takeovers and BEC in 3 minutes.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="huntress-siem.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">📊</div>
+          <h3>Managed SIEM</h3>
+          <p>24/7 threat response and compliance reporting. Fully managed by SOC experts at a predictable price.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+        <a href="huntress-sat.html" class="product-card" style="text-decoration:none;color:inherit;">
+          <div class="pcard-icon">🎓</div>
+          <h3>Security Awareness Training</h3>
+          <p>Engaging, expert-backed training with hands-on simulations and gamification that make concepts stick.</p>
+          <span class="pcard-arrow">Learn more →</span>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="huntress.html" class="btn-primary" style="background:#00b4a0;">Explore Huntress Security</a>
       </div>
     </div>
   </section>
@@ -285,10 +339,11 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div>
           <div class="section-label">Why Blue Cap IT</div>
           <h2>Local Expertise.<br/><span class="grad">Enterprise Results.</span></h2>
-          <p class="section-sub">We're not just a vendor — we're a full-service managed IT provider, Coro cybersecurity partner, Verkada Gold Partner, and Meter networking partner who guides you from strategy through implementation and long-term support.</p>
+          <p class="section-sub">We're not just a vendor — we're a full-service managed IT provider, Verkada Gold Partner, Coro Partner, Huntress Partner, and Meter Partner who guides you from strategy through implementation and long-term support.</p>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:1.5rem;">
             <img src="/images/verkada-partner.png" alt="Verkada Partner" style="height:32px;width:auto;"/>
             <img src="/Coro/coro-partner-transparent.png" alt="Coro Partner" style="height:48px;width:auto;"/>
+            <img src="/Huntress/Huntress Primary Logo - Teal.png" alt="Huntress Partner" style="height:28px;width:auto;"/>
             <img src="/meter/Meter-purple.png" alt="Meter Partner" style="height:28px;width:auto;"/>
           </div>
           <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
@@ -299,7 +354,7 @@ import MainLayout from '../layouts/MainLayout.astro';
         <ul class="why-list">
           <li class="why-item">
             <div class="why-icon">★</div>
-            <div><h4>Trusted Partnerships</h4><p>Verkada Gold Partner, Coro Partner, and Meter Partner — factory-direct pricing, full product access, and manufacturer-backed support across all platforms.</p></div>
+            <div><h4>Trusted Partnerships</h4><p>Verkada Gold Partner, Coro Partner, Huntress Partner, and Meter Partner — factory-direct pricing, full product access, and manufacturer-backed support across all platforms.</p></div>
           </li>
           <li class="why-item">
             <div class="why-icon">🔧</div>
