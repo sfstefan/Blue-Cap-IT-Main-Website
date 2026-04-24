@@ -2,7 +2,7 @@
    BLUE CAP IT — BOLD & TECHY
    Palette: Pure white · Blue Cap dark (#062A78) · Blue Cap light (#3C9BED)
             · Steel slate footer · Gold partner accent
-   Fonts:   Barlow Condensed (display) · DM Sans (body)
+   Fonts:   Sora (display) · DM Sans (body)
    ═══════════════════════════════════════════════════ */
 
 :root {
@@ -27,7 +27,7 @@
   --text:         #0A1530;
   --text-mid:     #1E3458;
   --text-muted:   #4D6590;
-  --text-light:   #8898BB;
+  --text-light:   #6B7BA6;
   --gold:         #C9960A;
   --gold-light:   #FFF3CC;
   --shadow-sm:    0 1px 4px rgba(6,42,120,0.08);
@@ -721,4 +721,123 @@ footer {
   .cta-band .btn-group { flex-direction: column; align-items: center; }
   .products-grid { grid-template-columns: 1fr; }
   .product-card { text-align: center; }
+}
+
+/* ─── FOCUS STATES (Accessibility) ─── */
+.btn-primary:focus-visible, .btn-ghost:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 3px;
+}
+nav a:focus-visible, .dropdown-menu a:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.product-card:focus-visible {
+  outline: 2px solid var(--elec);
+  outline-offset: 3px;
+}
+.hamburger:focus-visible {
+  outline: 2px solid var(--elec);
+  outline-offset: 3px;
+}
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 1px;
+}
+
+/* ─── INTERMEDIATE NAV BREAKPOINT ─── */
+@media (max-width: 1200px) and (min-width: 961px) {
+  .nav-links-plain { gap: 0; }
+  .nav-dropdown > a,
+  .nav-links-plain > li > a {
+    font-size: 0.72rem;
+    padding: 0.4rem 0.35rem;
+  }
+  .nav-right { gap: 0.3rem; }
+  .nav-phone { font-size: 0.68rem; }
+  .nav-subscribe { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
+  .nav-cta { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
+  .dropdown-menu { min-width: 200px; }
+}
+
+/* ─── ENHANCED CARD EFFECTS ─── */
+.product-card {
+  transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.product-card:hover {
+  border-color: var(--elec);
+  box-shadow: var(--shadow-lg), 0 0 24px rgba(60,155,237,0.12);
+  transform: translateY(-5px);
+}
+.product-card .pcard-icon {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.product-card:hover .pcard-icon {
+  transform: scale(1.15);
+}
+.pcard-arrow {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.product-card:hover .pcard-arrow {
+  transform: translateX(4px);
+  color: var(--sky);
+}
+
+/* ─── SCROLL ANIMATIONS ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.section-inner {
+  animation: fadeInUp 0.5s ease both;
+}
+
+/* ─── ENHANCED CTA BAND ─── */
+.cta-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 40% 50% at 80% 50%, rgba(60,155,237,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+.cta-band .btn-primary {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.cta-band .btn-primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 48px rgba(6,42,120,0.45);
+}
+.cta-band .btn-ghost {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.cta-band .btn-ghost:hover {
+  transform: translateY(-2px);
+  border-color: var(--sky);
+}
+
+/* ─── FOOTER CONTRAST FIX ─── */
+footer p, footer li a, .footer-col ul li a {
+  color: rgba(255,255,255,0.68);
+}
+
+/* ─── PRINT STYLES ─── */
+@media print {
+  nav, footer, .cta-band, .hamburger, .mobile-nav, .hero-badges, .hero-btns {
+    display: none !important;
+  }
+  body { background: #fff; color: #000; }
+  section { padding: 1rem 0; }
+  .page-wrap { padding-top: 0; }
+  a { color: #062A78; }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em; color: #666;
+  }
+  .product-card, .why-card {
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+  }
+  img { max-width: 100%; }
 }

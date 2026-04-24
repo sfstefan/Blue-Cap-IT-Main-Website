@@ -27,6 +27,7 @@ import '../styles/style.css';
   <meta name="twitter:title" content={title}/>
   {description && <meta name="twitter:description" content={description}/>}
   <meta name="twitter:image" content="https://bluecapit.com/images/BLUECAPTwitter.jpg"/>
+  <link rel="canonical" href={`https://bluecapit.com${Astro.url.pathname}`}/>
   <link rel="icon" href="/favicon.ico" sizes="any"/>
   <link rel="icon" href="/icon.svg" type="image/svg+xml"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
@@ -307,7 +308,7 @@ import '../styles/style.css';
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Blue Cap IT. All rights reserved. <a href="legal.html" style="color:rgba(255,255,255,0.5);text-decoration:none;margin-left:1rem;">Terms of Service</a></p>
+      <p>© 2025 Blue Cap IT. All rights reserved. <a href="legal.html" style="color:rgba(255,255,255,0.5);text-decoration:none;margin-left:1rem;">Terms of Service</a> <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none;margin-left:1rem;">Privacy Policy</a></p>
     </div>
   </footer>
 </div>
