@@ -5,6 +5,8 @@ date: "2025-05-15"
 author: "Blue Cap IT"
 ---
 
+<img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" />
+
 Verkada's May 2025 product update brings a wide range of new features and hardware across the entire platform. From a brand-new two-camera multisensor to dramatically expanded alarm system capabilities, here is everything you need to know about this release.
 
 ## Cameras: New Hardware, Smarter Search & Enhanced Privacy

@@ -5,6 +5,8 @@ date: "2025-02-15"
 author: "Blue Cap IT"
 ---
 
+<img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" />
+
 Verkada's February 2025 product update brings a wide range of new features and improvements across the entire platform — from brand-new camera hardware and a game-changing search tool to smarter alarm capabilities and deeper access control integrations. Here is a comprehensive look at everything in this release.
 
 ## Cameras: New Hardware, Faster Search & Better Performance

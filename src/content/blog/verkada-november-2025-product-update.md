@@ -5,6 +5,8 @@ date: "2025-11-15"
 author: "Blue Cap IT"
 ---
 
+<img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" />
+
 Verkada's November 2025 product update brings significant new capabilities across cameras, alarms, access control, intercoms, and workplace management. From AI-powered verbal deterrence that actively warns intruders to government-grade access control hardware built for secure environments, this release has something for every organization. Here's the full breakdown.
 
 ## Cameras: Smarter Monitoring & Sleeker Hardware

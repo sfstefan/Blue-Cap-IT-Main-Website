@@ -5,6 +5,8 @@ date: "2024-05-15"
 author: "Blue Cap IT"
 ---
 
+<img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" />
+
 # Verkada May 2024 Product Update
 
 Verkada's May 2024 release is packed with meaningful upgrades across every product line. From AI-powered video search to new hardware and deeper third-party integrations, here is everything you need to know.
