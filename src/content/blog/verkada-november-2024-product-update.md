@@ -5,7 +5,7 @@ date: "2024-11-15"
 author: "Blue Cap IT"
 ---
 
-<img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" />
+<a href="../verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
 
 Verkada's November 2024 product update brings significant improvements across the entire platform — from brand-new hardware to powerful AI search features and expanded mobile capabilities. Here's a full breakdown of everything in this release.
 
@@ -135,3 +135,4 @@ As an official **Verkada Gold Partner**, Blue Cap IT can help you take full adva
 - **Phone:** [(410) 858-4031](tel:4108584031)
 - **Email:** [info@bluecapit.com](mailto:info@bluecapit.com)
 - **Online:** [Contact Us](../contact.html)
+- **Learn More:** [Explore All Verkada Products](../verkada.html)

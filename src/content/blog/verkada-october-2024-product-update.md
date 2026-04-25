@@ -5,7 +5,7 @@ date: "2024-10-15"
 author: "Blue Cap IT"
 ---
 
-<img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" />
+<a href="../verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
 
 Verkada's October 2024 product update delivers major advancements across the entire platform — from next-generation cameras with dramatically improved image quality to AI-powered alerts you can configure in plain English. Here's a complete breakdown of everything new.
 
@@ -121,3 +121,4 @@ As an official **Verkada Gold Partner**, Blue Cap IT can help you take full adva
 - **Phone:** [(410) 858-4031](tel:4108584031)
 - **Email:** [info@bluecapit.com](mailto:info@bluecapit.com)
 - **Online:** [Contact Us](../contact.html)
+- **Learn More:** [Explore All Verkada Products](../verkada.html)

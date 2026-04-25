@@ -5,7 +5,7 @@ date: "2026-04-24"
 author: "Blue Cap IT"
 ---
 
-<img src="/meter/Meter-purple.png" alt="Meter" style="max-height:50px;width:auto;margin-bottom:2rem;" />
+<a href="../meter.html"><img src="/meter/Meter-purple.png" alt="Meter" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
 
 We're excited to announce that Blue Cap IT is now an **official Meter Partner** — adding full-stack enterprise networking to our portfolio of IT and security solutions.
 

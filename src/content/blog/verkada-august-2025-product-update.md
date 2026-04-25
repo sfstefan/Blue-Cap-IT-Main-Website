@@ -5,7 +5,7 @@ date: "2025-08-15"
 author: "Blue Cap IT"
 ---
 
-<img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" />
+<a href="../verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
 
 Verkada's August 2025 product update delivers meaningful upgrades across cameras, alarms, and access control — with a strong emphasis on government compliance, operational visibility, and third-party integration. Here's a full breakdown of everything in this release.
 
@@ -65,3 +65,4 @@ As an official **Verkada Gold Partner**, Blue Cap IT can help you take full adva
 - **Phone:** [(410) 858-4031](tel:4108584031)
 - **Email:** [info@bluecapit.com](mailto:info@bluecapit.com)
 - **Online:** [Contact Us](../contact.html)
+- **Learn More:** [Explore All Verkada Products](../verkada.html)
