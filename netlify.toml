@@ -2,3 +2,32 @@
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
+
+# Cousin-domain rewrites: bluecap-it.com and bluecap-it.net are domain aliases
+# on this site, but serve a minimal one-page layout instead of the full
+# bluecapit.com site. status=200 with force=true is a rewrite (URL stays as-is
+# in the browser); the visitor receives the cousin HTML directly.
+
+[[redirects]]
+  from = "https://bluecap-it.com/*"
+  to = "/cousin-com.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.bluecap-it.com/*"
+  to = "/cousin-com.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://bluecap-it.net/*"
+  to = "/cousin-net.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.bluecap-it.net/*"
+  to = "/cousin-net.html"
+  status = 200
+  force = true
