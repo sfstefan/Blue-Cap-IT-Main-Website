@@ -1,14 +1,16 @@
 ---
 const contactEmail = "scott@bluecap-it.net";
 const mainSite = "https://www.bluecapit.com";
+// Assets load from the primary domain so the cousin-domain catch-all rewrite doesn't intercept them.
+const asset = (path: string) => `${mainSite}${path}`;
 const partners = [
-  { name: "Verkada Gold Partner", src: "/images/verkada-partner.png", href: `${mainSite}/verkada.html`, cls: "partner-verkada" },
-  { name: "Cisco Meraki",          src: "/cisco-meraki-logo.png",        href: `${mainSite}/`,             cls: "partner-meraki"  },
-  { name: "Meter",                 src: "/meter/Meter-purple.png",        href: `${mainSite}/meter.html`,   cls: "partner-meter"   },
-  { name: "Coro",                  src: "/Coro/coro-logo-wide-indigo.png", href: `${mainSite}/cybersecurity.html`, cls: "partner-coro"  },
-  { name: "Huntress",              src: "/Huntress/huntress-logo-teal.png", href: `${mainSite}/huntress.html`, cls: "partner-huntress" },
-  { name: "Spot AI",               src: "/spotai/spotai-logo.png",         href: `${mainSite}/spotai.html`, cls: "partner-spotai"  },
-  { name: "Microsoft Silver Partner", src: "/MicrosoftSilverPartnerLogo.png", href: `${mainSite}/managed-services.html`, cls: "partner-microsoft" },
+  { name: "Verkada Gold Partner", src: asset("/images/verkada-partner.png"), href: `${mainSite}/verkada.html`, cls: "partner-verkada" },
+  { name: "Cisco Meraki",          src: asset("/cisco-meraki-logo.png"),        href: `${mainSite}/`,             cls: "partner-meraki"  },
+  { name: "Meter",                 src: asset("/meter/Meter-purple.png"),        href: `${mainSite}/meter.html`,   cls: "partner-meter"   },
+  { name: "Coro",                  src: asset("/Coro/coro-logo-wide-indigo.png"), href: `${mainSite}/cybersecurity.html`, cls: "partner-coro"  },
+  { name: "Huntress",              src: asset("/Huntress/huntress-logo-teal.png"), href: `${mainSite}/huntress.html`, cls: "partner-huntress" },
+  { name: "Spot AI",               src: asset("/spotai/spotai-logo.png"),         href: `${mainSite}/spotai.html`, cls: "partner-spotai"  },
+  { name: "Microsoft Silver Partner", src: asset("/MicrosoftSilverPartnerLogo.png"), href: `${mainSite}/managed-services.html`, cls: "partner-microsoft" },
 ];
 ---
 <!DOCTYPE html>
@@ -20,9 +22,9 @@ const partners = [
   <meta name="description" content="Blue Cap IT — IT services, cybersecurity, and physical security for businesses."/>
   <meta name="robots" content="noindex, nofollow"/>
   <link rel="canonical" href="https://www.bluecapit.com/"/>
-  <link rel="icon" href="/favicon.ico" sizes="any"/>
-  <link rel="icon" href="/icon.svg" type="image/svg+xml"/>
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="icon" href={asset("/favicon.ico")} sizes="any"/>
+  <link rel="icon" href={asset("/icon.svg")} type="image/svg+xml"/>
+  <link rel="apple-touch-icon" href={asset("/apple-touch-icon.png")}/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -260,7 +262,7 @@ const partners = [
 </head>
 <body>
   <header class="header">
-    <img src="/logo.svg" alt="Blue Cap IT"/>
+    <img src={asset("/logo.svg")} alt="Blue Cap IT"/>
   </header>
 
   <main>
