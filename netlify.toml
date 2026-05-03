@@ -31,3 +31,37 @@
   to = "/cousin-net.html"
   status = 200
   force = true
+
+# Case-insensitive redirects for the Network as a Service page.
+# Netlify URL matching is case-sensitive by default, so common
+# acronym capitalizations of /naas all redirect to the canonical
+# lowercase /naas page.
+[[redirects]]
+  from = "/NAAS"
+  to = "/naas"
+  status = 301
+
+[[redirects]]
+  from = "/NaaS"
+  to = "/naas"
+  status = 301
+
+[[redirects]]
+  from = "/Naas"
+  to = "/naas"
+  status = 301
+
+[[redirects]]
+  from = "/NAAS.html"
+  to = "/naas"
+  status = 301
+
+[[redirects]]
+  from = "/NaaS.html"
+  to = "/naas"
+  status = 301
+
+[[redirects]]
+  from = "/Naas.html"
+  to = "/naas"
+  status = 301
