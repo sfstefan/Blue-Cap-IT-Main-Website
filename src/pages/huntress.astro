@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Huntress Managed Security | Blue Cap IT — Huntress Partner" description="Blue Cap IT partners with Huntress to deliver 24/7 managed cybersecurity. SOC-backed EDR, identity threat detection, SIEM, and security awareness training — purpose-built for SMBs and backed by a world-class Security Operations Center.">
   <div class="inner-hero">
@@ -34,19 +35,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🎯</div>
+            <div class="why-icon"><Icon name="lucide:target" /></div>
             <div><h4>24/7 SOC-Backed Protection</h4><p>A world-class Security Operations Center monitors your environment around the clock — investigating threats, eliminating false positives, and responding in minutes, not hours.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">⚡</div>
+            <div class="why-icon"><Icon name="lucide:zap" /></div>
             <div><h4>8-Minute Mean Time to Respond</h4><p>Industry-leading response times mean threats are contained and remediated before hackers can move laterally or cause damage.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🏆</div>
+            <div class="why-icon"><Icon name="lucide:trophy" /></div>
             <div><h4>Award-Winning Platform</h4><p>Winner of the 2026 SC Award for Best Managed Detection and Response Service. Purpose-built for businesses like yours.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔧</div>
+            <div class="why-icon"><Icon name="lucide:wrench" /></div>
             <div><h4>Fully Managed by Blue Cap IT</h4><p>We deploy, configure, and manage Huntress for you. You get complete protection with zero added complexity to your team.</p></div>
           </li>
         </ul>
@@ -64,25 +65,25 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:1000px;margin:0 auto;">
         <a href="huntress-edr.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">💻</div>
+          <div class="pcard-icon"><Icon name="lucide:laptop" /></div>
           <h3>Managed EDR</h3>
           <p>24/7 endpoint detection and response with a lightweight agent, behavioral analytics, and automated threat remediation. The SOC handles everything from detection to cleanup.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="huntress-itdr.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🔐</div>
+          <div class="pcard-icon"><Icon name="lucide:lock-keyhole" /></div>
           <h3>Managed ITDR</h3>
           <p>Identity threat detection and response for Microsoft 365 and Google Workspace. Stops account takeovers, business email compromise, and unauthorized access in 3 minutes.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="huntress-siem.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">📊</div>
+          <div class="pcard-icon"><Icon name="lucide:bar-chart-3" /></div>
           <h3>Managed SIEM</h3>
           <p>Security information and event management without the complexity. 24/7 threat response and compliance reporting, fully managed by SOC experts at a predictable price.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="huntress-sat.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🎓</div>
+          <div class="pcard-icon"><Icon name="lucide:graduation-cap" /></div>
           <h3>Security Awareness Training</h3>
           <p>Engaging, expert-backed training built on real-world threat intelligence. Hands-on simulations and gamification that make cybersecurity concepts stick.</p>
           <span class="pcard-arrow">Learn more →</span>
@@ -101,22 +102,22 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🔍</div>
+          <div class="pcard-icon"><Icon name="lucide:search" /></div>
           <h3>1. Continuous Monitoring</h3>
           <p>Lightweight agents and cloud integrations monitor your endpoints, identities, and logs 24/7 for suspicious activity.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🤖</div>
+          <div class="pcard-icon"><Icon name="lucide:bot" /></div>
           <h3>2. AI + Human Analysis</h3>
           <p>AI-assisted detection flags potential threats. Human SOC analysts validate every alert — eliminating false positives and identifying real attacks.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🛡️</div>
+          <div class="pcard-icon"><Icon name="lucide:shield" /></div>
           <h3>3. Rapid Response</h3>
           <p>Confirmed threats are contained and remediated in minutes. Compromised endpoints are isolated, malicious processes are killed, and damage is prevented.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">📋</div>
+          <div class="pcard-icon"><Icon name="lucide:clipboard-list" /></div>
           <h3>4. Detailed Reporting</h3>
           <p>You get clear, actionable incident reports explaining what happened, what was done, and what to watch for — no jargon, no guesswork.</p>
         </div>

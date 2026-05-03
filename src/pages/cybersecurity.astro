@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Cybersecurity | Blue Cap IT — Coro Partner" description="Blue Cap IT partners with Coro to deliver all-in-one cybersecurity for small and mid-sized businesses. Endpoint protection, email security, cloud app security, network protection, and more — one platform, one agent.">
   <div class="inner-hero">
@@ -27,19 +28,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🛡️</div>
+            <div class="why-icon"><Icon name="lucide:shield" /></div>
             <div><h4>Complete Coverage</h4><p>Email, endpoints, cloud apps, network, and data — all protected from a single platform. No gaps, no bolt-on tools.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🤖</div>
+            <div class="why-icon"><Icon name="lucide:bot" /></div>
             <div><h4>AI-Powered Automation</h4><p>Coro's AI engine automatically detects and resolves threats — handling the vast majority of security events without manual intervention.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">⚡</div>
+            <div class="why-icon"><Icon name="lucide:zap" /></div>
             <div><h4>Simple to Deploy</h4><p>One lightweight agent, one dashboard, one platform. No complex integrations or multi-vendor headaches.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📈</div>
+            <div class="why-icon"><Icon name="lucide:trending-up" /></div>
             <div><h4>Scales With You</h4><p>Modular design lets you activate only the protection modules you need today — and add more as your business grows.</p></div>
           </li>
         </ul>
@@ -57,37 +58,37 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid">
         <a href="coro-endpoint.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">💻</div>
+          <div class="pcard-icon"><Icon name="lucide:laptop" /></div>
           <h3>Endpoint Protection</h3>
           <p>Next-gen antivirus and EDR (Endpoint Detection &amp; Response) for every device. Detects malware, ransomware, and advanced threats — then automatically contains and remediates them.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="coro-email.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">📧</div>
+          <div class="pcard-icon"><Icon name="lucide:mail" /></div>
           <h3>Email Security</h3>
           <p>Blocks phishing, business email compromise, malware attachments, and spam before they reach your inbox. Works with Microsoft 365 and Google Workspace.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="coro-cloud.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">☁️</div>
+          <div class="pcard-icon"><Icon name="lucide:cloud" /></div>
           <h3>Cloud App Security</h3>
           <p>Monitors and protects your cloud applications — Microsoft 365, Google Workspace, Slack, Salesforce, and more. Detects unauthorized access, data leaks, and suspicious activity.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="coro-network.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🌐</div>
+          <div class="pcard-icon"><Icon name="lucide:globe" /></div>
           <h3>Network Security</h3>
           <p>Zero Trust Network Access (ZTNA), VPN, firewall, and DNS filtering. Control who can access your network and what they can reach — from anywhere.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="coro-data.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">📁</div>
+          <div class="pcard-icon"><Icon name="lucide:folder-lock" /></div>
           <h3>Data Governance</h3>
           <p>Discover, classify, and protect sensitive data across your organization. Enforce policies to prevent data loss and maintain compliance with industry regulations.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="coro-training.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🎓</div>
+          <div class="pcard-icon"><Icon name="lucide:graduation-cap" /></div>
           <h3>Security Awareness Training</h3>
           <p>Educate your employees with engaging security training and simulated phishing campaigns. Turn your team from a vulnerability into your first line of defense.</p>
           <span class="pcard-arrow">Learn more →</span>
@@ -131,8 +132,8 @@ import MainLayout from '../layouts/MainLayout.astro';
       <p class="section-sub" style="text-align:center;margin:0.8rem auto 1.5rem;">Coro is purpose-built cybersecurity for small and mid-sized businesses. Blue Cap IT is proud to be an official Coro Partner — bringing enterprise-grade cyber protection to businesses that need it most.</p>
       <img src="/Coro/coro-logo-wide-indigo.png" alt="Coro" style="height:50px;width:auto;margin:0 auto 2rem;display:block;"/>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.2rem;max-width:700px;margin:0 auto;">
-        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;">🛡️</div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Coro Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">Authorized Coro Reseller</div></div>
-        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;">🤖</div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">AI-Driven</div><div style="font-size:0.8rem;color:var(--text-muted);">Automated Threat Resolution</div></div>
+        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:shield" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Coro Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">Authorized Coro Reseller</div></div>
+        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:bot" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">AI-Driven</div><div style="font-size:0.8rem;color:var(--text-muted);">Automated Threat Resolution</div></div>
       </div>
     </div>
   </section>

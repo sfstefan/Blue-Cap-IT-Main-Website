@@ -7,6 +7,7 @@ interface Props {
 const { title, description } = Astro.props;
 
 import '../styles/style.css';
+import { Icon } from 'astro-icon/components';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -65,82 +66,82 @@ import '../styles/style.css';
       <li class="nav-dropdown">
         <a href="verkada.html">Verkada</a>
         <div class="dropdown-menu">
-          <a href="verkada.html"><span class="dmicon">🛡</span> All Verkada Products</a>
-          <a href="cameras.html"><span class="dmicon">📷</span> Video Security Cameras</a>
-          <a href="access-control.html"><span class="dmicon">🔑</span> Access Control</a>
-          <a href="sensors.html"><span class="dmicon">🌬️</span> Air Quality</a>
-          <a href="alarms.html"><span class="dmicon">🚨</span> Alarms &amp; Intrusion</a>
-          <a href="intercom.html"><span class="dmicon">🔔</span> Intercom &amp; Visitors</a>
-          <a href="command.html"><span class="dmicon">☁️</span> Verkada Command</a>
-          <a href="command-connector.html"><span class="dmicon">🔌</span> Command Connector</a>
-          <a href="workplace.html"><span class="dmicon">🏢</span> Workplace</a>
-          <a href="connectivity.html"><span class="dmicon">📡</span> Connectivity</a>
+          <a href="verkada.html"><span class="dmicon"><Icon name="lucide:shield" /></span> All Verkada Products</a>
+          <a href="cameras.html"><span class="dmicon"><Icon name="lucide:camera" /></span> Video Security Cameras</a>
+          <a href="access-control.html"><span class="dmicon"><Icon name="lucide:key-round" /></span> Access Control</a>
+          <a href="sensors.html"><span class="dmicon"><Icon name="lucide:wind" /></span> Air Quality</a>
+          <a href="alarms.html"><span class="dmicon"><Icon name="lucide:siren" /></span> Alarms &amp; Intrusion</a>
+          <a href="intercom.html"><span class="dmicon"><Icon name="lucide:bell" /></span> Intercom &amp; Visitors</a>
+          <a href="command.html"><span class="dmicon"><Icon name="lucide:cloud" /></span> Verkada Command</a>
+          <a href="command-connector.html"><span class="dmicon"><Icon name="lucide:plug" /></span> Command Connector</a>
+          <a href="workplace.html"><span class="dmicon"><Icon name="lucide:building-2" /></span> Workplace</a>
+          <a href="connectivity.html"><span class="dmicon"><Icon name="lucide:radio-tower" /></span> Connectivity</a>
         </div>
       </li>
       <li class="nav-dropdown">
         <a href="managed-services.html">Managed IT</a>
         <div class="dropdown-menu">
-          <a href="managed-services.html"><span class="dmicon">🖥️</span> All Managed IT Services</a>
-          <a href="managed-services.html#"><span class="dmicon">📡</span> Remote Monitoring &amp; Management</a>
-          <a href="managed-services.html#"><span class="dmicon">🎧</span> Helpdesk Support</a>
-          <a href="managed-services.html#"><span class="dmicon">🔄</span> Patch Management</a>
-          <a href="managed-services.html#"><span class="dmicon">💾</span> Backup &amp; Disaster Recovery</a>
-          <a href="managed-services.html#"><span class="dmicon">☁️</span> Microsoft 365 Management</a>
-          <a href="managed-services.html#"><span class="dmicon">🌐</span> Network Management</a>
-          <a href="managed-services.html#"><span class="dmicon">🧠</span> Virtual CIO (vCIO)</a>
+          <a href="managed-services.html"><span class="dmicon"><Icon name="lucide:monitor" /></span> All Managed IT Services</a>
+          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:activity" /></span> Remote Monitoring &amp; Management</a>
+          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:headphones" /></span> Helpdesk Support</a>
+          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:refresh-cw" /></span> Patch Management</a>
+          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:database-backup" /></span> Backup &amp; Disaster Recovery</a>
+          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:cloud" /></span> Microsoft 365 Management</a>
+          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:globe" /></span> Network Management</a>
+          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:brain" /></span> Virtual CIO (vCIO)</a>
         </div>
       </li>
       <li class="nav-dropdown">
         <a href="cybersecurity.html">Coro</a>
         <div class="dropdown-menu">
-          <a href="cybersecurity.html"><span class="dmicon">🛡️</span> Coro Platform Overview</a>
-          <a href="coro-endpoint.html"><span class="dmicon">💻</span> Endpoint Protection</a>
-          <a href="coro-email.html"><span class="dmicon">📧</span> Email Security</a>
-          <a href="coro-cloud.html"><span class="dmicon">☁️</span> Cloud App Security</a>
-          <a href="coro-network.html"><span class="dmicon">🌐</span> Network Security</a>
-          <a href="coro-data.html"><span class="dmicon">📁</span> Data Governance</a>
-          <a href="coro-training.html"><span class="dmicon">🎓</span> Security Awareness Training</a>
+          <a href="cybersecurity.html"><span class="dmicon"><Icon name="lucide:shield" /></span> Coro Platform Overview</a>
+          <a href="coro-endpoint.html"><span class="dmicon"><Icon name="lucide:laptop" /></span> Endpoint Protection</a>
+          <a href="coro-email.html"><span class="dmicon"><Icon name="lucide:mail" /></span> Email Security</a>
+          <a href="coro-cloud.html"><span class="dmicon"><Icon name="lucide:cloud" /></span> Cloud App Security</a>
+          <a href="coro-network.html"><span class="dmicon"><Icon name="lucide:globe" /></span> Network Security</a>
+          <a href="coro-data.html"><span class="dmicon"><Icon name="lucide:folder-lock" /></span> Data Governance</a>
+          <a href="coro-training.html"><span class="dmicon"><Icon name="lucide:graduation-cap" /></span> Security Awareness Training</a>
         </div>
       </li>
       <li class="nav-dropdown">
         <a href="naas.html">Network as a Service</a>
         <div class="dropdown-menu">
-          <a href="naas.html"><span class="dmicon">🌐</span> NaaS Overview</a>
-          <a href="meter.html"><span class="dmicon">⚙️</span> Powered by Meter</a>
-          <a href="meter-switches.html"><span class="dmicon">🔀</span> Switches</a>
-          <a href="meter-access-points.html"><span class="dmicon">📶</span> Access Points</a>
-          <a href="meter-firewalls.html"><span class="dmicon">🔥</span> Firewalls</a>
-          <a href="meter-gateway.html"><span class="dmicon">📡</span> 5G Gateway</a>
-          <a href="meter-dashboard.html"><span class="dmicon">🖥️</span> Dashboard</a>
+          <a href="naas.html"><span class="dmicon"><Icon name="lucide:globe" /></span> NaaS Overview</a>
+          <a href="meter.html"><span class="dmicon"><Icon name="lucide:settings" /></span> Powered by Meter</a>
+          <a href="meter-switches.html"><span class="dmicon"><Icon name="lucide:network" /></span> Switches</a>
+          <a href="meter-access-points.html"><span class="dmicon"><Icon name="lucide:wifi" /></span> Access Points</a>
+          <a href="meter-firewalls.html"><span class="dmicon"><Icon name="lucide:flame" /></span> Firewalls</a>
+          <a href="meter-gateway.html"><span class="dmicon"><Icon name="lucide:radio-tower" /></span> 5G Gateway</a>
+          <a href="meter-dashboard.html"><span class="dmicon"><Icon name="lucide:layout-dashboard" /></span> Dashboard</a>
         </div>
       </li>
       <li class="nav-dropdown">
         <a href="huntress.html">Huntress</a>
         <div class="dropdown-menu">
-          <a href="huntress.html"><span class="dmicon">🎯</span> Huntress Overview</a>
-          <a href="huntress-edr.html"><span class="dmicon">💻</span> Managed EDR</a>
-          <a href="huntress-itdr.html"><span class="dmicon">🔐</span> Managed ITDR</a>
-          <a href="huntress-siem.html"><span class="dmicon">📊</span> Managed SIEM</a>
-          <a href="huntress-sat.html"><span class="dmicon">🎓</span> Security Awareness Training</a>
+          <a href="huntress.html"><span class="dmicon"><Icon name="lucide:target" /></span> Huntress Overview</a>
+          <a href="huntress-edr.html"><span class="dmicon"><Icon name="lucide:laptop" /></span> Managed EDR</a>
+          <a href="huntress-itdr.html"><span class="dmicon"><Icon name="lucide:lock-keyhole" /></span> Managed ITDR</a>
+          <a href="huntress-siem.html"><span class="dmicon"><Icon name="lucide:bar-chart-3" /></span> Managed SIEM</a>
+          <a href="huntress-sat.html"><span class="dmicon"><Icon name="lucide:graduation-cap" /></span> Security Awareness Training</a>
         </div>
       </li>
       <li class="nav-dropdown">
         <a href="spotai.html">spot.ai</a>
         <div class="dropdown-menu">
-          <a href="spotai.html"><span class="dmicon">📹</span> spot.ai Overview</a>
-          <a href="spotai-cameras.html"><span class="dmicon">📷</span> AI Cameras</a>
-          <a href="spotai-ivr.html"><span class="dmicon">💾</span> Intelligent Video Recorder</a>
-          <a href="spotai-video-intelligence.html"><span class="dmicon">🧠</span> Video Intelligence</a>
-          <a href="spotai-alerts.html"><span class="dmicon">🔔</span> Real-Time Alerts</a>
+          <a href="spotai.html"><span class="dmicon"><Icon name="lucide:video" /></span> spot.ai Overview</a>
+          <a href="spotai-cameras.html"><span class="dmicon"><Icon name="lucide:camera" /></span> AI Cameras</a>
+          <a href="spotai-ivr.html"><span class="dmicon"><Icon name="lucide:database" /></span> Intelligent Video Recorder</a>
+          <a href="spotai-video-intelligence.html"><span class="dmicon"><Icon name="lucide:brain" /></span> Video Intelligence</a>
+          <a href="spotai-alerts.html"><span class="dmicon"><Icon name="lucide:bell-ring" /></span> Real-Time Alerts</a>
         </div>
       </li>
       <li class="nav-dropdown">
         <a href="about.html">Company</a>
         <div class="dropdown-menu">
-          <a href="about.html"><span class="dmicon">🏢</span> About Blue Cap IT</a>
-          <a href="services.html"><span class="dmicon">🧰</span> Our Services</a>
-          <a href="blog.html"><span class="dmicon">📰</span> News &amp; Blog</a>
-          <a href="contact.html"><span class="dmicon">✉️</span> Contact Us</a>
+          <a href="about.html"><span class="dmicon"><Icon name="lucide:building-2" /></span> About Blue Cap IT</a>
+          <a href="services.html"><span class="dmicon"><Icon name="lucide:briefcase" /></span> Our Services</a>
+          <a href="blog.html"><span class="dmicon"><Icon name="lucide:newspaper" /></span> News &amp; Blog</a>
+          <a href="contact.html"><span class="dmicon"><Icon name="lucide:mail" /></span> Contact Us</a>
         </div>
       </li>
     </ul>

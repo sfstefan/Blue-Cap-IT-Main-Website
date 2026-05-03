@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Blue Cap IT | Managed IT, Cybersecurity, Verkada & Meter Networking" description="Blue Cap IT is a managed service provider, Verkada Gold Partner, Coro Partner, Huntress Partner, and Meter Partner. We deliver managed IT, cybersecurity, physical security, managed detection and response, and enterprise networking.">
 
@@ -50,37 +51,37 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:1000px;margin:0 auto;">
         <a href="managed-services.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid var(--elec);">
-          <div class="pcard-icon">🖥️</div>
+          <div class="pcard-icon"><Icon name="lucide:monitor" /></div>
           <h3>Managed IT</h3>
           <p>Your complete outsourced IT department. Helpdesk, monitoring, patching, backup, Microsoft 365, and vCIO services.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="cybersecurity.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #6366f1;">
-          <div class="pcard-icon">🛡️</div>
+          <div class="pcard-icon"><Icon name="lucide:shield" /></div>
           <h3>Coro Cybersecurity</h3>
           <p>All-in-one cybersecurity for SMBs. Endpoint, email, cloud, network, data governance, and security training.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="verkada.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #0a2540;">
-          <div class="pcard-icon">📷</div>
+          <div class="pcard-icon"><Icon name="lucide:camera" /></div>
           <h3>Verkada Security</h3>
           <p>Cloud-managed cameras, access control, sensors, alarms, intercoms, and more — all in one platform.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="huntress.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #00b4a0;">
-          <div class="pcard-icon">🎯</div>
+          <div class="pcard-icon"><Icon name="lucide:target" /></div>
           <h3>Huntress Security</h3>
           <p>24/7 SOC-backed EDR, identity threat detection, SIEM, and security awareness training.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="spotai.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #1a1a2e;">
-          <div class="pcard-icon">📹</div>
+          <div class="pcard-icon"><Icon name="lucide:video" /></div>
           <h3>spot.ai Video Intelligence</h3>
           <p>AI-powered video analytics, intelligent recording, and real-time alerts from your existing cameras.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="naas.html" class="product-card" style="text-decoration:none;color:inherit;border-top:3px solid #4a1d96;">
-          <div class="pcard-icon">🌐</div>
+          <div class="pcard-icon"><Icon name="lucide:globe" /></div>
           <h3>Network as a Service</h3>
           <p>Your entire network as one monthly subscription — switches, Wi-Fi 7, firewalls, 5G, install, and 24/7 management included. Zero upfront costs.</p>
           <span class="pcard-arrow">Learn more →</span>
@@ -102,22 +103,22 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:900px;margin:0 auto;">
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">📡</div>
+          <div class="pcard-icon"><Icon name="lucide:activity" /></div>
           <h3>Remote Monitoring</h3>
           <p>24/7 monitoring of your servers, workstations, and network devices with proactive alerts.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🎧</div>
+          <div class="pcard-icon"><Icon name="lucide:headphones" /></div>
           <h3>Helpdesk Support</h3>
           <p>Fast, friendly IT support from real people who know your systems and your business.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">💾</div>
+          <div class="pcard-icon"><Icon name="lucide:database-backup" /></div>
           <h3>Backup &amp; Recovery</h3>
           <p>Automated backups and disaster recovery planning to protect your critical data.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🧠</div>
+          <div class="pcard-icon"><Icon name="lucide:brain" /></div>
           <h3>Virtual CIO</h3>
           <p>Strategic IT planning, budgeting, and roadmaps — executive-level guidance without the executive-level salary.</p>
         </div>
@@ -144,25 +145,25 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:900px;margin:0 auto;">
         <a href="coro-endpoint.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">💻</div>
+          <div class="pcard-icon"><Icon name="lucide:laptop" /></div>
           <h3>Endpoint Protection</h3>
           <p>Next-gen antivirus and EDR for every device. Detects and remediates malware and ransomware automatically.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="coro-email.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">📧</div>
+          <div class="pcard-icon"><Icon name="lucide:mail" /></div>
           <h3>Email Security</h3>
           <p>Blocks phishing, business email compromise, and malware before they reach your inbox.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="coro-network.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🌐</div>
+          <div class="pcard-icon"><Icon name="lucide:globe" /></div>
           <h3>Network Security</h3>
           <p>Zero Trust Network Access, VPN, firewall, and DNS filtering to control who accesses what.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="cybersecurity.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🛡️</div>
+          <div class="pcard-icon"><Icon name="lucide:shield" /></div>
           <h3>Full Coro Platform</h3>
           <p>Cloud security, data governance, and security awareness training — see the complete platform.</p>
           <span class="pcard-arrow">See all Coro modules →</span>
@@ -190,25 +191,25 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:900px;margin:0 auto;">
         <a href="huntress-edr.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">💻</div>
+          <div class="pcard-icon"><Icon name="lucide:laptop" /></div>
           <h3>Managed EDR</h3>
           <p>24/7 endpoint detection and response. Behavioral analytics, automated remediation, and 8-minute mean time to respond.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="huntress-itdr.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🔐</div>
+          <div class="pcard-icon"><Icon name="lucide:lock-keyhole" /></div>
           <h3>Managed ITDR</h3>
           <p>Identity threat detection for M365 and Google Workspace. Stops account takeovers and BEC in 3 minutes.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="huntress-siem.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">📊</div>
+          <div class="pcard-icon"><Icon name="lucide:bar-chart-3" /></div>
           <h3>Managed SIEM</h3>
           <p>24/7 threat response and compliance reporting. Fully managed by SOC experts at a predictable price.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="huntress-sat.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🎓</div>
+          <div class="pcard-icon"><Icon name="lucide:graduation-cap" /></div>
           <h3>Security Awareness Training</h3>
           <p>Engaging, expert-backed training with hands-on simulations and gamification that make concepts stick.</p>
           <span class="pcard-arrow">Learn more →</span>
@@ -293,25 +294,25 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:900px;margin:0 auto;">
         <a href="spotai-cameras.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">📷</div>
+          <div class="pcard-icon"><Icon name="lucide:camera" /></div>
           <h3>AI Cameras</h3>
           <p>Premium IP cameras at no cost, or upgrade your existing cameras with AI. Fully camera-agnostic.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="spotai-ivr.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">💾</div>
+          <div class="pcard-icon"><Icon name="lucide:database" /></div>
           <h3>Intelligent Video Recorder</h3>
           <p>Purpose-built hardware with edge AI processing, 30-90 day storage, and support for up to 32 cameras.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="spotai-video-intelligence.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🧠</div>
+          <div class="pcard-icon"><Icon name="lucide:brain" /></div>
           <h3>Video Intelligence</h3>
           <p>AI-powered search, object detection, people counting, license plate recognition, and trend reporting.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="spotai-alerts.html" class="product-card" style="text-decoration:none;color:inherit;">
-          <div class="pcard-icon">🔔</div>
+          <div class="pcard-icon"><Icon name="lucide:bell-ring" /></div>
           <h3>Real-Time Alerts</h3>
           <p>Instant notifications for security incidents, safety violations, and custom triggers with video attached.</p>
           <span class="pcard-arrow">Learn more →</span>
@@ -341,42 +342,42 @@ import MainLayout from '../layouts/MainLayout.astro';
       <div class="products-grid">
         <a href="cameras.html" class="product-card" style="text-decoration:none;color:inherit;">
           <div class="pcard-tag">Verkada</div>
-          <div class="pcard-icon">📷</div>
+          <div class="pcard-icon"><Icon name="lucide:camera" /></div>
           <h3>Video Security Cameras</h3>
           <p>AI-powered cameras with built-in storage, cloud management, and advanced analytics — person detection, license plate recognition, and more.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="access-control.html" class="product-card" style="text-decoration:none;color:inherit;">
           <div class="pcard-tag">Verkada</div>
-          <div class="pcard-icon">🔑</div>
+          <div class="pcard-icon"><Icon name="lucide:key-round" /></div>
           <h3>Access Control</h3>
           <p>Cloud-managed door controllers, smart card readers, and mobile credentials. Grant, revoke, and audit access from anywhere.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="sensors.html" class="product-card" style="text-decoration:none;color:inherit;">
           <div class="pcard-tag">Verkada</div>
-          <div class="pcard-icon">🌡️</div>
+          <div class="pcard-icon"><Icon name="lucide:thermometer" /></div>
           <h3>Environmental Sensors</h3>
           <p>Monitor temperature, humidity, air quality, motion, and water leaks. Instant alerts and 90-day trends.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="alarms.html" class="product-card" style="text-decoration:none;color:inherit;">
           <div class="pcard-tag">Verkada</div>
-          <div class="pcard-icon">🚨</div>
+          <div class="pcard-icon"><Icon name="lucide:siren" /></div>
           <h3>Alarms &amp; Intrusion</h3>
           <p>Integrated alarm systems tied directly into your cameras and access control. One platform, complete coverage.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="intercom.html" class="product-card" style="text-decoration:none;color:inherit;">
           <div class="pcard-tag">Verkada</div>
-          <div class="pcard-icon">🔔</div>
+          <div class="pcard-icon"><Icon name="lucide:bell" /></div>
           <h3>Intercom &amp; Visitors</h3>
           <p>Video intercoms with remote unlock, two-way audio, and digital visitor check-in via the Verkada app.</p>
           <span class="pcard-arrow">Learn more →</span>
         </a>
         <a href="command.html" class="product-card" style="text-decoration:none;color:inherit;">
           <div class="pcard-tag">Verkada</div>
-          <div class="pcard-icon">☁️</div>
+          <div class="pcard-icon"><Icon name="lucide:cloud" /></div>
           <h3>Verkada Command</h3>
           <p>The unified cloud platform tying every Verkada device together. No VPNs, no servers — just a browser and a login.</p>
           <span class="pcard-arrow">Learn more →</span>
@@ -410,19 +411,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">★</div>
+            <div class="why-icon"><Icon name="lucide:star" /></div>
             <div><h4>Trusted Partnerships</h4><p>Verkada Gold Partner, Coro Partner, Huntress Partner, spot.ai Partner, and Meter Partner — factory-direct pricing, full product access, and manufacturer-backed support across all platforms.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔧</div>
+            <div class="why-icon"><Icon name="lucide:wrench" /></div>
             <div><h4>End-to-End Deployment</h4><p>We handle design, installation, configuration, cloud onboarding, and staff training — your team is productive from day one.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📋</div>
+            <div class="why-icon"><Icon name="lucide:clipboard-list" /></div>
             <div><h4>Ongoing Management</h4><p>We track renewals, manage subscriptions, push updates, and monitor your systems — so nothing falls through the cracks.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">⚡</div>
+            <div class="why-icon"><Icon name="lucide:zap" /></div>
             <div><h4>Fast, Responsive Support</h4><p>Call us at (410) 858-4031 or email <a href="mailto:info@bluecapit.com" style="color:var(--blue);">info@bluecapit.com</a> for fast, dedicated support from people who know your systems.</p></div>
           </li>
         </ul>

@@ -136,7 +136,8 @@ nav {
   padding: 0.55rem 0.85rem; border-radius: 6px; transition: all 0.14s;
 }
 .dropdown-menu a:hover { background: var(--elec-light); color: var(--elec); }
-.dropdown-menu .dmicon { font-size: 1rem; width: 22px; text-align:center; }
+.dropdown-menu .dmicon { font-size: 1rem; width: 22px; text-align:center; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
+.dropdown-menu .dmicon svg { width: 1rem; height: 1rem; color: var(--elec); }
 .nav-right { display: flex; align-items: center; gap: 0.4rem; flex-wrap: nowrap; flex-shrink: 0; }
 .nav-phone {
   color: var(--text-mid); font-size: 0.75rem; font-weight: 600;
@@ -267,7 +268,8 @@ section { padding: 6rem 4%; }
   box-shadow: var(--shadow-sm);
 }
 .why-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-top-color: var(--sky); }
-.why-icon { font-size: 1.9rem; margin-bottom: 1rem; }
+.why-icon { font-size: 1.9rem; margin-bottom: 1rem; line-height: 1; }
+.why-icon svg { width: 1.9rem; height: 1.9rem; color: var(--elec); display: inline-block; }
 .why-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
 .why-card p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.7; }
 
@@ -288,7 +290,8 @@ section { padding: 6rem 4%; }
 .product-card:hover::before { transform: scaleX(1); }
 .product-card:hover { border-color: var(--elec); box-shadow: var(--shadow-md); transform: translateY(-3px); }
 .pcard-tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky); margin-bottom: 0.8rem; }
-.pcard-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+.pcard-icon { font-size: 2rem; margin-bottom: 0.8rem; line-height: 1; }
+.pcard-icon svg { width: 2rem; height: 2rem; color: var(--elec); display: inline-block; }
 .product-card h3 { font-size: 1.1rem; color: var(--text); margin-bottom: 0.5rem; }
 .product-card p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.7; }
 .pcard-arrow { display:block; margin-top:1.2rem; font-size:0.82rem; font-weight:600; color:var(--elec); }
