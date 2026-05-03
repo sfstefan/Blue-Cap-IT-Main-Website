@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Meter Dashboard & Command | Blue Cap IT — Meter Partner" description="Meter Dashboard and Command give you real-time visibility and AI-powered control of your entire network. Custom dashboards, natural language controls, and collaborative tools — all in one platform.">
   <div class="inner-hero">
@@ -28,19 +29,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">📊</div>
+            <div class="why-icon"><Icon name="lucide:bar-chart-3" /></div>
             <div><h4>Real-Time Monitoring</h4><p>Live dashboards update in real time, showing device status, traffic patterns, client health, and network performance — always current, never stale.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🎯</div>
+            <div class="why-icon"><Icon name="lucide:target" /></div>
             <div><h4>Granular Control</h4><p>Configure VLANs, firewall rules, DNS settings, SSIDs, port assignments, and more — all from the dashboard without touching a CLI.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔔</div>
+            <div class="why-icon"><Icon name="lucide:bell-ring" /></div>
             <div><h4>Smart Alerts</h4><p>Customizable alerts notify your team of important network events — device outages, performance degradation, security incidents, and more.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">👥</div>
+            <div class="why-icon"><Icon name="lucide:users" /></div>
             <div><h4>Team Collaboration</h4><p>Share views, dashboards, and insights with team members or stakeholders. Everyone sees the same data — no silos, no miscommunication.</p></div>
           </li>
         </ul>
@@ -58,22 +59,22 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">💬</div>
+          <div class="pcard-icon"><Icon name="lucide:message-square" /></div>
           <h3>Natural Language</h3>
           <p>Ask "How many devices are on the guest network?" or "Show me bandwidth usage by floor" — Command understands and delivers.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">📈</div>
+          <div class="pcard-icon"><Icon name="lucide:trending-up" /></div>
           <h3>Custom Dashboards</h3>
           <p>Request a dashboard and Command builds it from scratch — drag-and-drop graphs, charts, tables, and metrics tailored to your needs.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">⚡</div>
+          <div class="pcard-icon"><Icon name="lucide:zap" /></div>
           <h3>Task Automation</h3>
           <p>Describe a task like "Block this device" or "Create a VLAN for IoT devices" and Command executes it — making real-time API calls on your behalf.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🖼️</div>
+          <div class="pcard-icon"><Icon name="lucide:image" /></div>
           <h3>Canvas View</h3>
           <p>A flexible, zoomable interface that lets you arrange network elements spatially. Understand complex topologies at a glance with visual organization.</p>
         </div>

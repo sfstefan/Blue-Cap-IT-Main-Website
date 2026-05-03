@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Email Security | Coro Cybersecurity — Blue Cap IT" description="Coro email security blocks phishing, business email compromise, malware, and spam before they reach your inbox. Works with Microsoft 365 and Google Workspace.">
   <div class="inner-hero">
@@ -26,19 +27,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🎣</div>
+            <div class="why-icon"><Icon name="lucide:fish" /></div>
             <div><h4>Anti-Phishing</h4><p>AI analyzes email content, sender reputation, and link destinations to catch phishing attempts — even sophisticated spear-phishing targeted at specific employees.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">👤</div>
+            <div class="why-icon"><Icon name="lucide:user" /></div>
             <div><h4>Impersonation Protection</h4><p>Detects business email compromise (BEC) where attackers impersonate executives, vendors, or trusted contacts to trick employees into transferring funds or sharing data.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📎</div>
+            <div class="why-icon"><Icon name="lucide:paperclip" /></div>
             <div><h4>Malware &amp; Attachment Scanning</h4><p>Every attachment is scanned and sandboxed before delivery. Malicious files are quarantined automatically — even zero-day threats.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔗</div>
+            <div class="why-icon"><Icon name="lucide:link" /></div>
             <div><h4>URL Protection</h4><p>Links in emails are checked in real time at the moment of click. If a link becomes malicious after delivery, Coro still blocks it.</p></div>
           </li>
         </ul>
@@ -54,32 +55,32 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid">
         <div class="product-card">
-          <div class="pcard-icon">🎣</div>
+          <div class="pcard-icon"><Icon name="lucide:fish" /></div>
           <h3>Phishing Prevention</h3>
           <p>AI-powered analysis of email content, headers, and sender behavior catches phishing attempts that basic spam filters miss.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">💼</div>
+          <div class="pcard-icon"><Icon name="lucide:briefcase" /></div>
           <h3>Business Email Compromise</h3>
           <p>Detects impersonation of executives and trusted contacts. Flags suspicious requests for wire transfers, gift cards, or credential sharing.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">🦠</div>
+          <div class="pcard-icon"><Icon name="lucide:bug" /></div>
           <h3>Malware Protection</h3>
           <p>Attachments are detonated in a secure sandbox. Malicious payloads are blocked before they reach any endpoint.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">📤</div>
+          <div class="pcard-icon"><Icon name="lucide:upload" /></div>
           <h3>Outbound DLP</h3>
           <p>Monitors outgoing emails for sensitive data — credit card numbers, social security numbers, health records — and prevents accidental or malicious data leaks.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">🔍</div>
+          <div class="pcard-icon"><Icon name="lucide:search" /></div>
           <h3>Quarantine &amp; Review</h3>
           <p>Suspicious emails are quarantined for admin review. Users can request release of false positives directly from the quarantine digest.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">☁️</div>
+          <div class="pcard-icon"><Icon name="lucide:cloud" /></div>
           <h3>M365 &amp; Google Integration</h3>
           <p>Connects directly to Microsoft 365 and Google Workspace via API — no MX record changes, no mail flow disruptions, no downtime during setup.</p>
         </div>

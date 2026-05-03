@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Meter Firewalls | Blue Cap IT — Meter Partner" description="Meter's in-house designed firewalls provide enterprise-grade network security with automatic failover, deep integration, and cloud management. No complexity, no extra vendors.">
   <div class="inner-hero">
@@ -27,19 +28,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🔄</div>
+            <div class="why-icon"><Icon name="lucide:refresh-cw" /></div>
             <div><h4>Automatic Failover</h4><p>Redundant firewall pairs ensure your network stays protected even if one unit goes down. Failover happens automatically — no manual intervention, no downtime.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔒</div>
+            <div class="why-icon"><Icon name="lucide:lock" /></div>
             <div><h4>Deep Packet Inspection</h4><p>Inspect traffic at the application layer to detect and block threats, malware, and unauthorized activity before it reaches your network.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🌐</div>
+            <div class="why-icon"><Icon name="lucide:globe" /></div>
             <div><h4>DNS Security</h4><p>Block malicious domains and filter web traffic at the DNS level — stopping threats before they even establish a connection.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔑</div>
+            <div class="why-icon"><Icon name="lucide:key-round" /></div>
             <div><h4>VPN &amp; SD-WAN</h4><p>Secure site-to-site and remote access VPN built into the firewall. SD-WAN capabilities route traffic intelligently across multiple WAN connections.</p></div>
           </li>
         </ul>
@@ -102,22 +103,22 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🛡️</div>
+          <div class="pcard-icon"><Icon name="lucide:shield" /></div>
           <h3>Stateful Firewall</h3>
           <p>Track and control all network connections with stateful inspection. Define granular rules for what traffic is allowed in and out.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🌐</div>
+          <div class="pcard-icon"><Icon name="lucide:globe" /></div>
           <h3>DNS Filtering</h3>
           <p>Block access to malicious, phishing, and unwanted domains at the network level — protecting every device without installing agents.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🔐</div>
+          <div class="pcard-icon"><Icon name="lucide:lock-keyhole" /></div>
           <h3>VPN Access</h3>
           <p>Secure remote access for employees working from anywhere. Site-to-site VPN connects branch offices over encrypted tunnels.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🚦</div>
+          <div class="pcard-icon"><Icon name="lucide:traffic-cone" /></div>
           <h3>Traffic Shaping</h3>
           <p>Prioritize business-critical applications and limit bandwidth hogs. Ensure your most important traffic always gets through.</p>
         </div>

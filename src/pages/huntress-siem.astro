@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Managed SIEM | Huntress Security Information & Event Management — Blue Cap IT" description="Huntress Managed SIEM delivers 24/7 threat response and compliance reporting without the complexity of traditional SIEMs. Fully managed by SOC experts at a predictable price. Deployed by Blue Cap IT.">
   <div class="inner-hero">
@@ -26,19 +27,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">📊</div>
+            <div class="why-icon"><Icon name="lucide:bar-chart-3" /></div>
             <div><h4>Centralized Log Management</h4><p>Collect and correlate security logs from across your environment — endpoints, cloud apps, identity providers, and network devices — in one place.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔍</div>
+            <div class="why-icon"><Icon name="lucide:search" /></div>
             <div><h4>24/7 Threat Detection</h4><p>SOC analysts monitor your logs around the clock, identifying threats that span multiple systems and would be invisible to individual security tools.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📋</div>
+            <div class="why-icon"><Icon name="lucide:clipboard-list" /></div>
             <div><h4>Compliance Reporting</h4><p>Meet compliance requirements for frameworks like HIPAA, PCI-DSS, SOC 2, and cyber insurance with built-in reporting and log retention.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">💰</div>
+            <div class="why-icon"><Icon name="lucide:wallet" /></div>
             <div><h4>Predictable Pricing</h4><p>No surprise ingestion fees or per-GB charges. Simple, transparent pricing based on your data sources — not your data volume.</p></div>
           </li>
         </ul>
@@ -55,22 +56,22 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🏥</div>
+          <div class="pcard-icon"><Icon name="lucide:hospital" /></div>
           <h3>HIPAA</h3>
           <p>Centralized audit logging and threat monitoring to satisfy HIPAA security requirements for healthcare organizations.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">💳</div>
+          <div class="pcard-icon"><Icon name="lucide:credit-card" /></div>
           <h3>PCI-DSS</h3>
           <p>Log collection, monitoring, and reporting capabilities that support PCI-DSS compliance for payment processing.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🔒</div>
+          <div class="pcard-icon"><Icon name="lucide:lock" /></div>
           <h3>SOC 2</h3>
           <p>Continuous monitoring and incident response documentation to demonstrate SOC 2 security controls.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">📄</div>
+          <div class="pcard-icon"><Icon name="lucide:file-text" /></div>
           <h3>Cyber Insurance</h3>
           <p>Satisfy cyber insurance requirements with 24/7 monitoring, log retention, and documented incident response capabilities.</p>
         </div>

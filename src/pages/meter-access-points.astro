@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Meter Access Points | Blue Cap IT — Meter Partner" description="Meter Wi-Fi 7 access points deliver blazing-fast wireless with tri-band radios and custom circuitry. The A1 for high-demand offices and A2 for hospitality — fully managed as a service.">
   <div class="inner-hero">
@@ -25,7 +26,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:800px;margin:0 auto;">
         <div class="product-card">
-          <div class="pcard-icon">📶</div>
+          <div class="pcard-icon"><Icon name="lucide:wifi" /></div>
           <h3>A1 — Premium Indoor AP</h3>
           <p>The A1 is Meter's premium access point, designed for high-demand indoor environments where performance is critical. Conference rooms, open offices, co-working spaces, and trading floors.</p>
           <ul style="margin-top:1rem;padding-left:1.2rem;font-size:0.92rem;color:var(--muted);">
@@ -38,7 +39,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           </ul>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">📶</div>
+          <div class="pcard-icon"><Icon name="lucide:wifi" /></div>
           <h3>A2 — Hospitality AP</h3>
           <p>The A2 delivers the same Wi-Fi 7 performance as the A1 in a form factor designed for hospitality environments. Hotels, restaurants, lobbies, and guest-facing spaces where aesthetics and simple installation matter.</p>
           <ul style="margin-top:1rem;padding-left:1.2rem;font-size:0.92rem;color:var(--muted);">
@@ -65,19 +66,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">⚡</div>
+            <div class="why-icon"><Icon name="lucide:zap" /></div>
             <div><h4>Wi-Fi 7 Performance</h4><p>The latest wireless standard delivers dramatically faster speeds, lower latency, and better performance in crowded environments compared to Wi-Fi 6/6E.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔬</div>
+            <div class="why-icon"><Icon name="lucide:microscope" /></div>
             <div><h4>Custom Radio Isolation</h4><p>Meter's proprietary circuitry design ensures strict isolation between 5 GHz and 6 GHz bands — eliminating cross-band interference for cleaner, faster connections.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔄</div>
+            <div class="why-icon"><Icon name="lucide:refresh-cw" /></div>
             <div><h4>Seamless Roaming</h4><p>Move between floors and zones without drops. Meter's software coordinates handoffs between APs so devices stay connected as people move through your space.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📊</div>
+            <div class="why-icon"><Icon name="lucide:bar-chart-3" /></div>
             <div><h4>Real-Time Analytics</h4><p>See connected devices, signal strength, channel utilization, and client health — all in real time through the Meter Dashboard.</p></div>
           </li>
         </ul>

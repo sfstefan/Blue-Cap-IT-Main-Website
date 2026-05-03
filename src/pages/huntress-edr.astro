@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Managed EDR | Huntress Endpoint Detection & Response — Blue Cap IT" description="Huntress Managed EDR provides 24/7 endpoint detection and response backed by a world-class SOC. Behavioral analytics, automated remediation, and an 8-minute mean time to respond — deployed by Blue Cap IT.">
   <div class="inner-hero">
@@ -26,19 +27,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🔍</div>
+            <div class="why-icon"><Icon name="lucide:search" /></div>
             <div><h4>Behavioral Detection</h4><p>Machine learning identifies suspicious behavior patterns — not just known malware signatures. Catches zero-day threats, fileless attacks, and advanced persistent threats.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">⚡</div>
+            <div class="why-icon"><Icon name="lucide:zap" /></div>
             <div><h4>8-Minute MTTR</h4><p>Industry-leading mean time to respond. Threats are isolated, contained, and remediated in minutes — before hackers can move laterally through your network.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">👤</div>
+            <div class="why-icon"><Icon name="lucide:user" /></div>
             <div><h4>Human-Validated Analysis</h4><p>Every alert is reviewed by a real SOC analyst. No alert fatigue, no false positive overload — only confirmed threats that require action.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🖥️</div>
+            <div class="why-icon"><Icon name="lucide:monitor" /></div>
             <div><h4>Lightweight Agent</h4><p>A small, efficient agent captures process execution data for deep endpoint visibility without impacting system performance.</p></div>
           </li>
         </ul>
@@ -55,32 +56,32 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🛡️</div>
+          <div class="pcard-icon"><Icon name="lucide:shield" /></div>
           <h3>Threat Prevention</h3>
           <p>Block known malware and malicious files before they execute on your endpoints.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🔬</div>
+          <div class="pcard-icon"><Icon name="lucide:microscope" /></div>
           <h3>Threat Hunting</h3>
           <p>Proactive threat hunting identifies hidden attackers that bypass traditional security tools.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🔒</div>
+          <div class="pcard-icon"><Icon name="lucide:lock" /></div>
           <h3>Endpoint Isolation</h3>
           <p>Compromised endpoints are automatically isolated from the network to prevent lateral movement.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🔄</div>
+          <div class="pcard-icon"><Icon name="lucide:refresh-cw" /></div>
           <h3>Auto-Remediation</h3>
           <p>Malicious processes are killed, persistence mechanisms are removed, and endpoints are cleaned — automatically.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🖥️</div>
+          <div class="pcard-icon"><Icon name="lucide:monitor" /></div>
           <h3>Windows, Mac &amp; Linux</h3>
           <p>Full coverage across all major operating systems. Protect every endpoint in your environment.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">📋</div>
+          <div class="pcard-icon"><Icon name="lucide:clipboard-list" /></div>
           <h3>Incident Reports</h3>
           <p>Clear, detailed reports for every incident — what happened, what was done, and what to monitor going forward.</p>
         </div>

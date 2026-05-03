@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Video Intelligence | spot.ai Analytics & Search — Blue Cap IT" description="spot.ai Video Intelligence uses deep learning to search, analyze, and extract insights from your camera footage. Object detection, people counting, license plate recognition, and trend reporting — all AI-powered.">
   <div class="inner-hero">
@@ -26,19 +27,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🔍</div>
+            <div class="why-icon"><Icon name="lucide:search" /></div>
             <div><h4>Natural Language Search</h4><p>Search your video footage using plain English — "red truck in parking lot" or "person at back door after 10pm." spot.ai finds it instantly.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">👥</div>
+            <div class="why-icon"><Icon name="lucide:users" /></div>
             <div><h4>People Counting &amp; Traffic</h4><p>Automatically count people entering and exiting locations. Track foot traffic patterns, peak hours, and occupancy trends over time.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🚗</div>
+            <div class="why-icon"><Icon name="lucide:car" /></div>
             <div><h4>License Plate Recognition</h4><p>Automatically read and log license plates from your camera footage. Search by plate number to find specific vehicles across all your cameras.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📈</div>
+            <div class="why-icon"><Icon name="lucide:trending-up" /></div>
             <div><h4>Trend Reporting</h4><p>AI-generated reports on traffic patterns, safety incidents, operational metrics, and anomalies — delivered automatically to your dashboard.</p></div>
           </li>
         </ul>

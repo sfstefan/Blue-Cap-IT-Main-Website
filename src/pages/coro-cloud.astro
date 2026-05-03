@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Cloud App Security | Coro Cybersecurity — Blue Cap IT" description="Coro cloud app security monitors and protects your cloud applications — Microsoft 365, Google Workspace, Slack, Salesforce, and more. Detects unauthorized access and data leaks.">
   <div class="inner-hero">
@@ -26,19 +27,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🔍</div>
+            <div class="why-icon"><Icon name="lucide:search" /></div>
             <div><h4>Shadow IT Discovery</h4><p>Discover every third-party app connected to your environment — even ones IT didn't approve. Revoke risky app permissions with one click.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🚨</div>
+            <div class="why-icon"><Icon name="lucide:siren" /></div>
             <div><h4>Anomaly Detection</h4><p>AI monitors login patterns, file access, and user behavior to spot compromised accounts, insider threats, and unusual data movement.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📂</div>
+            <div class="why-icon"><Icon name="lucide:folder-lock" /></div>
             <div><h4>File Sharing Controls</h4><p>Monitor and control how files are shared externally. Get alerts when sensitive files are shared publicly or with unauthorized recipients.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔐</div>
+            <div class="why-icon"><Icon name="lucide:lock-keyhole" /></div>
             <div><h4>Access Governance</h4><p>Track who has access to what across all your cloud apps. Identify over-privileged accounts and inactive users that pose a security risk.</p></div>
           </li>
         </ul>
@@ -54,32 +55,32 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid">
         <div class="product-card">
-          <div class="pcard-icon">☁️</div>
+          <div class="pcard-icon"><Icon name="lucide:cloud" /></div>
           <h3>Microsoft 365</h3>
           <p>Full protection for Exchange Online, SharePoint, OneDrive, and Teams. Monitor file sharing, detect account compromise, and control third-party app access.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">📧</div>
+          <div class="pcard-icon"><Icon name="lucide:mail" /></div>
           <h3>Google Workspace</h3>
           <p>Secure Gmail, Google Drive, and the full Google Workspace suite. Detect unauthorized access, data exfiltration, and risky third-party integrations.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">💬</div>
+          <div class="pcard-icon"><Icon name="lucide:message-square" /></div>
           <h3>Slack &amp; Collaboration Tools</h3>
           <p>Monitor messaging platforms for sensitive data sharing, unauthorized file uploads, and suspicious user activity.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">📊</div>
+          <div class="pcard-icon"><Icon name="lucide:bar-chart-3" /></div>
           <h3>Salesforce &amp; Business Apps</h3>
           <p>Protect CRM data and business-critical applications. Control access, monitor data exports, and detect anomalous behavior.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">🔗</div>
+          <div class="pcard-icon"><Icon name="lucide:link" /></div>
           <h3>Third-Party App Control</h3>
           <p>Discover and manage every OAuth-connected app in your environment. Revoke access to risky or unapproved applications instantly.</p>
         </div>
         <div class="product-card">
-          <div class="pcard-icon">📋</div>
+          <div class="pcard-icon"><Icon name="lucide:clipboard-list" /></div>
           <h3>Activity Audit Logs</h3>
           <p>Complete audit trail of all cloud activity. Search, filter, and export logs for compliance reporting and incident investigation.</p>
         </div>

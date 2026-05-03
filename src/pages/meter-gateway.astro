@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Meter 5G Gateway | Blue Cap IT — Meter Partner" description="Meter's 5G Gateway provides cellular ISP failover, out-of-band management, and up to 1200Mbps throughput over 5G. Keep your network online even when your primary ISP goes down.">
   <div class="inner-hero">
@@ -28,19 +29,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">📡</div>
+            <div class="why-icon"><Icon name="lucide:radio-tower" /></div>
             <div><h4>5G Cellular Connectivity</h4><p>Up to 1200Mbps throughput over 5G. Fast enough to keep your business running at full speed even without a wired ISP connection.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔄</div>
+            <div class="why-icon"><Icon name="lucide:refresh-cw" /></div>
             <div><h4>Automatic ISP Failover</h4><p>When your primary internet goes down, the Gateway detects the outage and switches to 5G automatically — no manual intervention, no downtime.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔧</div>
+            <div class="why-icon"><Icon name="lucide:wrench" /></div>
             <div><h4>Out-of-Band Management</h4><p>Meter can remotely access, diagnose, and fix your network over the cellular connection — even when your main internet is completely offline.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🏔️</div>
+            <div class="why-icon"><Icon name="lucide:mountain" /></div>
             <div><h4>Rugged &amp; Reliable</h4><p>Built to operate in harsh and rugged environments. The Gateway is designed for remote sites, construction locations, warehouses, and outdoor deployments.</p></div>
           </li>
         </ul>
@@ -58,22 +59,22 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🏢</div>
+          <div class="pcard-icon"><Icon name="lucide:building-2" /></div>
           <h3>Primary ISP Backup</h3>
           <p>Add a 5G backup to any office or facility. If your wired ISP goes down, the Gateway keeps your business online automatically.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🏗️</div>
+          <div class="pcard-icon"><Icon name="lucide:layers" /></div>
           <h3>Remote &amp; Temporary Sites</h3>
           <p>Construction sites, pop-up locations, and temporary offices where running fiber isn't practical. Get enterprise networking over 5G.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🏭</div>
+          <div class="pcard-icon"><Icon name="lucide:factory" /></div>
           <h3>Warehouses &amp; Facilities</h3>
           <p>Large facilities where wired connectivity is unreliable or expensive to extend. The Gateway provides coverage where cables can't reach.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🏪</div>
+          <div class="pcard-icon"><Icon name="lucide:store" /></div>
           <h3>Retail &amp; Branch Offices</h3>
           <p>Multi-location businesses that need guaranteed uptime at every site. Keep point-of-sale, security cameras, and operations running 24/7.</p>
         </div>

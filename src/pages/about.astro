@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="About Blue Cap IT | Managed IT, Cybersecurity & Verkada Gold Partner" description="Blue Cap IT is a full-service managed IT provider, Verkada Gold Partner, Coro cybersecurity partner, and Meter networking partner. Learn about our team, mission, and approach to IT services.">
   <div class="inner-hero">
@@ -29,27 +30,27 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🖥️</div>
+            <div class="why-icon"><Icon name="lucide:monitor" /></div>
             <div><h4>Managed Service Provider</h4><p>We serve as your complete outsourced IT department — remote monitoring, helpdesk, patch management, backup, Microsoft 365, network management, and vCIO services.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🛡️</div>
+            <div class="why-icon"><Icon name="lucide:shield" /></div>
             <div><h4>Coro Cybersecurity Partner</h4><p>As a Coro Partner, we deploy and manage all-in-one cybersecurity — endpoint protection, email security, cloud app security, network protection, and security awareness training.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">★</div>
+            <div class="why-icon"><Icon name="lucide:star" /></div>
             <div><h4>Verkada Gold Partner</h4><p>Official Verkada Gold Partner status — full product catalog, partner pricing, manufacturer warranties, and technical support for physical security solutions.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📍</div>
+            <div class="why-icon"><Icon name="lucide:map-pin" /></div>
             <div><h4>Local, Responsive Service</h4><p>We're local. Our team provides the hands-on support and quick response times that remote providers simply can't match.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🤝</div>
+            <div class="why-icon"><Icon name="lucide:handshake" /></div>
             <div><h4>Relationship-Driven Support</h4><p>When you call (410) 858-4031 or email <a href="mailto:info@bluecapit.com" style="color:var(--blue);">info@bluecapit.com</a>, you reach a real person who knows your system. We build long-term partnerships, not just one-time transactions.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔒</div>
+            <div class="why-icon"><Icon name="lucide:lock" /></div>
             <div><h4>Security-First Mindset</h4><p>We understand that physical security is serious. We approach every project with the rigor, care, and professionalism that protecting your people and assets demands.</p></div>
           </li>
         </ul>
@@ -81,12 +82,12 @@ import MainLayout from '../layouts/MainLayout.astro';
         <img src="/meter/Meter-purple.png" alt="Meter Partner" style="height:32px;width:auto;"/>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.2rem;max-width:900px;margin:0 auto;">
-        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;">🥇</div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Verkada Gold Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">Physical Security Platform</div></div>
-        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;">🛡️</div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Coro Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">All-in-One Cybersecurity</div></div>
-        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;">🎯</div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Huntress Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">24/7 Managed Security</div></div>
-        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;">📹</div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">spot.ai Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">AI Video Intelligence</div></div>
-        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;">🌐</div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Meter Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">Enterprise Networking</div></div>
-        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;">🖥️</div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Managed Services</div><div style="font-size:0.8rem;color:var(--text-muted);">Complete IT Management</div></div>
+        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:medal" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Verkada Gold Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">Physical Security Platform</div></div>
+        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:shield" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Coro Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">All-in-One Cybersecurity</div></div>
+        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:target" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Huntress Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">24/7 Managed Security</div></div>
+        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:video" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">spot.ai Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">AI Video Intelligence</div></div>
+        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:globe" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Meter Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">Enterprise Networking</div></div>
+        <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:monitor" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Managed Services</div><div style="font-size:0.8rem;color:var(--text-muted);">Complete IT Management</div></div>
       </div>
     </div>
   </section>

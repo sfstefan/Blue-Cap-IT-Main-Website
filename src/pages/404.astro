@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Page Not Found | Blue Cap IT" description="The page you're looking for doesn't exist. Browse our managed IT, cybersecurity, physical security, and networking solutions.">
   <div class="inner-hero">
@@ -21,32 +22,32 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));max-width:900px;margin:0 auto;">
         <a href="managed-services.html" class="product-card" style="text-decoration:none;color:inherit;text-align:center;">
-          <div class="pcard-icon">🖥️</div>
+          <div class="pcard-icon"><Icon name="lucide:monitor" /></div>
           <h3>Managed IT</h3>
           <span class="pcard-arrow">View services →</span>
         </a>
         <a href="cybersecurity.html" class="product-card" style="text-decoration:none;color:inherit;text-align:center;">
-          <div class="pcard-icon">🛡️</div>
+          <div class="pcard-icon"><Icon name="lucide:shield" /></div>
           <h3>Coro Cybersecurity</h3>
           <span class="pcard-arrow">View solutions →</span>
         </a>
         <a href="huntress.html" class="product-card" style="text-decoration:none;color:inherit;text-align:center;">
-          <div class="pcard-icon">🎯</div>
+          <div class="pcard-icon"><Icon name="lucide:target" /></div>
           <h3>Huntress Security</h3>
           <span class="pcard-arrow">View solutions →</span>
         </a>
         <a href="verkada.html" class="product-card" style="text-decoration:none;color:inherit;text-align:center;">
-          <div class="pcard-icon">📷</div>
+          <div class="pcard-icon"><Icon name="lucide:camera" /></div>
           <h3>Verkada Security</h3>
           <span class="pcard-arrow">View products →</span>
         </a>
         <a href="spotai.html" class="product-card" style="text-decoration:none;color:inherit;text-align:center;">
-          <div class="pcard-icon">📹</div>
+          <div class="pcard-icon"><Icon name="lucide:video" /></div>
           <h3>spot.ai Video</h3>
           <span class="pcard-arrow">View solutions →</span>
         </a>
         <a href="meter.html" class="product-card" style="text-decoration:none;color:inherit;text-align:center;">
-          <div class="pcard-icon">🌐</div>
+          <div class="pcard-icon"><Icon name="lucide:globe" /></div>
           <h3>Meter Networking</h3>
           <span class="pcard-arrow">View products →</span>
         </a>

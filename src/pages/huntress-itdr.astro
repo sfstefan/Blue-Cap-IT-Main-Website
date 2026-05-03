@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Managed ITDR | Huntress Identity Threat Detection & Response — Blue Cap IT" description="Huntress Managed ITDR detects and stops identity-based threats in Microsoft 365 and Google Workspace. Account takeovers, business email compromise, and unauthorized logins — stopped in 3 minutes.">
   <div class="inner-hero">
@@ -26,19 +27,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🔐</div>
+            <div class="why-icon"><Icon name="lucide:lock-keyhole" /></div>
             <div><h4>Account Takeover Detection</h4><p>Detects compromised accounts, suspicious logins from new locations, impossible travel scenarios, and credential theft — then locks attackers out.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📧</div>
+            <div class="why-icon"><Icon name="lucide:mail" /></div>
             <div><h4>Business Email Compromise</h4><p>Catches attackers who gain access to email accounts and attempt to redirect payments, steal data, or impersonate executives.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">⚡</div>
+            <div class="why-icon"><Icon name="lucide:zap" /></div>
             <div><h4>3-Minute Response Time</h4><p>Huntress ITDR has a 3-minute mean time to respond — stopping identity threats before attackers can do meaningful damage.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🚫</div>
+            <div class="why-icon"><Icon name="lucide:ban" /></div>
             <div><h4>Rogue App Detection</h4><p>Identifies unauthorized OAuth apps and shadow workflows that attackers use to maintain persistent access to your cloud environment.</p></div>
           </li>
         </ul>
@@ -54,22 +55,22 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <div class="products-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🎣</div>
+          <div class="pcard-icon"><Icon name="lucide:fish" /></div>
           <h3>Phishing Attacks</h3>
           <p>Detect and respond to successful phishing attempts that bypass email filters and compromise user credentials.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">👤</div>
+          <div class="pcard-icon"><Icon name="lucide:user" /></div>
           <h3>Account Takeovers</h3>
           <p>Identify when attackers gain access to legitimate accounts and attempt to use them for malicious purposes.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">🌐</div>
+          <div class="pcard-icon"><Icon name="lucide:globe" /></div>
           <h3>AitM Attacks</h3>
           <p>Stop Adversary-in-the-Middle attacks where hackers intercept authentication tokens to bypass MFA.</p>
         </div>
         <div class="product-card" style="text-align:center;">
-          <div class="pcard-icon">📱</div>
+          <div class="pcard-icon"><Icon name="lucide:smartphone" /></div>
           <h3>Shadow Workflows</h3>
           <p>Find and remove unauthorized mail rules, forwarding rules, and OAuth apps attackers use for persistence.</p>
         </div>

@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Real-Time Alerts | spot.ai Notifications & Monitoring — Blue Cap IT" description="spot.ai delivers real-time alerts for security incidents, safety violations, and operational anomalies. Custom triggers, instant notifications, and AI-powered event detection across all your cameras.">
   <div class="inner-hero">
@@ -26,19 +27,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">🔔</div>
+            <div class="why-icon"><Icon name="lucide:bell-ring" /></div>
             <div><h4>Instant Notifications</h4><p>Get alerts via email, SMS, or mobile app the moment an event is detected — with a video clip attached so you can verify immediately.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">⚙️</div>
+            <div class="why-icon"><Icon name="lucide:settings" /></div>
             <div><h4>Custom Triggers</h4><p>Define your own alert rules — people in restricted zones, vehicles in loading docks after hours, PPE violations, or any custom scenario your business needs.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">⚠️</div>
+            <div class="why-icon"><Icon name="lucide:alert-triangle" /></div>
             <div><h4>Safety Monitoring</h4><p>Automatically detect safety violations, slip-and-fall events, and hazardous conditions — helping you prevent injuries before they happen.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📊</div>
+            <div class="why-icon"><Icon name="lucide:bar-chart-3" /></div>
             <div><h4>Alert Analytics</h4><p>Track alert frequency, response times, and trends over time. Identify recurring issues and measure the impact of your interventions.</p></div>
           </li>
         </ul>

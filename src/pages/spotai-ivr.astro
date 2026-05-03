@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 <MainLayout title="Intelligent Video Recorder | spot.ai IVR — Blue Cap IT" description="The spot.ai Intelligent Video Recorder combines hardware, software, and AI analytics in one appliance. Supports up to 32 cameras with 30-90 day local storage, deep-learning models, and hybrid cloud access.">
   <div class="inner-hero">
@@ -26,19 +27,19 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <ul class="why-list">
           <li class="why-item">
-            <div class="why-icon">💾</div>
+            <div class="why-icon"><Icon name="lucide:database" /></div>
             <div><h4>30-90 Day Local Storage</h4><p>Built-in NVR redundancy with 30, 60, or 90-day local storage options. Your footage is always available, even if internet goes down.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">📷</div>
+            <div class="why-icon"><Icon name="lucide:camera" /></div>
             <div><h4>Up to 32 Cameras</h4><p>Each IVR appliance supports up to 32 cameras — and scales seamlessly across multiple appliances for larger deployments.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🧠</div>
+            <div class="why-icon"><Icon name="lucide:brain" /></div>
             <div><h4>Edge AI Processing</h4><p>Deep-learning models run directly on the IVR — no cloud dependency for real-time detection, classification, and alerting.</p></div>
           </li>
           <li class="why-item">
-            <div class="why-icon">🔧</div>
+            <div class="why-icon"><Icon name="lucide:wrench" /></div>
             <div><h4>Zero-Touch Setup</h4><p>Auto-discovers cameras on the network, ingests video streams, and begins AI indexing immediately. No manual configuration required.</p></div>
           </li>
         </ul>
