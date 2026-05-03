@@ -530,6 +530,8 @@ footer {
   transition: color 0.15s;
 }
 .mobile-nav a:hover { color: var(--elec); }
+.mobile-nav a svg { width: 1.1em; height: 1.1em; vertical-align: -0.18em; margin-right: 0.5rem; color: var(--elec); }
+.btn-ghost svg, .btn-primary svg { width: 1em; height: 1em; vertical-align: -0.125em; margin-right: 0.4rem; }
 .mobile-nav .mobile-section-title {
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.13em;
   text-transform: uppercase; color: var(--text-muted);
