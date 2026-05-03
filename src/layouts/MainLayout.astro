@@ -33,7 +33,7 @@ import { Icon } from 'astro-icon/components';
   <link rel="icon" href="/icon.svg" type="image/svg+xml"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
   <!-- Schema.org Organization -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -42,10 +42,10 @@ import { Icon } from 'astro-icon/components';
     "url": "https://bluecapit.com",
     "telephone": "+1-410-858-4031",
     "email": "info@bluecapit.com",
-    "description": "Managed IT services, cybersecurity, physical security, and enterprise networking solutions. Verkada Gold Partner, Coro Partner, and Meter Partner.",
+    "description": "Boutique managed IT partner serving Maryland businesses. Managed IT, Network as a Service, cybersecurity, physical security, and AI video intelligence. Verkada Gold Partner, Coro Partner, Huntress Partner, spot.ai Partner, and Meter Partner.",
     "image": "https://bluecapit.com/images/BLUECAPTwitter.jpg",
     "areaServed": "United States",
-    "serviceType": ["Managed IT Services", "Cybersecurity", "Physical Security", "Enterprise Networking"]
+    "serviceType": ["Managed IT Services", "Network as a Service", "Cybersecurity", "Managed Detection and Response", "Physical Security", "AI Video Intelligence"]
   })}></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN39P8Z2HR"></script>
@@ -82,13 +82,13 @@ import { Icon } from 'astro-icon/components';
         <a href="managed-services.html">Managed IT</a>
         <div class="dropdown-menu">
           <a href="managed-services.html"><span class="dmicon"><Icon name="lucide:monitor" /></span> All Managed IT Services</a>
-          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:activity" /></span> Remote Monitoring &amp; Management</a>
-          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:headphones" /></span> Helpdesk Support</a>
-          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:refresh-cw" /></span> Patch Management</a>
-          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:database-backup" /></span> Backup &amp; Disaster Recovery</a>
-          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:cloud" /></span> Microsoft 365 Management</a>
-          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:globe" /></span> Network Management</a>
-          <a href="managed-services.html#"><span class="dmicon"><Icon name="lucide:brain" /></span> Virtual CIO (vCIO)</a>
+          <a href="managed-services.html#rmm"><span class="dmicon"><Icon name="lucide:activity" /></span> Remote Monitoring &amp; Management</a>
+          <a href="managed-services.html#helpdesk"><span class="dmicon"><Icon name="lucide:headphones" /></span> Helpdesk Support</a>
+          <a href="managed-services.html#patching"><span class="dmicon"><Icon name="lucide:refresh-cw" /></span> Patch Management</a>
+          <a href="managed-services.html#backup"><span class="dmicon"><Icon name="lucide:database-backup" /></span> Backup &amp; Disaster Recovery</a>
+          <a href="managed-services.html#microsoft-365"><span class="dmicon"><Icon name="lucide:cloud" /></span> Microsoft 365 Management</a>
+          <a href="managed-services.html#network"><span class="dmicon"><Icon name="lucide:globe" /></span> Network Management</a>
+          <a href="managed-services.html#vcio"><span class="dmicon"><Icon name="lucide:brain" /></span> Virtual CIO (vCIO)</a>
         </div>
       </li>
       <li class="nav-dropdown">
@@ -146,7 +146,7 @@ import { Icon } from 'astro-icon/components';
     <a href="tel:4108584031" class="nav-phone"><Icon name="lucide:phone" /> (410) 858-4031</a>
     <a href="mailto:info@bluecapit.com" class="nav-phone" style="font-size:0.78rem;"><Icon name="lucide:mail" /> info@bluecapit.com</a>
     <a href="blog.html#subscribe" class="nav-subscribe">Subscribe to News</a>
-    <a href="contact.html" class="nav-cta">Free Quote</a>
+    <a href="contact.html" class="nav-cta">Get a Free Quote</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -169,11 +169,11 @@ import { Icon } from 'astro-icon/components';
   <a href="connectivity.html"><Icon name="lucide:radio-tower" /> Connectivity</a>
   <span class="mobile-section-title">Managed IT</span>
   <a href="managed-services.html"><Icon name="lucide:monitor" /> All Managed IT Services</a>
-  <a href="managed-services.html"><Icon name="lucide:activity" /> Remote Monitoring</a>
-  <a href="managed-services.html"><Icon name="lucide:headphones" /> Helpdesk Support</a>
-  <a href="managed-services.html"><Icon name="lucide:database-backup" /> Backup & Disaster Recovery</a>
-  <a href="managed-services.html"><Icon name="lucide:cloud" /> Microsoft 365</a>
-  <a href="managed-services.html"><Icon name="lucide:brain" /> Virtual CIO (vCIO)</a>
+  <a href="managed-services.html#rmm"><Icon name="lucide:activity" /> Remote Monitoring</a>
+  <a href="managed-services.html#helpdesk"><Icon name="lucide:headphones" /> Helpdesk Support</a>
+  <a href="managed-services.html#backup"><Icon name="lucide:database-backup" /> Backup & Disaster Recovery</a>
+  <a href="managed-services.html#microsoft-365"><Icon name="lucide:cloud" /> Microsoft 365</a>
+  <a href="managed-services.html#vcio"><Icon name="lucide:brain" /> Virtual CIO (vCIO)</a>
   <span class="mobile-section-title">Cybersecurity</span>
   <a href="cybersecurity.html"><Icon name="lucide:shield" /> Coro Platform Overview</a>
   <a href="coro-endpoint.html"><Icon name="lucide:laptop" /> Endpoint Protection</a>
@@ -229,14 +229,14 @@ import { Icon } from 'astro-icon/components';
           <h5 style="color:#fff;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;font-family:'Sora',sans-serif;font-weight:700;border-bottom:2px solid var(--elec);display:inline-block;padding-bottom:0.4rem;">Strategic Partnerships</h5>
         </div>
         <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;">
-          <a href="verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Authorized Reseller" style="height:36px;width:auto;"/></a>
-          <a href="cybersecurity.html"><img src="/Coro/coro-partner-transparent.png" alt="Coro Official Partner" style="height:60px;width:auto;"/></a>
-          <img src="/Channel_Select_87px_225_BW.png" alt="Cisco Select Partner" style="height:52px;width:auto;"/>
-          <img src="/MicrosoftSilverPartnerLogo.png" alt="Microsoft Silver Partner" style="height:52px;width:auto;"/>
-          <img src="/cisco-meraki-logo.png" alt="Cisco Meraki" style="height:40px;width:auto;"/>
-          <a href="meter.html"><img src="/meter/Meter.png" alt="Meter Network Partner" style="height:40px;width:auto;"/></a>
-          <a href="huntress.html"><img src="/Huntress/huntress-logo-teal.png" alt="Huntress Partner" style="height:36px;width:auto;"/></a>
-          <a href="spotai.html"><img src="/spotai/spotai-logo-white.png" alt="spot.ai Partner" style="height:36px;width:auto;"/></a>
+          <a href="verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Authorized Reseller — physical security platform partner" style="height:36px;width:auto;"/></a>
+          <a href="cybersecurity.html"><img src="/Coro/coro-partner-transparent.png" alt="Coro Official Partner — all-in-one cybersecurity" style="height:60px;width:auto;"/></a>
+          <img src="/Channel_Select_87px_225_BW.png" alt="Cisco Select Partner badge" style="height:52px;width:auto;"/>
+          <img src="/MicrosoftSilverPartnerLogo.png" alt="Microsoft Silver Partner badge" style="height:52px;width:auto;"/>
+          <img src="/cisco-meraki-logo.png" alt="Cisco Meraki networking partner" style="height:40px;width:auto;"/>
+          <a href="meter.html"><img src="/meter/Meter.png" alt="Meter Network Partner — Network as a Service" style="height:40px;width:auto;"/></a>
+          <a href="huntress.html"><img src="/Huntress/huntress-logo-teal.png" alt="Huntress Partner — 24/7 managed security" style="height:36px;width:auto;"/></a>
+          <a href="spotai.html"><img src="/spotai/spotai-logo-white.png" alt="spot.ai Partner — AI video intelligence" style="height:36px;width:auto;"/></a>
         </div>
       </div>
       <div class="footer-col">

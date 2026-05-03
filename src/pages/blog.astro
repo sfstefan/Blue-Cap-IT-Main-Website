@@ -26,9 +26,12 @@ const posts = (await getCollection('blog')).sort(
         </div>
         <form class="subscribe-form" id="subscribeForm">
           <div class="subscribe-fields">
-            <input type="text" name="firstName" placeholder="Your Name *" required />
-            <input type="text" name="companyName" placeholder="Company Name" />
-            <input type="email" name="email" placeholder="Email Address *" required />
+            <label for="subscribe-firstName" class="sr-only">Your Name</label>
+            <input id="subscribe-firstName" type="text" name="firstName" placeholder="Your Name *" required />
+            <label for="subscribe-companyName" class="sr-only">Company Name</label>
+            <input id="subscribe-companyName" type="text" name="companyName" placeholder="Company Name" />
+            <label for="subscribe-email" class="sr-only">Email Address</label>
+            <input id="subscribe-email" type="email" name="email" placeholder="Email Address *" required />
           </div>
           <button type="submit" class="btn-primary">Subscribe</button>
           <p class="subscribe-note">No spam, ever. Unsubscribe anytime.</p>

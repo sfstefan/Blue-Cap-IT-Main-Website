@@ -314,15 +314,6 @@ section { padding: 6rem 4%; }
 }
 .gold-partner-band .gold-sub { font-size: 0.84rem; color: rgba(255,255,255,0.6); margin-top: 0.2rem; }
 
-/* ─── VERKADA GOLD SECTION inline ─── */
-.verkada-gold-section {
-  display: flex; align-items: center; gap: 1.5rem;
-  background: #000; border: 2px solid var(--gold);
-  border-radius: 10px; padding: 1.3rem 1.7rem; margin-top: 2rem;
-}
-.verkada-gold-section p { color: rgba(255,255,255,0.7); font-size: 0.87rem; line-height: 1.65; }
-.verkada-gold-section strong { color: var(--gold); }
-
 /* ─── CTA BAND ─── */
 .cta-band {
   background: #0A1220;
@@ -692,7 +683,6 @@ footer {
   .hero-btns { flex-wrap: wrap; }
   .why-grid > div { text-align: center; }
   .why-grid .btn-primary, .why-grid .btn-ghost { width: auto; }
-  .verkada-gold-section { flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
 }
 
 @media (max-width: 600px) {
@@ -826,6 +816,19 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 /* ─── FOOTER CONTRAST FIX ─── */
 footer p, footer li a, .footer-col ul li a {
   color: rgba(255,255,255,0.68);
+}
+
+/* ─── SR-ONLY UTILITY (visually hidden, available to screen readers) ─── */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 /* ─── PRINT STYLES ─── */
