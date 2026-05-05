@@ -32,6 +32,18 @@
   status = 200
   force = true
 
+[[redirects]]
+  from = "https://bluecap-it.org/*"
+  to = "/cousin-org.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.bluecap-it.org/*"
+  to = "/cousin-org.html"
+  status = 200
+  force = true
+
 # Case-insensitive redirects for the Network as a Service page.
 # Netlify URL matching is case-sensitive by default, so common
 # acronym capitalizations of /naas all redirect to the canonical

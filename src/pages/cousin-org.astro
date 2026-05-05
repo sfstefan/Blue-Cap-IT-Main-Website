@@ -1,0 +1,317 @@
+---
+const contactEmail = "scott@bluecap-it.org";
+const mainSite = "https://www.bluecapit.com";
+// Assets load from the primary domain so the cousin-domain catch-all rewrite doesn't intercept them.
+const asset = (path: string) => `${mainSite}${path}`;
+const partners = [
+  { name: "Verkada Gold Partner", src: asset("/images/verkada-partner.png"), href: `${mainSite}/verkada.html`, cls: "partner-verkada" },
+  { name: "Cisco Meraki",          src: asset("/cisco-meraki-logo.png"),        href: `${mainSite}/`,             cls: "partner-meraki"  },
+  { name: "Meter",                 src: asset("/meter/Meter-purple.png"),        href: `${mainSite}/meter.html`,   cls: "partner-meter"   },
+  { name: "Coro",                  src: asset("/Coro/coro-logo-wide-indigo.png"), href: `${mainSite}/cybersecurity.html`, cls: "partner-coro"  },
+  { name: "Huntress",              src: asset("/Huntress/huntress-logo-teal.png"), href: `${mainSite}/huntress.html`, cls: "partner-huntress" },
+  { name: "Spot AI",               src: asset("/spotai/spotai-logo.png"),         href: `${mainSite}/spotai.html`, cls: "partner-spotai"  },
+  { name: "Microsoft Silver Partner", src: asset("/MicrosoftSilverPartnerLogo.png"), href: `${mainSite}/managed-services.html`, cls: "partner-microsoft" },
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blue Cap IT</title>
+  <meta name="description" content="Blue Cap IT — IT services, cybersecurity, and physical security for businesses."/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="canonical" href="https://www.bluecapit.com/"/>
+  <link rel="icon" href={asset("/favicon.ico")} sizes="any"/>
+  <link rel="icon" href={asset("/icon.svg")} type="image/svg+xml"/>
+  <link rel="apple-touch-icon" href={asset("/apple-touch-icon.png")}/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style is:inline>
+    :root {
+      --elec: #062A78;
+      --elec-dark: #041D55;
+      --sky: #3C9BED;
+      --text: #0A1530;
+      --text-mid: #1E3458;
+      --text-muted: #4D6590;
+      --text-soft: #6B7BA6;
+      --border: #C5D6EC;
+      --surface: #F0F4FC;
+      --surface-2: #E4ECF8;
+      --white: #FFFFFF;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--elec); text-decoration: none; }
+    a:hover { color: var(--sky); text-decoration: underline; }
+
+    .header {
+      border-bottom: 2.5px solid var(--elec);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header img { height: 56px; width: auto; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    /* ─── Hero (matches bluecapit.com main-site treatment) ─── */
+    h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.85rem, 4.2vw, 2.7rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .grad {
+      background: linear-gradient(110deg, var(--elec) 0%, var(--sky) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .lede {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.03rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--elec);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .services {
+      list-style: none;
+      margin-bottom: 3rem;
+    }
+    .services li {
+      padding: 0.6rem 0;
+      font-size: 1rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--surface);
+    }
+    .services li:last-child { border-bottom: none; }
+
+    /* ─── Partner row ─── */
+    .partners { margin-bottom: 3rem; }
+    .partner-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem 2.25rem;
+      padding: 0.75rem 0;
+    }
+    .partner-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      padding: 0 0.25rem;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      opacity: 0.85;
+      text-decoration: none;
+    }
+    .partner-link:hover { opacity: 1; transform: translateY(-1px); }
+    .partner-link img {
+      max-height: 100%;
+      width: auto;
+      max-width: 150px;
+      object-fit: contain;
+      filter: saturate(0.95);
+    }
+    .partner-verkada    img { max-height: 26px; max-width: 170px; }
+    .partner-meraki     img { max-height: 36px; max-width: 130px; }
+    .partner-meter      img { max-height: 30px; max-width: 110px; }
+    .partner-coro       img { max-height: 30px; max-width: 130px; }
+    .partner-huntress   img { max-height: 28px; max-width: 130px; }
+    .partner-spotai     img { max-height: 30px; max-width: 110px; }
+    .partner-microsoft  img { max-height: 56px; max-width: 90px; }
+
+    /* ─── Contact card ─── */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.25rem 2rem 2rem;
+      margin-bottom: 3rem;
+    }
+    .contact-card h2 {
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem 2rem;
+      margin-bottom: 2rem;
+    }
+    .contact-item .contact-label {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.55rem;
+    }
+    .contact-item .contact-value {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--elec);
+      letter-spacing: -0.01em;
+      word-break: break-word;
+    }
+    .contact-item .contact-value:hover { color: var(--sky); }
+
+    .contact-address {
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border);
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-mid);
+    }
+    .contact-address .addr-label {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.55rem;
+      display: block;
+    }
+    .contact-address .org {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ─── Closing handoff ─── */
+    .handoff {
+      margin-top: 3rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .handoff p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .handoff a {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--elec);
+      letter-spacing: -0.005em;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .handoff a:hover {
+      color: var(--sky);
+      border-bottom-color: var(--sky);
+    }
+
+    @media (max-width: 540px) {
+      .header img { height: 44px; }
+      main { padding: 2.5rem 1.25rem 2rem; }
+      .partner-row { gap: 1rem 1.5rem; }
+      .partner-link { height: 40px; }
+      .partner-verkada    img { max-height: 22px; max-width: 140px; }
+      .partner-microsoft  img { max-height: 48px; max-width: 78px; }
+      .contact-card { padding: 1.5rem 1.25rem 1.25rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+      .contact-item .contact-value { font-size: 1.1rem; }
+      .handoff { padding: 1.5rem 1rem; }
+      .handoff a { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src={asset("/logo.svg")} alt="Blue Cap IT"/>
+  </header>
+
+  <main>
+    <h1><span class="grad">IT services, cybersecurity, and physical security</span> for businesses of all sizes.</h1>
+    <p class="lede">We help small and mid-sized organizations modernize their networks, protect against cyber threats, and secure their physical premises through partnerships with industry-leading vendors.</p>
+
+    <h2>What we do</h2>
+    <ul class="services">
+      <li>Managed IT and IT consulting</li>
+      <li>Cybersecurity</li>
+      <li>Cloud-managed networking</li>
+      <li>Physical security and surveillance</li>
+    </ul>
+
+    <section class="partners">
+      <h2>Industry Partners</h2>
+      <div class="partner-row">
+        {partners.map((p) => (
+          <a class={`partner-link ${p.cls}`} href={p.href} aria-label={p.name}>
+            <img src={p.src} alt={p.name} loading="lazy"/>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="contact-card">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-label">Phone</div>
+          <a class="contact-value" href="tel:+14108584031">410-858-4031</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
+          <a class="contact-value" href={`mailto:${contactEmail}`}>{contactEmail}</a>
+        </div>
+      </div>
+      <div class="contact-address">
+        <span class="addr-label">Mailing Address</span>
+        <span class="org">Blue Cap IT Enterprises Corporation</span>
+        2631 Housley Road #1072<br/>
+        Annapolis, MD 21401
+      </div>
+    </section>
+
+    <div class="handoff">
+      <p>For full services, case studies, and additional information, visit our main site:</p>
+      <a href="https://www.bluecapit.com">www.bluecapit.com →</a>
+    </div>
+  </main>
+</body>
+</html>

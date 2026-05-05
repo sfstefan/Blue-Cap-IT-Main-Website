@@ -6,7 +6,7 @@ export default defineConfig({
   site: 'https://bluecapit.com',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/cousin-com') && !page.includes('/cousin-net'),
+      filter: (page) => !page.includes('/cousin-com') && !page.includes('/cousin-net') && !page.includes('/cousin-org'),
     }),
     icon(),
   ],
