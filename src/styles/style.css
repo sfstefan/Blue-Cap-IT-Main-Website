@@ -1235,7 +1235,7 @@ footer p, footer li a, .footer-col ul li a {
 }
 
 .bcit-faq__item summary:hover {
-  color: var(--sky);
+  color: #1e6091;
 }
 
 .bcit-faq__item summary::after {
@@ -1246,7 +1246,7 @@ footer p, footer li a, .footer-col ul li a {
   transform: translateY(-50%);
   font-size: 1.8rem;
   font-weight: 400;
-  color: var(--sky);
+  color: #1e6091;
   transition: transform 0.2s ease;
   line-height: 1;
 }
@@ -1257,7 +1257,7 @@ footer p, footer li a, .footer-col ul li a {
 }
 
 .bcit-faq__item[open] summary {
-  color: var(--sky);
+  color: #1e6091;
 }
 
 .bcit-faq__answer {
@@ -1277,7 +1277,7 @@ footer p, footer li a, .footer-col ul li a {
 }
 
 .bcit-faq__answer a {
-  color: var(--sky);
+  color: #1e6091;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -1290,7 +1290,7 @@ footer p, footer li a, .footer-col ul li a {
   margin-top: 2.5rem;
   padding: 1.5rem 1.75rem;
   background: #f7fafc;
-  border-left: 4px solid var(--sky);
+  border-left: 4px solid #1e6091;
   border-radius: 4px;
 }
 
