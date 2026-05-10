@@ -2,9 +2,10 @@
 interface Props {
   title: string;
   description?: string;
+  schema?: object;
 }
 
-const { title, description } = Astro.props;
+const { title, description, schema } = Astro.props;
 
 import '../styles/style.css';
 import { Icon } from 'astro-icon/components';
@@ -47,6 +48,7 @@ import { Icon } from 'astro-icon/components';
     "areaServed": "United States",
     "serviceType": ["Managed IT Services", "Network as a Service", "Cybersecurity", "Managed Detection and Response", "Physical Security", "AI Video Intelligence"]
   })}></script>
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>}
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN39P8Z2HR"></script>
   <script is:inline>
