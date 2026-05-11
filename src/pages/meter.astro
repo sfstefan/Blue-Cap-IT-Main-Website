@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Meter, and how is it different from a traditional networking vendor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Meter is a vertically integrated networking company — they design and manufacture their own switches, Wi-Fi access points, firewalls, and 5G gateways, and they pair the hardware with their own AI-powered management software called Meter Command. Traditional networking vendors (Cisco, Aruba, Juniper, Ubiquiti) sell you boxes and leave configuration, monitoring, and upgrades to you. Meter delivers the hardware, the software, the install, and the ongoing operations as one subscription — so you don't have to assemble pieces from five different vendors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did Blue Cap IT partner with Meter specifically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Meter is purpose-built for the way mid-sized businesses actually run networks — Wi-Fi 7 ready, AI-managed, and delivered as a subscription rather than a capital purchase. Their hardware is silent and compact (designed for offices, not data centers), their dashboard uses natural language instead of CLI commands, and their support engineers know the hardware because Meter built it. As a Meter Partner, Blue Cap IT layers local on-site service, design consulting, and a single point of contact on top of the platform — so you get Meter's technology with a Maryland team that answers the phone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What hardware does Meter actually design and build?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Meter's full hardware stack includes the S-Series switches (24-port, 48-port, and core models with PoE++, 2.5GbE, and 25Gbps uplinks), A-Series Wi-Fi 7 access points (A1 for high-density offices and A2 for hospitality), F-Series firewalls with automatic failover and deep packet inspection, and P-Series 5G cellular gateways for failover and out-of-band management. Every component is designed in-house and engineered to work together natively — no integration headaches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Meter Command, and how does the AI dashboard work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Meter Command is the AI-powered web dashboard that manages your entire network through natural language. Instead of clicking through twenty menus to find a stat, you ask a question like \"show me Wi-Fi performance for the conference room last week\" and Command builds the dashboard on the fly. It also troubleshoots issues, identifies devices, suggests configuration changes, and handles routine policy updates. Blue Cap IT manages Command on your behalf — you get the visibility, we handle the operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We already have networking gear — can we keep it, or do we have to start over?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You don't have to start over. Meter has a hardware buyback program that credits the residual value of your existing switches, access points, and firewalls toward your subscription — so you're not eating the cost of unused gear. We typically migrate in phases: install Meter alongside your current network, validate performance, then retire the old equipment as we go. Call (410) 858-4031 and we'll walk through a transition plan for your specific environment."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Meter Networking | Blue Cap IT — Meter Partner" description="Blue Cap IT partners with Meter to deliver full-stack enterprise networking as a service. Custom-built hardware, AI-powered dashboard, ISP management, and hands-free network operations — all on a simple monthly subscription.">
+<MainLayout title="Meter Networking | Blue Cap IT — Meter Partner" description="Blue Cap IT partners with Meter to deliver full-stack enterprise networking as a service. Custom-built hardware, AI-powered dashboard, ISP management, and hands-free network operations — all on a simple monthly subscription." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> Networking</div>
@@ -150,6 +197,51 @@ import { Icon } from 'astro-icon/components';
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:1rem;box-shadow:0 8px 32px rgba(0,0,0,0.3);">
         <iframe src="https://www.youtube.com/embed/btlIwjNmKQQ" title="Meter's full-stack solution: how it works" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="meter-faq-heading">
+    <h2 id="meter-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Meter networking from Blue Cap IT — purpose-built switches, Wi-Fi 7 access points, firewalls, 5G gateways, and the AI-powered Meter Command dashboard — for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is Meter, and how is it different from a traditional networking vendor?</summary>
+      <div class="bcit-faq__answer">
+        <p>Meter is a vertically integrated networking company — they design and manufacture their own switches, Wi-Fi access points, firewalls, and 5G gateways, and they pair the hardware with their own AI-powered management software called Meter Command. Traditional networking vendors (Cisco, Aruba, Juniper, Ubiquiti) sell you boxes and leave configuration, monitoring, and upgrades to you. Meter delivers the hardware, the software, the install, and the ongoing operations as one subscription — so you don't have to assemble pieces from five different vendors.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Why did Blue Cap IT partner with Meter specifically?</summary>
+      <div class="bcit-faq__answer">
+        <p>Meter is purpose-built for the way mid-sized businesses actually run networks — Wi-Fi 7 ready, AI-managed, and delivered as a subscription rather than a capital purchase. Their hardware is silent and compact (designed for offices, not data centers), their dashboard uses natural language instead of CLI commands, and their support engineers know the hardware because Meter built it. As a Meter Partner, Blue Cap IT layers local on-site service, design consulting, and a single point of contact on top of the platform — so you get Meter's technology with a Maryland team that answers the phone.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What hardware does Meter actually design and build?</summary>
+      <div class="bcit-faq__answer">
+        <p>Meter's full hardware stack includes the S-Series switches (24-port, 48-port, and core models with PoE++, 2.5GbE, and 25Gbps uplinks), A-Series Wi-Fi 7 access points (A1 for high-density offices and A2 for hospitality), F-Series firewalls with automatic failover and deep packet inspection, and P-Series 5G cellular gateways for failover and out-of-band management. Every component is designed in-house and engineered to work together natively — no integration headaches.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What is Meter Command, and how does the AI dashboard work?</summary>
+      <div class="bcit-faq__answer">
+        <p>Meter Command is the AI-powered web dashboard that manages your entire network through natural language. Instead of clicking through twenty menus to find a stat, you ask a question like "show me Wi-Fi performance for the conference room last week" and Command builds the dashboard on the fly. It also troubleshoots issues, identifies devices, suggests configuration changes, and handles routine policy updates. Blue Cap IT manages Command on your behalf — you get the visibility, we handle the operations.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>We already have networking gear — can we keep it, or do we have to start over?</summary>
+      <div class="bcit-faq__answer">
+        <p>You don't have to start over. Meter has a hardware buyback program that credits the residual value of your existing switches, access points, and firewalls toward your subscription — so you're not eating the cost of unused gear. We typically migrate in phases: install Meter alongside your current network, validate performance, then retire the old equipment as we go. Call (410) 858-4031 and we'll walk through a transition plan for your specific environment.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free network assessment</a> — we'll evaluate your current network, model a Meter subscription for your environment, and walk through the migration path if you have existing gear.</p>
     </div>
   </section>
 
