@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kinds of events can spot.ai actually detect and alert me on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A wide range, configurable per camera and zone. Security events: people in restricted areas after hours, perimeter intrusions, tailgating at access-controlled doors, vehicles in no-park zones, repeated visits to a location overnight. Safety events: PPE violations (missing hard hats, vests, masks), slip-and-fall incidents, forklift safety violations, hazardous conditions like spills. Operational events: vehicles idling too long, queue length exceeding thresholds, occupancy in spaces exceeding limits, deliveries arriving outside scheduled windows. Custom triggers: anything you can describe — \"alert me when more than three people gather at the loading dock between 6 PM and 6 AM\" works as a rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are alerts delivered, and can I route different alerts to different people?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alerts deliver via email, SMS text message, mobile push notification through the spot.ai app, and direct integrations with Slack, Microsoft Teams, and other tools. Routing is fully configurable: high-priority security events can page the security manager and on-call IT staff; routine PPE alerts can go to the safety supervisor; operational anomalies can land in a department-specific Slack channel. Each alert includes the relevant video clip attached, so whoever receives it can verify the event without having to log into the dashboard separately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Won't I get flooded with alerts — how does spot.ai avoid alert fatigue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alert fatigue is the failure mode that kills most video analytics deployments. spot.ai avoids it three ways. First, rules are tuned per camera and zone with sensitivity dialed for your environment — not generic defaults. Second, the AI's accuracy on mainstream detections is high enough that false positives are uncommon to begin with. Third, you can group similar events, set cooldowns to prevent duplicate alerts for the same incident, and route low-priority detections to a dashboard digest instead of paging someone. We tune the rules with you in the first weeks after deployment so the alerts you actually receive are the ones that need response."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can spot.ai alerts integrate with my existing systems like Slack, Teams, or my alarm panel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Native integrations include Slack, Microsoft Teams, email, SMS, and webhooks for custom systems. The webhook option means almost any platform you use — ticketing systems, alarm dispatch, paging services, custom dashboards — can receive spot.ai alerts. For physical security integrations, spot.ai works alongside your access control and alarm panels; a detected event can trigger camera recording on connected systems, log to your incident management platform, or push to your central station monitoring service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly are alerts delivered after an event happens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Within seconds of the event for the standard delivery channels. Because spot.ai's AI processing happens locally on the Intelligent Video Recorder, detection is near-instantaneous; the alert is generated within a second or two of the event being captured, and the notification reaches the configured channels (push, SMS, email, Slack) over the next few seconds depending on the network. The video clip attached to the alert is ready by the time the notification arrives, so reviewers can verify the event immediately rather than waiting on cloud processing."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Real-Time Alerts | spot.ai Notifications & Monitoring — Blue Cap IT" description="spot.ai delivers real-time alerts for security incidents, safety violations, and operational anomalies. Custom triggers, instant notifications, and AI-powered event detection across all your cameras.">
+<MainLayout title="Real-Time Alerts | spot.ai Notifications & Monitoring — Blue Cap IT" description="spot.ai delivers real-time alerts for security incidents, safety violations, and operational anomalies. Custom triggers, instant notifications, and AI-powered event detection across all your cameras." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/spotai/spotai-logo.png" alt="spot.ai" style="max-height:50px;width:auto;margin-bottom:1.5rem;"/>
@@ -45,6 +92,51 @@ import { Icon } from 'astro-icon/components';
           </li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="spotai-alerts-faq-heading">
+    <h2 id="spotai-alerts-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about spot.ai real-time alerts from Blue Cap IT — AI-powered event detection, custom triggers, multi-channel notification routing, and integrations with Slack, Teams, and security systems for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What kinds of events can spot.ai actually detect and alert me on?</summary>
+      <div class="bcit-faq__answer">
+        <p>A wide range, configurable per camera and zone. Security events: people in restricted areas after hours, perimeter intrusions, tailgating at access-controlled doors, vehicles in no-park zones, repeated visits to a location overnight. Safety events: PPE violations (missing hard hats, vests, masks), slip-and-fall incidents, forklift safety violations, hazardous conditions like spills. Operational events: vehicles idling too long, queue length exceeding thresholds, occupancy in spaces exceeding limits, deliveries arriving outside scheduled windows. Custom triggers: anything you can describe — "alert me when more than three people gather at the loading dock between 6 PM and 6 AM" works as a rule.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How are alerts delivered, and can I route different alerts to different people?</summary>
+      <div class="bcit-faq__answer">
+        <p>Alerts deliver via email, SMS text message, mobile push notification through the spot.ai app, and direct integrations with Slack, Microsoft Teams, and other tools. Routing is fully configurable: high-priority security events can page the security manager and on-call IT staff; routine PPE alerts can go to the safety supervisor; operational anomalies can land in a department-specific Slack channel. Each alert includes the relevant video clip attached, so whoever receives it can verify the event without having to log into the dashboard separately.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Won't I get flooded with alerts — how does spot.ai avoid alert fatigue?</summary>
+      <div class="bcit-faq__answer">
+        <p>Alert fatigue is the failure mode that kills most video analytics deployments. spot.ai avoids it three ways. First, rules are tuned per camera and zone with sensitivity dialed for your environment — not generic defaults. Second, the AI's accuracy on mainstream detections is high enough that false positives are uncommon to begin with. Third, you can group similar events, set cooldowns to prevent duplicate alerts for the same incident, and route low-priority detections to a dashboard digest instead of paging someone. We tune the rules with you in the first weeks after deployment so the alerts you actually receive are the ones that need response.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can spot.ai alerts integrate with my existing systems like Slack, Teams, or my alarm panel?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Native integrations include Slack, Microsoft Teams, email, SMS, and webhooks for custom systems. The webhook option means almost any platform you use — ticketing systems, alarm dispatch, paging services, custom dashboards — can receive spot.ai alerts. For physical security integrations, spot.ai works alongside your access control and alarm panels; a detected event can trigger camera recording on connected systems, log to your incident management platform, or push to your central station monitoring service.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How quickly are alerts delivered after an event happens?</summary>
+      <div class="bcit-faq__answer">
+        <p>Within seconds of the event for the standard delivery channels. Because spot.ai's AI processing happens locally on the Intelligent Video Recorder, detection is near-instantaneous; the alert is generated within a second or two of the event being captured, and the notification reaches the configured channels (push, SMS, email, Slack) over the next few seconds depending on the network. The video clip attached to the alert is ready by the time the notification arrives, so reviewers can verify the event immediately rather than waiting on cloud processing.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free alerts assessment</a> — we'll discuss what events matter most to your business, configure the right triggers and routing, and quote spot.ai with itemized pricing.</p>
     </div>
   </section>
 
