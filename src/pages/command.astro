@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Verkada Command, and how do I access it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verkada Command is the cloud platform that unifies every Verkada device — cameras, access control, alarms, sensors, intercoms, visitor management — in one browser-based dashboard. You access it at command.verkada.com from any modern browser, with no VPN, no port forwarding, and no client software to install. The same dashboard works on a desktop, a tablet, or a phone, and there are dedicated iOS and Android mobile apps for live view, playback, and remote unlock on the go."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Verkada Command included with the cameras, or do I pay separately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Command is included with every Verkada device license. When you buy a camera, door controller, or sensor, you pay an annual or multi-year license per device that covers cloud storage, software updates, AI analytics, the Command dashboard, mobile app access, and warranty. There's no separate per-user fee, no extra charge for the platform, and no Command tier upsell. Adding more users to your organization doesn't add cost — the license is per device, not per seat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does user management work — can I limit what each person sees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in detail. Command supports custom roles with granular permissions, so you can give the office manager full access to one site while limiting a department head to only their floor's cameras. Permissions can be set per camera, per door, per location, and per function (live view only, archive access, user management, etc.). Every admin action is logged in an audit trail — who logged in, what they viewed, what they changed, when. The mobile app respects the same permissions as the web dashboard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Verkada Command integrate with our identity provider — Okta, Azure AD, or Google Workspace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Command supports SAML 2.0 SSO with all major identity providers including Okta, Microsoft Entra ID (formerly Azure AD), and Google Workspace. This means employees sign in with their work credentials and lose access automatically when they leave the company — no separate Command password to revoke. Multi-factor authentication is enforced through your IdP, and provisioning rules can be managed centrally. Blue Cap IT handles the SSO integration during onboarding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Verkada handle data security and uptime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Command is hosted on a hardened cloud infrastructure with end-to-end encryption for data in transit and at rest, regular third-party penetration testing, and a 99.9% uptime SLA from Verkada. Footage is encrypted on the camera, encrypted in transit, and encrypted in cloud storage. Verkada is SOC 2 Type II certified and meets compliance standards required by healthcare, education, finance, and government clients. If something does go wrong, your cameras keep recording locally and your access control keeps functioning — Command going offline doesn't take down the physical security itself."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Verkada Command Platform | Blue Cap IT — Gold Partner" description="Verkada Command is the unified cloud platform for managing cameras, access control, sensors, alarms, and intercoms from one dashboard. No servers, no VPNs — deployed by Blue Cap IT.">
+<MainLayout title="Verkada Command Platform | Blue Cap IT — Gold Partner" description="Verkada Command is the unified cloud platform for managing cameras, access control, sensors, alarms, and intercoms from one dashboard. No servers, no VPNs — deployed by Blue Cap IT." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <a href="verkada.html">Verkada Solutions</a> <span>/</span> Verkada Command</div>
@@ -81,6 +128,51 @@ import { Icon } from 'astro-icon/components';
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:1rem;box-shadow:0 8px 32px rgba(0,0,0,0.3);">
         <iframe src="https://www.youtube.com/embed/H4f0hVifcWs" title="Searching in Verkada Command" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="command-faq-heading">
+    <h2 id="command-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Verkada Command — the cloud platform that unifies cameras, access control, alarms, sensors, intercoms, and visitor management — from Blue Cap IT, an official Verkada Gold Partner serving businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is Verkada Command, and how do I access it?</summary>
+      <div class="bcit-faq__answer">
+        <p>Verkada Command is the cloud platform that unifies every Verkada device — cameras, access control, alarms, sensors, intercoms, visitor management — in one browser-based dashboard. You access it at command.verkada.com from any modern browser, with no VPN, no port forwarding, and no client software to install. The same dashboard works on a desktop, a tablet, or a phone, and there are dedicated iOS and Android mobile apps for live view, playback, and remote unlock on the go.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Is Verkada Command included with the cameras, or do I pay separately?</summary>
+      <div class="bcit-faq__answer">
+        <p>Command is included with every Verkada device license. When you buy a camera, door controller, or sensor, you pay an annual or multi-year license per device that covers cloud storage, software updates, AI analytics, the Command dashboard, mobile app access, and warranty. There's no separate per-user fee, no extra charge for the platform, and no Command tier upsell. Adding more users to your organization doesn't add cost — the license is per device, not per seat.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does user management work — can I limit what each person sees?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes, in detail. Command supports custom roles with granular permissions, so you can give the office manager full access to one site while limiting a department head to only their floor's cameras. Permissions can be set per camera, per door, per location, and per function (live view only, archive access, user management, etc.). Every admin action is logged in an audit trail — who logged in, what they viewed, what they changed, when. The mobile app respects the same permissions as the web dashboard.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Does Verkada Command integrate with our identity provider — Okta, Azure AD, or Google Workspace?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Command supports SAML 2.0 SSO with all major identity providers including Okta, Microsoft Entra ID (formerly Azure AD), and Google Workspace. This means employees sign in with their work credentials and lose access automatically when they leave the company — no separate Command password to revoke. Multi-factor authentication is enforced through your IdP, and provisioning rules can be managed centrally. Blue Cap IT handles the SSO integration during onboarding.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does Verkada handle data security and uptime?</summary>
+      <div class="bcit-faq__answer">
+        <p>Command is hosted on a hardened cloud infrastructure with end-to-end encryption for data in transit and at rest, regular third-party penetration testing, and a 99.9% uptime SLA from Verkada. Footage is encrypted on the camera, encrypted in transit, and encrypted in cloud storage. Verkada is SOC 2 Type II certified and meets compliance standards required by healthcare, education, finance, and government clients. If something does go wrong, your cameras keep recording locally and your access control keeps functioning — Command going offline doesn't take down the physical security itself.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free Verkada Command demo</a> — we'll walk you through a live dashboard, show how user permissions and SSO work with your environment, and quote your full project with itemized pricing.</p>
     </div>
   </section>
 
