@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Verkada Command Connector, and what problem does it solve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Command Connector is a compact on-premise appliance that brings non-Verkada cameras into the Verkada Command cloud dashboard. Most organizations don't want to rip out hundreds of existing cameras to standardize on Verkada — and they don't have to. Command Connector connects to your existing ONVIF-compatible cameras, streams them into Command alongside any native Verkada devices, and gives you one unified dashboard for live view, search, alerts, and AI analytics. It's the practical migration path for facilities with significant existing camera investment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which existing cameras work with Command Connector?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most ONVIF-compatible IP cameras from any manufacturer — including Axis, Hikvision, Dahua, Hanwha, Bosch, Pelco, and many others. ONVIF is the industry standard most modern IP cameras support, so if your cameras were installed in roughly the last decade, there's a strong chance they'll work. Older analog cameras and proprietary systems generally won't, but we can audit your existing fleet during a free assessment and tell you exactly which cameras carry over and which would need replacement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do third-party cameras get the same AI features as native Verkada cameras through Command Connector?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most of them, yes. Once a camera is connected, Verkada's AI engine processes the video feed in the same way it processes native Verkada cameras — person and vehicle detection, motion search, smart filters, motion-based alerts, and object tracking all work on third-party feeds. Some camera-specific hardware features (like a Verkada camera's on-board LPR or facial recognition) require native hardware, but the core AI and search capabilities apply across both. The dashboard experience is identical regardless of camera brand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Command Connector replace my existing NVR or DVR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, yes. Command Connector includes on-board storage for third-party camera recordings and connects to Verkada's cloud for remote access, so a standalone NVR or DVR becomes redundant. You retire the old recording infrastructure, the cameras stream into the Connector, footage is stored locally and synced to Command for remote viewing. The single appliance becomes your storage, your viewer, your AI engine, and your remote-access gateway — no separate boxes to maintain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Command Connector a temporary bridge, or a permanent solution?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either, depending on your strategy. Many clients use it as a permanent solution — they have good cameras that don't need replacing, and they just want modern cloud management and AI on top. Others use it as a phased migration: connect all existing cameras to Command Connector now, then replace individual cameras with native Verkada units over time as they age out, without disrupting operations or losing footage continuity. Both paths are valid — and both end up with everything managed from the same dashboard."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Verkada Command Connector | Blue Cap IT — Gold Partner" description="Verkada Command Connector integrates third-party and legacy cameras into the Verkada Command platform. Blue Cap IT is a Verkada Gold Partner. Call (410) 858-4031.">
+<MainLayout title="Verkada Command Connector | Blue Cap IT — Gold Partner" description="Verkada Command Connector integrates third-party and legacy cameras into the Verkada Command platform. Blue Cap IT is a Verkada Gold Partner. Call (410) 858-4031." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <a href="verkada.html">Verkada Solutions</a> <span>/</span> Command Connector</div>
@@ -89,6 +136,51 @@ import { Icon } from 'astro-icon/components';
       <div class="section-label">Hardware</div>
       <h2>Command Connector <span class="grad">Appliance</span></h2>
       <p class="section-sub">The Command Connector is a compact, rack-mountable appliance designed for easy deployment. It connects to your network, discovers ONVIF-compatible cameras, and streams them into Verkada Command with minimal configuration. Available in multiple models to match your camera count and storage requirements.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="command-connector-faq-heading">
+    <h2 id="command-connector-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Verkada Command Connector from Blue Cap IT, an official Verkada Gold Partner — the on-premise appliance that brings existing ONVIF cameras into the Verkada Command cloud platform for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is the Verkada Command Connector, and what problem does it solve?</summary>
+      <div class="bcit-faq__answer">
+        <p>Command Connector is a compact on-premise appliance that brings non-Verkada cameras into the Verkada Command cloud dashboard. Most organizations don't want to rip out hundreds of existing cameras to standardize on Verkada — and they don't have to. Command Connector connects to your existing ONVIF-compatible cameras, streams them into Command alongside any native Verkada devices, and gives you one unified dashboard for live view, search, alerts, and AI analytics. It's the practical migration path for facilities with significant existing camera investment.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Which existing cameras work with Command Connector?</summary>
+      <div class="bcit-faq__answer">
+        <p>Most ONVIF-compatible IP cameras from any manufacturer — including Axis, Hikvision, Dahua, Hanwha, Bosch, Pelco, and many others. ONVIF is the industry standard most modern IP cameras support, so if your cameras were installed in roughly the last decade, there's a strong chance they'll work. Older analog cameras and proprietary systems generally won't, but we can audit your existing fleet during a free assessment and tell you exactly which cameras carry over and which would need replacement.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Do third-party cameras get the same AI features as native Verkada cameras through Command Connector?</summary>
+      <div class="bcit-faq__answer">
+        <p>Most of them, yes. Once a camera is connected, Verkada's AI engine processes the video feed in the same way it processes native Verkada cameras — person and vehicle detection, motion search, smart filters, motion-based alerts, and object tracking all work on third-party feeds. Some camera-specific hardware features (like a Verkada camera's on-board LPR or facial recognition) require native hardware, but the core AI and search capabilities apply across both. The dashboard experience is identical regardless of camera brand.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can Command Connector replace my existing NVR or DVR?</summary>
+      <div class="bcit-faq__answer">
+        <p>In most cases, yes. Command Connector includes on-board storage for third-party camera recordings and connects to Verkada's cloud for remote access, so a standalone NVR or DVR becomes redundant. You retire the old recording infrastructure, the cameras stream into the Connector, footage is stored locally and synced to Command for remote viewing. The single appliance becomes your storage, your viewer, your AI engine, and your remote-access gateway — no separate boxes to maintain.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Is Command Connector a temporary bridge, or a permanent solution?</summary>
+      <div class="bcit-faq__answer">
+        <p>Either, depending on your strategy. Many clients use it as a permanent solution — they have good cameras that don't need replacing, and they just want modern cloud management and AI on top. Others use it as a phased migration: connect all existing cameras to Command Connector now, then replace individual cameras with native Verkada units over time as they age out, without disrupting operations or losing footage continuity. Both paths are valid — and both end up with everything managed from the same dashboard.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free camera assessment</a> — we'll audit your existing camera fleet, identify what carries over to Command Connector, and quote a phased migration plan with itemized pricing.</p>
     </div>
   </section>
 
