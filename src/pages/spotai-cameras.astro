@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does \"camera-agnostic\" actually mean, and which existing cameras work with spot.ai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Camera-agnostic means spot.ai is not locked to a specific hardware vendor or model. Any IP camera that supports the ONVIF standard (an industry specification most modern IP cameras follow) will work — including cameras from Axis, Hanwha, Bosch, Hikvision, Dahua, Pelco, Honeywell, Avigilon, and many others. The Intelligent Video Recorder auto-discovers compatible cameras on your network and starts ingesting their streams. We can audit your existing camera fleet during a free assessment and tell you exactly which models carry over and which (typically older analog or proprietary models) won't."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of premium cameras come included with the spot.ai subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "spot.ai's included camera lineup covers the standard use cases: indoor dome cameras for offices and retail floors, outdoor weatherproof bullet and dome cameras for exteriors, PTZ (pan-tilt-zoom) cameras for large open areas, fisheye 360° cameras for wide-area coverage, and license plate recognition (LPR) cameras for parking and gates. All are high-resolution IP cameras designed for the AI analytics platform. They're \"included\" in the sense that there's no separate camera purchase line item — you pay the spot.ai subscription and the cameras are part of it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if some of my existing cameras are too old or low-resolution for AI analytics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The AI works on any resolution, but the quality of detection scales with the quality of the camera feed. Older, lower-resolution cameras (sub-1 MP analog or fixed-IP from a decade ago) may catch broad events but miss fine details like license plates or facial features. You can mix-and-match: keep older cameras for general coverage and upgrade to spot.ai's included high-resolution cameras for the areas where AI accuracy matters most (entry points, parking lots, point-of-sale areas, restricted zones). We help prioritize which areas warrant new cameras during the site assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I mix spot.ai's included cameras with my existing IP cameras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it's a common deployment pattern. The Intelligent Video Recorder handles both equally well — all cameras show up in the same spot.ai dashboard, the same AI analytics apply to every feed, and you don't see a difference in the user experience between an \"included\" camera and one you owned previously. Many clients use this to phase in spot.ai cameras only where they need them most, keeping existing cameras everywhere else."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does spot.ai handle cameras spread across multiple buildings or sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each physical site needs its own Intelligent Video Recorder (the on-premise appliance that processes the local camera streams), but all IVRs report to the same central spot.ai cloud dashboard. So you have one login, one user permission model, one search interface, and unified analytics across every site — even if cameras are spread across multiple buildings, cities, or states. Cross-site searches (\"show me all license plate matches from yesterday across all locations\") run from the same dashboard."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="spot.ai Cameras | AI-Powered Video Surveillance — Blue Cap IT" description="spot.ai provides premium AI-powered IP cameras at no cost, or works with your existing cameras. Camera-agnostic platform that upgrades any ONVIF-compliant camera with AI video intelligence.">
+<MainLayout title="spot.ai Cameras | AI-Powered Video Surveillance — Blue Cap IT" description="spot.ai provides premium AI-powered IP cameras at no cost, or works with your existing cameras. Camera-agnostic platform that upgrades any ONVIF-compliant camera with AI video intelligence." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/spotai/spotai-logo.png" alt="spot.ai" style="max-height:50px;width:auto;margin-bottom:1.5rem;"/>
@@ -45,6 +92,51 @@ import { Icon } from 'astro-icon/components';
           </li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="spotai-cameras-faq-heading">
+    <h2 id="spotai-cameras-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about spot.ai AI cameras from Blue Cap IT — camera-agnostic deployment, premium IP cameras included with the subscription, ONVIF compatibility, and multi-site management for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What does "camera-agnostic" actually mean, and which existing cameras work with spot.ai?</summary>
+      <div class="bcit-faq__answer">
+        <p>Camera-agnostic means spot.ai is not locked to a specific hardware vendor or model. Any IP camera that supports the ONVIF standard (an industry specification most modern IP cameras follow) will work — including cameras from Axis, Hanwha, Bosch, Hikvision, Dahua, Pelco, Honeywell, Avigilon, and many others. The Intelligent Video Recorder auto-discovers compatible cameras on your network and starts ingesting their streams. We can audit your existing camera fleet during a free assessment and tell you exactly which models carry over and which (typically older analog or proprietary models) won't.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What kind of premium cameras come included with the spot.ai subscription?</summary>
+      <div class="bcit-faq__answer">
+        <p>spot.ai's included camera lineup covers the standard use cases: indoor dome cameras for offices and retail floors, outdoor weatherproof bullet and dome cameras for exteriors, PTZ (pan-tilt-zoom) cameras for large open areas, fisheye 360° cameras for wide-area coverage, and license plate recognition (LPR) cameras for parking and gates. All are high-resolution IP cameras designed for the AI analytics platform. They're "included" in the sense that there's no separate camera purchase line item — you pay the spot.ai subscription and the cameras are part of it.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What if some of my existing cameras are too old or low-resolution for AI analytics?</summary>
+      <div class="bcit-faq__answer">
+        <p>The AI works on any resolution, but the quality of detection scales with the quality of the camera feed. Older, lower-resolution cameras (sub-1 MP analog or fixed-IP from a decade ago) may catch broad events but miss fine details like license plates or facial features. You can mix-and-match: keep older cameras for general coverage and upgrade to spot.ai's included high-resolution cameras for the areas where AI accuracy matters most (entry points, parking lots, point-of-sale areas, restricted zones). We help prioritize which areas warrant new cameras during the site assessment.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can I mix spot.ai's included cameras with my existing IP cameras?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes, and it's a common deployment pattern. The Intelligent Video Recorder handles both equally well — all cameras show up in the same spot.ai dashboard, the same AI analytics apply to every feed, and you don't see a difference in the user experience between an "included" camera and one you owned previously. Many clients use this to phase in spot.ai cameras only where they need them most, keeping existing cameras everywhere else.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does spot.ai handle cameras spread across multiple buildings or sites?</summary>
+      <div class="bcit-faq__answer">
+        <p>Each physical site needs its own Intelligent Video Recorder (the on-premise appliance that processes the local camera streams), but all IVRs report to the same central spot.ai cloud dashboard. So you have one login, one user permission model, one search interface, and unified analytics across every site — even if cameras are spread across multiple buildings, cities, or states. Cross-site searches ("show me all license plate matches from yesterday across all locations") run from the same dashboard.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free camera assessment</a> — we'll audit your existing camera fleet, identify which models carry over to spot.ai, recommend the right mix of new and existing cameras, and quote your full deployment with itemized pricing.</p>
     </div>
   </section>
 
