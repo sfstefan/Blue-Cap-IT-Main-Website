@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is a Verkada alarm system different from a traditional alarm like ADT or Brinks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional alarm systems are isolated — a separate panel, a separate monitoring contract, and no real connection to your cameras or doors. When something triggers, the monitoring company calls and asks if it's a false alarm. Verkada alarms are built into the same cloud platform as your cameras and access control. When a sensor fires, you instantly see live video from the nearest camera in the same dashboard, the system can verify the threat with AI before escalating, and your team gets mobile alerts with video attached. Same protection, far less noise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a separate professional monitoring contract, or does Verkada include it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You have options. The Verkada Alarm Panel (BP52) connects directly to your team via mobile alerts and email — no monitoring contract required. If your insurance, jurisdiction, or industry requires UL-listed professional monitoring with dispatch, Verkada integrates with central station monitoring services. The key difference from a traditional alarm: you're not locked into a monitoring company. We'll talk through what's required for your situation during the free site assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What sensors and devices does Verkada's alarm system support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The full hardware stack: alarm panels (BP52) and touchscreen keypads, wireless hubs (WH52) for extending range across large facilities, PIR motion sensors (BR32), glass break sensors (BR34), panic buttons (BR33), indoor sirens (BZ11), weatherproof outdoor sirens (BZ32), water leak sensors (BR35) for server rooms and utility areas, and cellular backup communicators for ISP failover. Sensors are wireless and battery-powered for fast installation, and everything reports back to the same Verkada Command dashboard as your cameras and doors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does AI video verification reduce false alarms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When a sensor triggers, Verkada doesn't just send a \"motion detected\" ping — it pulls the camera covering that zone and analyzes the video using AI. If it sees a person where one shouldn't be, you get an alert with the clip attached. If it sees a tree branch waving in the wind or a delivery truck, the system can suppress the alert or hold it for your review. Most traditional alarm callouts are false alarms; visual context dramatically cuts that noise — which means your team responds when it matters and ignores fewer real alerts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to my alarm system if the internet goes out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The alarm system keeps working. The BP52 Alarm Panel continues monitoring sensors locally, the sirens still trigger, and the panic buttons still work. The optional Cellular Backup Communicator maintains connectivity to Verkada Command and any monitoring service over LTE/5G, so alerts still reach you and event logs still sync. When the primary internet comes back, everything reconciles automatically. Power loss is handled by battery backup on the panel and individual battery-powered sensors."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Verkada Alarms &amp; Intrusion Detection | Blue Cap IT — Gold Partner" description="Verkada alarm systems integrate directly with cameras and access control — no isolated panels. Wireless sensors, professional monitoring, and cloud management through Blue Cap IT.">
+<MainLayout title="Verkada Alarms &amp; Intrusion Detection | Blue Cap IT — Gold Partner" description="Verkada alarm systems integrate directly with cameras and access control — no isolated panels. Wireless sensors, professional monitoring, and cloud management through Blue Cap IT." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <a href="verkada.html">Verkada Solutions</a> <span>/</span> Alarms &amp; Intrusion</div>
@@ -111,6 +158,51 @@ import { Icon } from 'astro-icon/components';
         <h4>Cellular Backup Communicator</h4>
         <p>Maintains alarm connectivity over cellular when your primary network goes down, ensuring uninterrupted protection.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="alarms-faq-heading">
+    <h2 id="alarms-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Verkada alarm and intrusion detection systems from Blue Cap IT, an official Verkada Gold Partner — alarm panels, motion and glass break sensors, sirens, panic buttons, and cellular backup for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>How is a Verkada alarm system different from a traditional alarm like ADT or Brinks?</summary>
+      <div class="bcit-faq__answer">
+        <p>Traditional alarm systems are isolated — a separate panel, a separate monitoring contract, and no real connection to your cameras or doors. When something triggers, the monitoring company calls and asks if it's a false alarm. Verkada alarms are built into the same cloud platform as your cameras and access control. When a sensor fires, you instantly see live video from the nearest camera in the same dashboard, the system can verify the threat with AI before escalating, and your team gets mobile alerts with video attached. Same protection, far less noise.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Do I need a separate professional monitoring contract, or does Verkada include it?</summary>
+      <div class="bcit-faq__answer">
+        <p>You have options. The Verkada Alarm Panel (BP52) connects directly to your team via mobile alerts and email — no monitoring contract required. If your insurance, jurisdiction, or industry requires UL-listed professional monitoring with dispatch, Verkada integrates with central station monitoring services. The key difference from a traditional alarm: you're not locked into a monitoring company. We'll talk through what's required for your situation during the free site assessment.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What sensors and devices does Verkada's alarm system support?</summary>
+      <div class="bcit-faq__answer">
+        <p>The full hardware stack: alarm panels (BP52) and touchscreen keypads, wireless hubs (WH52) for extending range across large facilities, PIR motion sensors (BR32), glass break sensors (BR34), panic buttons (BR33), indoor sirens (BZ11), weatherproof outdoor sirens (BZ32), water leak sensors (BR35) for server rooms and utility areas, and cellular backup communicators for ISP failover. Sensors are wireless and battery-powered for fast installation, and everything reports back to the same Verkada Command dashboard as your cameras and doors.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does AI video verification reduce false alarms?</summary>
+      <div class="bcit-faq__answer">
+        <p>When a sensor triggers, Verkada doesn't just send a "motion detected" ping — it pulls the camera covering that zone and analyzes the video using AI. If it sees a person where one shouldn't be, you get an alert with the clip attached. If it sees a tree branch waving in the wind or a delivery truck, the system can suppress the alert or hold it for your review. Most traditional alarm callouts are false alarms; visual context dramatically cuts that noise — which means your team responds when it matters and ignores fewer real alerts.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What happens to my alarm system if the internet goes out?</summary>
+      <div class="bcit-faq__answer">
+        <p>The alarm system keeps working. The BP52 Alarm Panel continues monitoring sensors locally, the sirens still trigger, and the panic buttons still work. The optional Cellular Backup Communicator maintains connectivity to Verkada Command and any monitoring service over LTE/5G, so alerts still reach you and event logs still sync. When the primary internet comes back, everything reconciles automatically. Power loss is handled by battery backup on the panel and individual battery-powered sensors.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free alarm assessment</a> — we'll evaluate your facility, recommend the right sensor and panel layout, and quote your full project with itemized pricing.</p>
     </div>
   </section>
 
