@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does \"boutique\" mean in the context of Blue Cap IT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Boutique means we're intentionally small. We're big enough to staff every layer of modern IT — managed services, networking, cybersecurity, physical security, and video intelligence — but small enough that you reach the engineer who designed your network when you call, not a ticket queue in another time zone. The trade-off is that we won't onboard hundreds of clients a year. That's the point. Our clients get a partner who knows their business by name, not a customer number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kinds of businesses does Blue Cap IT typically work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Small and mid-sized businesses across the Mid-Atlantic and Carolinas — typically 10 to 500 employees. We serve professional services firms (law, accounting, consulting), healthcare practices, manufacturers, nonprofits, schools, real estate companies, and businesses in the trades. The common thread isn't industry — it's that our clients want enterprise-grade technology delivered by a partner who actually understands their business, without the bureaucracy of a national MSP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why work with Blue Cap IT instead of a large MSP or hiring an internal IT manager?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three reasons. First, breadth: a single internal IT person can't credibly cover everything from helpdesk to firewall design to physical security to cybersecurity strategy — Blue Cap IT brings specialists in every layer. Second, cost: an experienced internal IT manager runs six figures all-in, which is more than most clients spend on our full managed services. Third, service: large national MSPs run ticket queues across multiple time zones and shuffle accounts between reps; we don't. You get the same engineers every time you call, and you get the technical depth of a big provider without the impersonal experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What partnerships and certifications does Blue Cap IT hold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Blue Cap IT is a Verkada Gold Partner (physical security), Coro Partner (cybersecurity platform), Huntress Partner (24/7 managed security), spot.ai Partner (AI video intelligence), and Meter Partner (Network as a Service). These are technical partnerships — earned through certified training, demonstrated installation expertise, and ongoing volume — not quota relationships. We deploy and support the full stack ourselves rather than reselling and forwarding tickets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Blue Cap IT located, and how do you support clients across multiple states?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Blue Cap IT is based in Maryland. We provide on-site service across Maryland, Washington DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina — handling installations, site assessments, and physical security deployments throughout the Mid-Atlantic and Carolinas region. Day-to-day operations (monitoring, helpdesk, patching, cybersecurity, network management) are delivered remotely from our team, so location rarely affects service quality. For cloud-only services like Microsoft 365 management or Coro cybersecurity, we work with businesses anywhere in the United States."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="About Blue Cap IT | Your Boutique IT Partner" description="Blue Cap IT is a boutique managed IT partner focused on customer service, client outcomes, and education over upsell. Managed IT, Network as a Service, cybersecurity, physical security, and video intelligence — delivered by people who answer the phone.">
+<MainLayout title="About Blue Cap IT | Your Boutique IT Partner" description="Blue Cap IT is a boutique managed IT partner focused on customer service, client outcomes, and education over upsell. Managed IT, Network as a Service, cybersecurity, physical security, and video intelligence — delivered by people who answer the phone." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/images/about-hero.jpg" alt="A small group of professionals gathered around a wooden table with notepads — a client meeting in natural light" style="width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:1rem;margin-bottom:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);" />
@@ -136,6 +183,51 @@ import { Icon } from 'astro-icon/components';
         <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:globe" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Meter Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">Enterprise Networking</div></div>
         <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:monitor" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Managed Services</div><div style="font-size:0.8rem;color:var(--text-muted);">Complete IT Management</div></div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="about-faq-heading">
+    <h2 id="about-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Blue Cap IT — our approach, services, partnerships, and how we work with small and mid-sized businesses across the Mid-Atlantic and Carolinas.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What does "boutique" mean in the context of Blue Cap IT?</summary>
+      <div class="bcit-faq__answer">
+        <p>Boutique means we're intentionally small. We're big enough to staff every layer of modern IT — managed services, networking, cybersecurity, physical security, and video intelligence — but small enough that you reach the engineer who designed your network when you call, not a ticket queue in another time zone. The trade-off is that we won't onboard hundreds of clients a year. That's the point. Our clients get a partner who knows their business by name, not a customer number.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What kinds of businesses does Blue Cap IT typically work with?</summary>
+      <div class="bcit-faq__answer">
+        <p>Small and mid-sized businesses across the Mid-Atlantic and Carolinas — typically 10 to 500 employees. We serve professional services firms (law, accounting, consulting), healthcare practices, manufacturers, nonprofits, schools, real estate companies, and businesses in the trades. The common thread isn't industry — it's that our clients want enterprise-grade technology delivered by a partner who actually understands their business, without the bureaucracy of a national MSP.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Why work with Blue Cap IT instead of a large MSP or hiring an internal IT manager?</summary>
+      <div class="bcit-faq__answer">
+        <p>Three reasons. First, breadth: a single internal IT person can't credibly cover everything from helpdesk to firewall design to physical security to cybersecurity strategy — Blue Cap IT brings specialists in every layer. Second, cost: an experienced internal IT manager runs six figures all-in, which is more than most clients spend on our full managed services. Third, service: large national MSPs run ticket queues across multiple time zones and shuffle accounts between reps; we don't. You get the same engineers every time you call, and you get the technical depth of a big provider without the impersonal experience.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What partnerships and certifications does Blue Cap IT hold?</summary>
+      <div class="bcit-faq__answer">
+        <p>Blue Cap IT is a Verkada Gold Partner (physical security), Coro Partner (cybersecurity platform), Huntress Partner (24/7 managed security), spot.ai Partner (AI video intelligence), and Meter Partner (Network as a Service). These are technical partnerships — earned through certified training, demonstrated installation expertise, and ongoing volume — not quota relationships. We deploy and support the full stack ourselves rather than reselling and forwarding tickets.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Where is Blue Cap IT located, and how do you support clients across multiple states?</summary>
+      <div class="bcit-faq__answer">
+        <p>Blue Cap IT is based in Maryland. We provide on-site service across Maryland, Washington DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina — handling installations, site assessments, and physical security deployments throughout the Mid-Atlantic and Carolinas region. Day-to-day operations (monitoring, helpdesk, patching, cybersecurity, network management) are delivered remotely from our team, so location rarely affects service quality. For cloud-only services like Microsoft 365 management or Coro cybersecurity, we work with businesses anywhere in the United States.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free assessment</a> — we'd rather listen first and recommend second. Tell us what you're trying to accomplish and we'll show you what fits.</p>
     </div>
   </section>
 
