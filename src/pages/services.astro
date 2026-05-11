@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Blue Cap IT offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Blue Cap IT is a full-stack IT partner for small and mid-sized businesses. We deliver managed IT (helpdesk, monitoring, patching, backup, Microsoft 365 administration, vCIO), Network as a Service powered by Meter, cybersecurity through Coro and Huntress, physical security as a Verkada Gold Partner, and AI video intelligence through spot.ai. The point is one phone number — (410) 858-4031 — for everything technology, instead of juggling separate vendors for IT, security, and networking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does Blue Cap IT deliver services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Maryland, Washington DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina. We handle on-site visits and ongoing remote operations across the entire Mid-Atlantic and Carolinas region. For purely cloud-managed services (Microsoft 365 administration, Coro cybersecurity, Huntress monitoring), we can work with businesses anywhere in the United States — talk to us about your specific needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Blue Cap IT different from a traditional IT provider or break/fix shop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Break/fix providers charge by the hour when something is already broken — incentives are misaligned. Blue Cap IT operates on flat monthly subscriptions for managed IT, NaaS, cybersecurity, and physical security, which means we make money when your systems run smoothly, not when they fail. You also get a single point of contact who knows your environment — not a rotating tier-one ticket queue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Blue Cap IT replace our existing IT staff, or work alongside them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. Some clients fully outsource IT to us; others run co-managed IT where their internal team handles strategy and we handle the day-to-day (monitoring, patching, helpdesk overflow, after-hours coverage). We'll structure the engagement around what your team actually needs — call (410) 858-4031 or request a free assessment to talk through your situation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started with Blue Cap IT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free assessment first. We come on-site (or jump on a video call for remote-only engagements) to understand your business, audit your current setup, and identify gaps. From there we present an itemized recommendation with transparent pricing — no high-pressure pitch, no obligation. If we're a good fit, we onboard your environment over 2–4 weeks. Start by calling (410) 858-4031 or filling out the contact form."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Services | Blue Cap IT — Managed IT, Cybersecurity & Security Solutions" description="Blue Cap IT delivers full-stack IT services — managed IT, cybersecurity, physical security, video intelligence, and Network as a Service. Transparent and outcomes-focused.">
+<MainLayout title="Services | Blue Cap IT — Managed IT, Cybersecurity & Security Solutions" description="Blue Cap IT delivers full-stack IT services — managed IT, cybersecurity, physical security, video intelligence, and Network as a Service. Transparent and outcomes-focused." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/images/services-hero.jpg" alt="Two IT professionals working at computer workstations in a modern office" style="width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:1rem;margin-bottom:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);" />
@@ -269,6 +316,51 @@ import { Icon } from 'astro-icon/components';
       <div style="text-align:center;margin-top:2rem;">
         <a href="naas.html" class="btn-primary" style="background:#4a1d96;">Explore Network as a Service</a>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="services-faq-heading">
+    <h2 id="services-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Blue Cap IT's managed IT, cybersecurity, physical security, and Network as a Service offerings for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What services does Blue Cap IT offer?</summary>
+      <div class="bcit-faq__answer">
+        <p>Blue Cap IT is a full-stack IT partner for small and mid-sized businesses. We deliver managed IT (helpdesk, monitoring, patching, backup, Microsoft 365 administration, vCIO), Network as a Service powered by Meter, cybersecurity through Coro and Huntress, physical security as a Verkada Gold Partner, and AI video intelligence through spot.ai. The point is one phone number — (410) 858-4031 — for everything technology, instead of juggling separate vendors for IT, security, and networking.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Where does Blue Cap IT deliver services?</summary>
+      <div class="bcit-faq__answer">
+        <p>Maryland, Washington DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina. We handle on-site visits and ongoing remote operations across the entire Mid-Atlantic and Carolinas region. For purely cloud-managed services (Microsoft 365 administration, Coro cybersecurity, Huntress monitoring), we can work with businesses anywhere in the United States — talk to us about your specific needs.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How is Blue Cap IT different from a traditional IT provider or break/fix shop?</summary>
+      <div class="bcit-faq__answer">
+        <p>Break/fix providers charge by the hour when something is already broken — incentives are misaligned. Blue Cap IT operates on flat monthly subscriptions for managed IT, NaaS, cybersecurity, and physical security, which means we make money when your systems run smoothly, not when they fail. You also get a single point of contact who knows your environment — not a rotating tier-one ticket queue.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can Blue Cap IT replace our existing IT staff, or work alongside them?</summary>
+      <div class="bcit-faq__answer">
+        <p>Both. Some clients fully outsource IT to us; others run co-managed IT where their internal team handles strategy and we handle the day-to-day (monitoring, patching, helpdesk overflow, after-hours coverage). We'll structure the engagement around what your team actually needs — call (410) 858-4031 or request a free assessment to talk through your situation.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How do I get started with Blue Cap IT?</summary>
+      <div class="bcit-faq__answer">
+        <p>Free assessment first. We come on-site (or jump on a video call for remote-only engagements) to understand your business, audit your current setup, and identify gaps. From there we present an itemized recommendation with transparent pricing — no high-pressure pitch, no obligation. If we're a good fit, we onboard your environment over 2–4 weeks. Start by calling (410) 858-4031 or filling out the contact form.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free assessment</a> — we're happy to walk through which combination of services makes sense for your business.</p>
     </div>
   </section>
 
