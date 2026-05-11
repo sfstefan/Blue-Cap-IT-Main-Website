@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Intelligent Video Recorder, and how is it different from a traditional NVR or DVR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The IVR is a purpose-built on-premise appliance that does everything a traditional NVR/DVR does — record video from your IP cameras, encrypt it, store it locally — and adds the AI engine and cloud connectivity that NVRs lack. Traditional recorders are dumb storage: they capture footage and you go review it manually after something happens. The IVR runs deep-learning models on every frame as it's recorded, indexes footage by detected objects (people, vehicles, license plates, motion events), enables instant search, and connects to spot.ai's cloud dashboard for remote viewing. Same form factor; vastly more capability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many cameras can one IVR support, and what if I have more than 32?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each IVR appliance supports up to 32 cameras. For deployments larger than that — multi-floor offices, warehouses, retail chains, schools with many buildings — you scale by adding more IVR appliances. Each one handles its local cameras independently, but they all report to the same central spot.ai cloud dashboard. So a 96-camera deployment across three floors might use three IVRs (one per floor), and the user experience in the dashboard is identical to a single-IVR site."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the AI run on the IVR locally instead of in the cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three reasons. First, latency: real-time detections (PPE violations, intrusions, queue alerts) need to fire within seconds, which means processing happens where the cameras are, not after a round-trip to the cloud. Second, bandwidth: streaming continuous high-resolution video from every camera to a cloud GPU farm 24/7 would saturate most office internet connections. Third, privacy and reliability: video stays on your premises by default, you control what does and doesn't go to the cloud, and the system keeps working even if the internet drops."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much footage can the IVR store, and for how long?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local storage typically holds 30 to 120 days of continuous footage, depending on the IVR model, camera count, resolution, and frame rate. Higher-resolution cameras and more cameras consume storage faster; lower-resolution cameras and motion-only recording extend retention. We size the right IVR storage tier during the assessment based on your camera mix and how far back you want to be able to search. For longer-term archival, video clips can be selectively uploaded to the cloud."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to recording if my internet connection goes down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recording keeps running. The IVR records and stores video locally regardless of internet status — that's a deliberate part of the architecture. AI analytics keep processing on the device, alerts queue up locally, and when internet comes back, everything syncs. You can also still review footage on-site through a direct connection to the IVR. The cloud is for remote access and unified multi-site management, not for the recording itself."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Intelligent Video Recorder | spot.ai IVR — Blue Cap IT" description="The spot.ai Intelligent Video Recorder combines hardware, software, and AI analytics in one appliance. Supports up to 32 cameras with 30-90 day local storage, deep-learning models, and hybrid cloud access.">
+<MainLayout title="Intelligent Video Recorder | spot.ai IVR — Blue Cap IT" description="The spot.ai Intelligent Video Recorder combines hardware, software, and AI analytics in one appliance. Supports up to 32 cameras with 30-120 day local storage, deep-learning models, and hybrid cloud access." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/spotai/spotai-logo.png" alt="spot.ai" style="max-height:50px;width:auto;margin-bottom:1.5rem;"/>
@@ -29,7 +76,7 @@ import { Icon } from 'astro-icon/components';
         <ul class="why-list">
           <li class="why-item">
             <div class="why-icon"><Icon name="lucide:database" /></div>
-            <div><h4>30-90 Day Local Storage</h4><p>Built-in NVR redundancy with 30, 60, or 90-day local storage options. Your footage is always available, even if internet goes down.</p></div>
+            <div><h4>30-120 Day Local Storage</h4><p>Built-in NVR redundancy with 30 to 120 days of local storage options. Your footage is always available, even if internet goes down.</p></div>
           </li>
           <li class="why-item">
             <div class="why-icon"><Icon name="lucide:camera" /></div>
@@ -45,6 +92,51 @@ import { Icon } from 'astro-icon/components';
           </li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="spotai-ivr-faq-heading">
+    <h2 id="spotai-ivr-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about the spot.ai Intelligent Video Recorder (IVR) from Blue Cap IT — the on-premise appliance that auto-discovers cameras, runs edge AI analytics, and stores footage locally with cloud connectivity for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is the Intelligent Video Recorder, and how is it different from a traditional NVR or DVR?</summary>
+      <div class="bcit-faq__answer">
+        <p>The IVR is a purpose-built on-premise appliance that does everything a traditional NVR/DVR does — record video from your IP cameras, encrypt it, store it locally — and adds the AI engine and cloud connectivity that NVRs lack. Traditional recorders are dumb storage: they capture footage and you go review it manually after something happens. The IVR runs deep-learning models on every frame as it's recorded, indexes footage by detected objects (people, vehicles, license plates, motion events), enables instant search, and connects to spot.ai's cloud dashboard for remote viewing. Same form factor; vastly more capability.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How many cameras can one IVR support, and what if I have more than 32?</summary>
+      <div class="bcit-faq__answer">
+        <p>Each IVR appliance supports up to 32 cameras. For deployments larger than that — multi-floor offices, warehouses, retail chains, schools with many buildings — you scale by adding more IVR appliances. Each one handles its local cameras independently, but they all report to the same central spot.ai cloud dashboard. So a 96-camera deployment across three floors might use three IVRs (one per floor), and the user experience in the dashboard is identical to a single-IVR site.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Why does the AI run on the IVR locally instead of in the cloud?</summary>
+      <div class="bcit-faq__answer">
+        <p>Three reasons. First, latency: real-time detections (PPE violations, intrusions, queue alerts) need to fire within seconds, which means processing happens where the cameras are, not after a round-trip to the cloud. Second, bandwidth: streaming continuous high-resolution video from every camera to a cloud GPU farm 24/7 would saturate most office internet connections. Third, privacy and reliability: video stays on your premises by default, you control what does and doesn't go to the cloud, and the system keeps working even if the internet drops.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How much footage can the IVR store, and for how long?</summary>
+      <div class="bcit-faq__answer">
+        <p>Local storage typically holds 30 to 120 days of continuous footage, depending on the IVR model, camera count, resolution, and frame rate. Higher-resolution cameras and more cameras consume storage faster; lower-resolution cameras and motion-only recording extend retention. We size the right IVR storage tier during the assessment based on your camera mix and how far back you want to be able to search. For longer-term archival, video clips can be selectively uploaded to the cloud.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What happens to recording if my internet connection goes down?</summary>
+      <div class="bcit-faq__answer">
+        <p>Recording keeps running. The IVR records and stores video locally regardless of internet status — that's a deliberate part of the architecture. AI analytics keep processing on the device, alerts queue up locally, and when internet comes back, everything syncs. You can also still review footage on-site through a direct connection to the IVR. The cloud is for remote access and unified multi-site management, not for the recording itself.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free video intelligence assessment</a> — we'll evaluate your camera count, sizing requirements, and retention needs, then quote the right IVR appliance configuration with itemized pricing.</p>
     </div>
   </section>
 
