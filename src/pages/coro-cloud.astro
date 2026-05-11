@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is cloud app security, and how is it different from email or endpoint protection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cloud App Security protects the SaaS applications your team uses every day — Microsoft 365, Google Workspace, Slack, Salesforce, and the long tail of business apps connected to them. Endpoint protection secures devices. Email security secures inboxes. Cloud App Security secures what happens inside those apps: who logs in, what files are shared, which third-party integrations are connected, and whether any of it looks suspicious. As businesses moved to the cloud, the most common attacks moved with them — account takeover, OAuth abuse, mass file exfiltration, and risky external sharing aren't endpoint or email problems, they're cloud app problems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which cloud apps does Coro Cloud App Security protect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Microsoft 365 (Exchange Online, SharePoint, OneDrive, Teams), Google Workspace (Gmail, Drive, Docs, Calendar), Slack and other collaboration tools, Salesforce and other major SaaS business apps, plus visibility into every OAuth-connected third-party app in those environments. The integration is API-based — Coro connects to each platform with read-only or admin-level permissions (depending on what you want it to do) and monitors activity continuously. We map your specific cloud footprint during a free assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is \"shadow IT,\" and why should I care about it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shadow IT is any app, service, or integration your employees use that IT didn't approve or doesn't know about — a marketing tool that connects to your Google Drive, a chatbot that scans Slack messages, a free PDF converter that uploads files to an unknown server. Every shadow IT connection is a potential data leak, and most companies have far more than they realize. Coro automatically discovers every OAuth-connected app in your Microsoft 365 or Google Workspace tenant, scores each by risk, and lets you revoke access to anything sketchy with one click. The typical first scan reveals dozens of apps the security team didn't know existed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Coro detect when a user account has been compromised?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coro builds a behavioral baseline for each user — typical login locations, devices, hours, and access patterns — then watches for anomalies. Logins from new countries, simultaneous logins from geographically impossible locations, mass file downloads, unusual permission changes, and access to data the user never normally touches all trigger alerts. When a compromise looks likely, Coro can automatically suspend the account and force password reset / MFA re-enrollment. Most account takeovers are caught within minutes of the first anomalous login — well before the attacker can do meaningful damage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Coro find sensitive files that have been shared too broadly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Coro scans file sharing across SharePoint, OneDrive, Google Drive, and connected business apps, identifying files shared publicly (anyone with the link), shared with external email addresses outside your organization, or shared with risky third-party apps. Sensitive content (credit card numbers, social security numbers, health records, financial documents) is flagged automatically. You get a complete report of who has access to what, and one-click controls to revoke risky shares. This is especially useful for regulated industries (healthcare, finance, legal) where over-shared sensitive data is a compliance problem."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Cloud App Security | Coro Cybersecurity — Blue Cap IT" description="Coro cloud app security monitors and protects your cloud applications — Microsoft 365, Google Workspace, Slack, Salesforce, and more. Detects unauthorized access and data leaks.">
+<MainLayout title="Cloud App Security | Coro Cybersecurity — Blue Cap IT" description="Coro cloud app security monitors and protects your cloud applications — Microsoft 365, Google Workspace, Slack, Salesforce, and more. Detects unauthorized access and data leaks." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/images/coro-cloud-hero.jpg" alt="Cloud computing infrastructure visualization with connected nodes" style="width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:1rem;margin-bottom:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);" />
@@ -86,6 +133,51 @@ import { Icon } from 'astro-icon/components';
           <p>Complete audit trail of all cloud activity. Search, filter, and export logs for compliance reporting and incident investigation.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="coro-cloud-faq-heading">
+    <h2 id="coro-cloud-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Coro Cloud App Security from Blue Cap IT — shadow IT discovery, anomaly detection, file sharing controls, and access governance for Microsoft 365, Google Workspace, Slack, Salesforce, and other cloud apps for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is cloud app security, and how is it different from email or endpoint protection?</summary>
+      <div class="bcit-faq__answer">
+        <p>Cloud App Security protects the SaaS applications your team uses every day — Microsoft 365, Google Workspace, Slack, Salesforce, and the long tail of business apps connected to them. Endpoint protection secures devices. Email security secures inboxes. Cloud App Security secures what happens inside those apps: who logs in, what files are shared, which third-party integrations are connected, and whether any of it looks suspicious. As businesses moved to the cloud, the most common attacks moved with them — account takeover, OAuth abuse, mass file exfiltration, and risky external sharing aren't endpoint or email problems, they're cloud app problems.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Which cloud apps does Coro Cloud App Security protect?</summary>
+      <div class="bcit-faq__answer">
+        <p>Microsoft 365 (Exchange Online, SharePoint, OneDrive, Teams), Google Workspace (Gmail, Drive, Docs, Calendar), Slack and other collaboration tools, Salesforce and other major SaaS business apps, plus visibility into every OAuth-connected third-party app in those environments. The integration is API-based — Coro connects to each platform with read-only or admin-level permissions (depending on what you want it to do) and monitors activity continuously. We map your specific cloud footprint during a free assessment.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What is "shadow IT," and why should I care about it?</summary>
+      <div class="bcit-faq__answer">
+        <p>Shadow IT is any app, service, or integration your employees use that IT didn't approve or doesn't know about — a marketing tool that connects to your Google Drive, a chatbot that scans Slack messages, a free PDF converter that uploads files to an unknown server. Every shadow IT connection is a potential data leak, and most companies have far more than they realize. Coro automatically discovers every OAuth-connected app in your Microsoft 365 or Google Workspace tenant, scores each by risk, and lets you revoke access to anything sketchy with one click. The typical first scan reveals dozens of apps the security team didn't know existed.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does Coro detect when a user account has been compromised?</summary>
+      <div class="bcit-faq__answer">
+        <p>Coro builds a behavioral baseline for each user — typical login locations, devices, hours, and access patterns — then watches for anomalies. Logins from new countries, simultaneous logins from geographically impossible locations, mass file downloads, unusual permission changes, and access to data the user never normally touches all trigger alerts. When a compromise looks likely, Coro can automatically suspend the account and force password reset / MFA re-enrollment. Most account takeovers are caught within minutes of the first anomalous login — well before the attacker can do meaningful damage.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can Coro find sensitive files that have been shared too broadly?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Coro scans file sharing across SharePoint, OneDrive, Google Drive, and connected business apps, identifying files shared publicly (anyone with the link), shared with external email addresses outside your organization, or shared with risky third-party apps. Sensitive content (credit card numbers, social security numbers, health records, financial documents) is flagged automatically. You get a complete report of who has access to what, and one-click controls to revoke risky shares. This is especially useful for regulated industries (healthcare, finance, legal) where over-shared sensitive data is a compliance problem.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free cloud security assessment</a> — we'll scan your Microsoft 365 or Google Workspace tenant for shadow IT, over-shared files, and risky integrations, then quote Coro Cloud App Security with itemized pricing.</p>
     </div>
   </section>
 
