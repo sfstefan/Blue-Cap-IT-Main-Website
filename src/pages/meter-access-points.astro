@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between Wi-Fi 7 and Wi-Fi 6/6E — and is it worth upgrading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wi-Fi 7 (802.11be) is the latest wireless standard, and it's the first major leap in years that practical users will actually feel. Compared to Wi-Fi 6, Wi-Fi 7 delivers roughly 4x the theoretical throughput, dramatically lower latency, and much better performance in crowded environments. The real-world wins: cleaner video calls when 50 people are in the office, faster file transfers without ducking to a wired connection, and stable performance for streaming, AR/VR, and modern collaboration tools. For most businesses installing or refreshing wireless today, Wi-Fi 7 is the right standard to deploy — your laptops and phones will catch up over the next 18 months anyway."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I pick the A1 versus the A2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The A1 is the premium indoor access point — designed for high-demand environments where wireless performance is mission-critical: open offices, conference rooms, co-working spaces, trading floors, and any space with dense device counts. The A2 delivers the same Wi-Fi 7 performance but in a form factor and install profile tuned for hospitality and guest-facing spaces — hotels, restaurants, lobbies, retail. The radio performance is comparable; the differences are aesthetics, mounting flexibility, and how easy it is to roll out across many similar spaces. We'll match the right model to each part of your facility during the site survey."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many access points do I need for my space?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depends on square footage, ceiling height, building materials, expected device density per area, and what kind of work happens there. As a rough rule, a typical open office runs one AP per 1,500 to 2,000 square feet; conference rooms and high-density spaces need more. Warehouses, retail, healthcare facilities, and educational spaces each have different patterns. Meter's design team does a proper RF design — coverage maps, channel planning, density modeling — before any APs ship. The free assessment includes a walkthrough and a recommendation specific to your floor plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can older devices still use Meter's Wi-Fi 7 access points?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Wi-Fi 7 is backwards-compatible all the way back through Wi-Fi 6, 5, 4, and earlier. Older laptops, phones, printers, and IoT devices connect to the appropriate band (2.4 GHz, 5 GHz, or 6 GHz for Wi-Fi 6E/7 devices) and work normally — they just don't get the Wi-Fi 7 speed advantages. Your newer devices use the full Wi-Fi 7 capabilities; your older devices use whatever standard they support; everything coexists on the same APs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Meter's \"custom radio isolation\" mean, and why should I care?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wi-Fi 7 access points operate on three bands simultaneously — 2.4 GHz, 5 GHz, and 6 GHz. The 5 GHz and 6 GHz bands are close enough in frequency that radios can interfere with each other inside the AP, dropping throughput and increasing latency. Most vendors handle this with software workarounds. Meter designs its own circuit boards specifically to isolate the radios at the hardware level, eliminating the interference. The practical result is cleaner connections, higher sustained throughput on both bands at once, and consistent performance in dense environments where every other AP would degrade. It's the kind of engineering most clients never notice — until they compare it side by side with off-the-shelf hardware."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Meter Access Points | Blue Cap IT — Meter Partner" description="Meter Wi-Fi 7 access points deliver blazing-fast wireless with tri-band radios and custom circuitry. The A1 for high-demand offices and A2 for hospitality — fully managed as a service.">
+<MainLayout title="Meter Access Points | Blue Cap IT — Meter Partner" description="Meter Wi-Fi 7 access points deliver blazing-fast wireless with tri-band radios and custom circuitry. The A1 for high-demand offices and A2 for hospitality — fully managed as a service." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/meter/Meter-purple.png" alt="Meter" style="max-height:60px;width:auto;margin-bottom:1.5rem;"/>
@@ -83,6 +130,51 @@ import { Icon } from 'astro-icon/components';
           </li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="meter-access-points-faq-heading">
+    <h2 id="meter-access-points-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Meter A-Series Wi-Fi 7 access points from Blue Cap IT — the A1 premium indoor AP and A2 hospitality AP, with tri-band radios, custom radio isolation, and seamless roaming for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What's the difference between Wi-Fi 7 and Wi-Fi 6/6E — and is it worth upgrading?</summary>
+      <div class="bcit-faq__answer">
+        <p>Wi-Fi 7 (802.11be) is the latest wireless standard, and it's the first major leap in years that practical users will actually feel. Compared to Wi-Fi 6, Wi-Fi 7 delivers roughly 4x the theoretical throughput, dramatically lower latency, and much better performance in crowded environments. The real-world wins: cleaner video calls when 50 people are in the office, faster file transfers without ducking to a wired connection, and stable performance for streaming, AR/VR, and modern collaboration tools. For most businesses installing or refreshing wireless today, Wi-Fi 7 is the right standard to deploy — your laptops and phones will catch up over the next 18 months anyway.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>When should I pick the A1 versus the A2?</summary>
+      <div class="bcit-faq__answer">
+        <p>The A1 is the premium indoor access point — designed for high-demand environments where wireless performance is mission-critical: open offices, conference rooms, co-working spaces, trading floors, and any space with dense device counts. The A2 delivers the same Wi-Fi 7 performance but in a form factor and install profile tuned for hospitality and guest-facing spaces — hotels, restaurants, lobbies, retail. The radio performance is comparable; the differences are aesthetics, mounting flexibility, and how easy it is to roll out across many similar spaces. We'll match the right model to each part of your facility during the site survey.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How many access points do I need for my space?</summary>
+      <div class="bcit-faq__answer">
+        <p>Depends on square footage, ceiling height, building materials, expected device density per area, and what kind of work happens there. As a rough rule, a typical open office runs one AP per 1,500 to 2,000 square feet; conference rooms and high-density spaces need more. Warehouses, retail, healthcare facilities, and educational spaces each have different patterns. Meter's design team does a proper RF design — coverage maps, channel planning, density modeling — before any APs ship. The free assessment includes a walkthrough and a recommendation specific to your floor plan.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can older devices still use Meter's Wi-Fi 7 access points?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Wi-Fi 7 is backwards-compatible all the way back through Wi-Fi 6, 5, 4, and earlier. Older laptops, phones, printers, and IoT devices connect to the appropriate band (2.4 GHz, 5 GHz, or 6 GHz for Wi-Fi 6E/7 devices) and work normally — they just don't get the Wi-Fi 7 speed advantages. Your newer devices use the full Wi-Fi 7 capabilities; your older devices use whatever standard they support; everything coexists on the same APs.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What does Meter's "custom radio isolation" mean, and why should I care?</summary>
+      <div class="bcit-faq__answer">
+        <p>Wi-Fi 7 access points operate on three bands simultaneously — 2.4 GHz, 5 GHz, and 6 GHz. The 5 GHz and 6 GHz bands are close enough in frequency that radios can interfere with each other inside the AP, dropping throughput and increasing latency. Most vendors handle this with software workarounds. Meter designs its own circuit boards specifically to isolate the radios at the hardware level, eliminating the interference. The practical result is cleaner connections, higher sustained throughput on both bands at once, and consistent performance in dense environments where every other AP would degrade. It's the kind of engineering most clients never notice — until they compare it side by side with off-the-shelf hardware.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free wireless assessment</a> — we'll walk your space, model coverage, recommend AP placement, and quote your full Wi-Fi 7 deployment with itemized pricing.</p>
     </div>
   </section>
 
