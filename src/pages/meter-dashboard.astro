@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between Meter Dashboard and Meter Command?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dashboard is the traditional web interface — a clean, visual control panel for monitoring devices, configuring settings, and reviewing performance. Think of it as the \"point-and-click\" experience: navigate menus, fill out forms, click save. Meter Command is the AI layer on top. Instead of clicking through twenty menus to answer a question, you ask in plain English — \"show me Wi-Fi performance for the conference room last week\" or \"create a VLAN for our new IoT cameras\" — and Command either fetches the data or executes the action. Most clients use both: Dashboard for routine work, Command for ad-hoc queries and one-off tasks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need networking expertise to use the Meter Dashboard, or can my non-technical team manage it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Dashboard is designed to be operable by people without CLI experience. Common tasks — viewing device status, generating a Wi-Fi password for a guest, checking which floor is having connectivity issues, restarting a misbehaving access point — are accessible without networking expertise. More advanced operations (configuring VLANs, setting firewall rules, defining traffic policies) are also available through the UI rather than CLI, but make more sense in the hands of an IT-savvy user or Blue Cap IT. Most of our clients have a designated power user on the customer side who handles day-to-day questions, while we handle the complex changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the AI in Meter Command accidentally break my network if it misinterprets a request?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Command is designed with safety guardrails for exactly this concern. Read-only queries (showing data, building dashboards, generating reports) execute directly. Write operations that change network configuration (creating VLANs, modifying firewall rules, blocking devices) require explicit confirmation before they're applied — Command shows you exactly what it's about to do and asks \"should I proceed?\" before executing. You can also undo recent changes from the change log. Production-impacting actions don't happen behind your back."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from a typical network management interface like Cisco Meraki?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Meraki and similar cloud-managed platforms pioneered the web-based dashboard model and they do it well — but they're still fundamentally point-and-click interfaces. You navigate menus, run reports, configure features manually. Meter Command adds the AI layer that those platforms don't have: natural language queries instead of menu hunting, on-the-fly custom dashboards instead of pre-built reports, and conversational task execution instead of multi-step wizards. For routine work the difference is convenience; for ad-hoc investigations (troubleshooting an outage, answering a question from leadership) the difference is minutes versus hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can multiple team members use the Dashboard at the same time without stepping on each other?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it's designed to be collaborative. Multiple users can be logged in simultaneously, viewing live dashboards or making changes. Role-based access control limits what each user can do — your help desk team can view and reset Wi-Fi passwords, your senior engineer can change firewall rules, and an executive can see uptime reports without any admin permissions. Shared dashboards and views let team members align around the same data, and every action is logged in an audit trail so you can see who changed what and when."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Meter Dashboard & Command | Blue Cap IT — Meter Partner" description="Meter Dashboard and Command give you real-time visibility and AI-powered control of your entire network. Custom dashboards, natural language controls, and collaborative tools — all in one platform.">
+<MainLayout title="Meter Dashboard & Command | Blue Cap IT — Meter Partner" description="Meter Dashboard and Command give you real-time visibility and AI-powered control of your entire network. Custom dashboards, natural language controls, and collaborative tools — all in one platform." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/meter/Meter-purple.png" alt="Meter" style="max-height:60px;width:auto;margin-bottom:1.5rem;"/>
@@ -79,6 +126,51 @@ import { Icon } from 'astro-icon/components';
           <p>A flexible, zoomable interface that lets you arrange network elements spatially. Understand complex topologies at a glance with visual organization.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="meter-dashboard-faq-heading">
+    <h2 id="meter-dashboard-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Meter Dashboard and Meter Command from Blue Cap IT — the AI-powered web platform for managing your entire Meter network, including natural language queries, custom dashboards, and task automation for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What's the difference between Meter Dashboard and Meter Command?</summary>
+      <div class="bcit-faq__answer">
+        <p>Dashboard is the traditional web interface — a clean, visual control panel for monitoring devices, configuring settings, and reviewing performance. Think of it as the "point-and-click" experience: navigate menus, fill out forms, click save. Meter Command is the AI layer on top. Instead of clicking through twenty menus to answer a question, you ask in plain English — "show me Wi-Fi performance for the conference room last week" or "create a VLAN for our new IoT cameras" — and Command either fetches the data or executes the action. Most clients use both: Dashboard for routine work, Command for ad-hoc queries and one-off tasks.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Do I need networking expertise to use the Meter Dashboard, or can my non-technical team manage it?</summary>
+      <div class="bcit-faq__answer">
+        <p>The Dashboard is designed to be operable by people without CLI experience. Common tasks — viewing device status, generating a Wi-Fi password for a guest, checking which floor is having connectivity issues, restarting a misbehaving access point — are accessible without networking expertise. More advanced operations (configuring VLANs, setting firewall rules, defining traffic policies) are also available through the UI rather than CLI, but make more sense in the hands of an IT-savvy user or Blue Cap IT. Most of our clients have a designated power user on the customer side who handles day-to-day questions, while we handle the complex changes.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can the AI in Meter Command accidentally break my network if it misinterprets a request?</summary>
+      <div class="bcit-faq__answer">
+        <p>Command is designed with safety guardrails for exactly this concern. Read-only queries (showing data, building dashboards, generating reports) execute directly. Write operations that change network configuration (creating VLANs, modifying firewall rules, blocking devices) require explicit confirmation before they're applied — Command shows you exactly what it's about to do and asks "should I proceed?" before executing. You can also undo recent changes from the change log. Production-impacting actions don't happen behind your back.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How is this different from a typical network management interface like Cisco Meraki?</summary>
+      <div class="bcit-faq__answer">
+        <p>Meraki and similar cloud-managed platforms pioneered the web-based dashboard model and they do it well — but they're still fundamentally point-and-click interfaces. You navigate menus, run reports, configure features manually. Meter Command adds the AI layer that those platforms don't have: natural language queries instead of menu hunting, on-the-fly custom dashboards instead of pre-built reports, and conversational task execution instead of multi-step wizards. For routine work the difference is convenience; for ad-hoc investigations (troubleshooting an outage, answering a question from leadership) the difference is minutes versus hours.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can multiple team members use the Dashboard at the same time without stepping on each other?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes, and it's designed to be collaborative. Multiple users can be logged in simultaneously, viewing live dashboards or making changes. Role-based access control limits what each user can do — your help desk team can view and reset Wi-Fi passwords, your senior engineer can change firewall rules, and an executive can see uptime reports without any admin permissions. Shared dashboards and views let team members align around the same data, and every action is logged in an audit trail so you can see who changed what and when.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free Meter Dashboard demo</a> — we'll show you the dashboard live with your environment in mind and quote your full Meter NaaS deployment with itemized pricing.</p>
     </div>
   </section>
 
