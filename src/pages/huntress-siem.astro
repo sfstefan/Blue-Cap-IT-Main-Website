@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is SIEM, and why does my business need it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SIEM stands for Security Information and Event Management. It collects logs from your systems (endpoints, servers, firewalls, cloud apps, identity providers), correlates them in one place, and lets analysts spot threats that span multiple systems — like a brute-force attempt against a server that's followed by a successful login from an unusual location and then unusual file access. Individual security tools each see a piece of the picture; SIEM is what assembles the whole story. Businesses need SIEM for two reasons: catching multi-stage attacks that no single tool would notice, and producing the audit logs that compliance frameworks and cyber insurance carriers increasingly require."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Huntress Managed SIEM different from traditional SIEM products like Splunk or LogRhythm?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional SIEMs like Splunk, LogRhythm, IBM QRadar, and Microsoft Sentinel are powerful but built for organizations with dedicated security analysts. They generate enormous alert volumes, require expert tuning to suppress false positives, and bill by data ingestion volume — meaning costs spiral as you add data sources. Huntress Managed SIEM strips out the complexity: the SOC handles ingestion, tuning, correlation, and alert triage for you. You get the security and compliance value without staffing analysts or absorbing surprise ingestion bills."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do cyber insurance providers often require SIEM, and what does that mean for my premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Underwriters use cybersecurity controls as risk signals. Two of the controls they look hardest at: centralized log monitoring (so an incident can actually be investigated) and documented 24/7 monitoring (so attacks aren't running uncaught for weeks). SIEM checks both boxes. Carriers often require it for coverage at certain limits, and many offer better premiums or higher coverage caps to clients that have a managed SIEM in place. Huntress Managed SIEM with Blue Cap IT-managed deployment is documentation underwriters know and accept."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I still need SIEM if I already have Huntress Managed EDR and ITDR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EDR and ITDR each cover a specific layer — endpoints and cloud identities. SIEM is the broader log aggregation and correlation layer that covers everything else: firewalls, switches, servers, on-prem applications, network gear, and the systems EDR/ITDR don't directly monitor. SIEM also produces the long-term retention and audit reporting that compliance frameworks want. For small environments with a simple footprint, EDR + ITDR may be enough. For regulated industries, mid-sized companies, or anyone with cyber insurance requirements above baseline, SIEM is usually the next layer added."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Huntress SIEM priced — won't log ingestion costs spiral out of control?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That's the most common complaint about traditional SIEMs, and Huntress priced explicitly to avoid it. Huntress Managed SIEM charges based on data sources connected — not per-GB ingested. So you can connect your full log stream from firewalls, servers, M365, identity providers, and endpoints without watching the meter run. Your monthly cost is predictable and budget-friendly. We'll quote your specific data source inventory during a free assessment."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Managed SIEM | Huntress Security Information & Event Management — Blue Cap IT" description="Huntress Managed SIEM delivers 24/7 threat response and compliance reporting without the complexity of traditional SIEMs. Fully managed by SOC experts at a predictable price. Deployed by Blue Cap IT.">
+<MainLayout title="Managed SIEM | Huntress Security Information & Event Management — Blue Cap IT" description="Huntress Managed SIEM delivers 24/7 threat response and compliance reporting without the complexity of traditional SIEMs. Fully managed by SOC experts at a predictable price. Deployed by Blue Cap IT." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/Huntress/huntress-logo-teal.png" alt="Huntress" style="max-height:50px;width:auto;margin-bottom:1.5rem;"/>
@@ -77,6 +124,51 @@ import { Icon } from 'astro-icon/components';
           <p>Satisfy cyber insurance requirements with 24/7 monitoring, log retention, and documented incident response capabilities.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="huntress-siem-faq-heading">
+    <h2 id="huntress-siem-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Huntress Managed SIEM (Security Information and Event Management) from Blue Cap IT — centralized log management, 24/7 SOC threat detection, and compliance reporting for HIPAA, PCI-DSS, SOC 2, and cyber insurance for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is SIEM, and why does my business need it?</summary>
+      <div class="bcit-faq__answer">
+        <p>SIEM stands for Security Information and Event Management. It collects logs from your systems (endpoints, servers, firewalls, cloud apps, identity providers), correlates them in one place, and lets analysts spot threats that span multiple systems — like a brute-force attempt against a server that's followed by a successful login from an unusual location and then unusual file access. Individual security tools each see a piece of the picture; SIEM is what assembles the whole story. Businesses need SIEM for two reasons: catching multi-stage attacks that no single tool would notice, and producing the audit logs that compliance frameworks and cyber insurance carriers increasingly require.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How is Huntress Managed SIEM different from traditional SIEM products like Splunk or LogRhythm?</summary>
+      <div class="bcit-faq__answer">
+        <p>Traditional SIEMs like Splunk, LogRhythm, IBM QRadar, and Microsoft Sentinel are powerful but built for organizations with dedicated security analysts. They generate enormous alert volumes, require expert tuning to suppress false positives, and bill by data ingestion volume — meaning costs spiral as you add data sources. Huntress Managed SIEM strips out the complexity: the SOC handles ingestion, tuning, correlation, and alert triage for you. You get the security and compliance value without staffing analysts or absorbing surprise ingestion bills.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Why do cyber insurance providers often require SIEM, and what does that mean for my premium?</summary>
+      <div class="bcit-faq__answer">
+        <p>Underwriters use cybersecurity controls as risk signals. Two of the controls they look hardest at: centralized log monitoring (so an incident can actually be investigated) and documented 24/7 monitoring (so attacks aren't running uncaught for weeks). SIEM checks both boxes. Carriers often require it for coverage at certain limits, and many offer better premiums or higher coverage caps to clients that have a managed SIEM in place. Huntress Managed SIEM with Blue Cap IT-managed deployment is documentation underwriters know and accept.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Do I still need SIEM if I already have Huntress Managed EDR and ITDR?</summary>
+      <div class="bcit-faq__answer">
+        <p>EDR and ITDR each cover a specific layer — endpoints and cloud identities. SIEM is the broader log aggregation and correlation layer that covers everything else: firewalls, switches, servers, on-prem applications, network gear, and the systems EDR/ITDR don't directly monitor. SIEM also produces the long-term retention and audit reporting that compliance frameworks want. For small environments with a simple footprint, EDR + ITDR may be enough. For regulated industries, mid-sized companies, or anyone with cyber insurance requirements above baseline, SIEM is usually the next layer added.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How is Huntress SIEM priced — won't log ingestion costs spiral out of control?</summary>
+      <div class="bcit-faq__answer">
+        <p>That's the most common complaint about traditional SIEMs, and Huntress priced explicitly to avoid it. Huntress Managed SIEM charges based on data sources connected — not per-GB ingested. So you can connect your full log stream from firewalls, servers, M365, identity providers, and endpoints without watching the meter run. Your monthly cost is predictable and budget-friendly. We'll quote your specific data source inventory during a free assessment.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free SIEM and compliance assessment</a> — we'll review your logging and monitoring posture against your industry's compliance and cyber insurance requirements, and quote Huntress Managed SIEM with itemized pricing.</p>
     </div>
   </section>
 
