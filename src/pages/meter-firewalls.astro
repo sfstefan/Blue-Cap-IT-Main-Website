@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which F-Series firewall model do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depends on your bandwidth requirements and site size. The F1 is the top-tier model — 50 Gbps WAN throughput with a high-availability dual-unit configuration, built for large enterprise headquarters and dense campuses. The F2 delivers 20 Gbps in the same HA dual-unit design — the sweet spot for mid-sized offices and multi-site deployments. The F3 is the compact branch firewall — full stateful firewall, DNS security, VPN, and SD-WAN in a small form factor for branch offices, retail locations, and remote sites. We size the right firewall during a free assessment based on your internet speed, number of users, and traffic patterns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does \"automatic failover\" mean, and why does it matter for my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The F1 and F2 ship in pairs — two physical firewalls running side by side. One is active, one is standby. If the active firewall has a hardware fault, the standby takes over in seconds without manual intervention or admin involvement. Your internet traffic, VPN connections, and security policies continue uninterrupted. Traditional single-firewall deployments mean an outage every time the firewall fails — for a business that depends on connectivity (which is most of them), the cost of a single hour of downtime usually exceeds the cost of the redundant unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is SD-WAN, and do I need it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SD-WAN (Software-Defined Wide Area Network) intelligently routes traffic across multiple internet connections. If you have a primary fiber line and a backup cable or 5G connection, SD-WAN automatically uses the best path for each kind of traffic — video calls go over the lowest-latency connection, bulk file transfers can use a slower link, and if one ISP drops, traffic shifts to the working one without breaking sessions. You need it if you have multiple internet connections (or want the option), if you have multiple sites that should talk to each other, or if connectivity downtime would seriously hurt your business. Every Meter F-Series firewall includes SD-WAN."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Meter's firewall replace my existing SonicWall, Fortinet, or Cisco firewall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and that's a common migration. Meter F-Series firewalls cover the standard enterprise feature set — stateful inspection, deep packet inspection, DNS security, IPS, VPN, SD-WAN, traffic shaping — and add the cloud-management piece most legacy firewalls lack. The transition usually goes: we install the Meter firewall in parallel, validate your security policies are translated correctly, cut over the WAN connection on a planned maintenance window, and retire the old box. License renewals on SonicWall, Fortinet, and Cisco are predictable refresh moments — that's when most clients make the switch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I still need Coro Network Security if I have a Meter F-Series firewall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They cover different layers. The Meter firewall enforces network-level security — what traffic enters and leaves your physical office network, who can connect via VPN, and which destinations are blocked at DNS. Coro Network Security adds identity-aware controls: Zero Trust Network Access that restricts users to specific apps based on identity, device posture, and context (regardless of whether they're on your network). For employees only at the office, the firewall alone covers a lot. For remote workers, hybrid teams, and clients with significant identity-based security needs, running both is the right answer."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Meter Firewalls | Blue Cap IT — Meter Partner" description="Meter's in-house designed firewalls provide enterprise-grade network security with automatic failover, deep integration, and cloud management. No complexity, no extra vendors.">
+<MainLayout title="Meter Firewalls | Blue Cap IT — Meter Partner" description="Meter's in-house designed firewalls provide enterprise-grade network security with automatic failover, deep integration, and cloud management. No complexity, no extra vendors." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/meter/Meter-purple.png" alt="Meter" style="max-height:60px;width:auto;margin-bottom:1.5rem;"/>
@@ -123,6 +170,51 @@ import { Icon } from 'astro-icon/components';
           <p>Prioritize business-critical applications and limit bandwidth hogs. Ensure your most important traffic always gets through.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="meter-firewalls-faq-heading">
+    <h2 id="meter-firewalls-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Meter F-Series firewalls from Blue Cap IT — the F1, F2, and F3 with automatic failover, deep packet inspection, VPN, SD-WAN, and DNS security for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>Which F-Series firewall model do I need?</summary>
+      <div class="bcit-faq__answer">
+        <p>Depends on your bandwidth requirements and site size. The F1 is the top-tier model — 50 Gbps WAN throughput with a high-availability dual-unit configuration, built for large enterprise headquarters and dense campuses. The F2 delivers 20 Gbps in the same HA dual-unit design — the sweet spot for mid-sized offices and multi-site deployments. The F3 is the compact branch firewall — full stateful firewall, DNS security, VPN, and SD-WAN in a small form factor for branch offices, retail locations, and remote sites. We size the right firewall during a free assessment based on your internet speed, number of users, and traffic patterns.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What does "automatic failover" mean, and why does it matter for my business?</summary>
+      <div class="bcit-faq__answer">
+        <p>The F1 and F2 ship in pairs — two physical firewalls running side by side. One is active, one is standby. If the active firewall has a hardware fault, the standby takes over in seconds without manual intervention or admin involvement. Your internet traffic, VPN connections, and security policies continue uninterrupted. Traditional single-firewall deployments mean an outage every time the firewall fails — for a business that depends on connectivity (which is most of them), the cost of a single hour of downtime usually exceeds the cost of the redundant unit.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What is SD-WAN, and do I need it?</summary>
+      <div class="bcit-faq__answer">
+        <p>SD-WAN (Software-Defined Wide Area Network) intelligently routes traffic across multiple internet connections. If you have a primary fiber line and a backup cable or 5G connection, SD-WAN automatically uses the best path for each kind of traffic — video calls go over the lowest-latency connection, bulk file transfers can use a slower link, and if one ISP drops, traffic shifts to the working one without breaking sessions. You need it if you have multiple internet connections (or want the option), if you have multiple sites that should talk to each other, or if connectivity downtime would seriously hurt your business. Every Meter F-Series firewall includes SD-WAN.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can Meter's firewall replace my existing SonicWall, Fortinet, or Cisco firewall?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes, and that's a common migration. Meter F-Series firewalls cover the standard enterprise feature set — stateful inspection, deep packet inspection, DNS security, IPS, VPN, SD-WAN, traffic shaping — and add the cloud-management piece most legacy firewalls lack. The transition usually goes: we install the Meter firewall in parallel, validate your security policies are translated correctly, cut over the WAN connection on a planned maintenance window, and retire the old box. License renewals on SonicWall, Fortinet, and Cisco are predictable refresh moments — that's when most clients make the switch.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Do I still need Coro Network Security if I have a Meter F-Series firewall?</summary>
+      <div class="bcit-faq__answer">
+        <p>They cover different layers. The Meter firewall enforces network-level security — what traffic enters and leaves your physical office network, who can connect via VPN, and which destinations are blocked at DNS. Coro Network Security adds identity-aware controls: Zero Trust Network Access that restricts users to specific apps based on identity, device posture, and context (regardless of whether they're on your network). For employees only at the office, the firewall alone covers a lot. For remote workers, hybrid teams, and clients with significant identity-based security needs, running both is the right answer.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free network security assessment</a> — we'll evaluate your current firewall, size the right F-Series model, plan the cutover, and quote your full deployment with itemized pricing.</p>
     </div>
   </section>
 
