@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's included in Blue Cap IT's managed IT services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A flat monthly subscription covers 24/7 remote monitoring, unlimited helpdesk support for your employees, automated patch management across operating systems and applications, backup and disaster recovery, Microsoft 365 administration (user provisioning, security, licensing), network management for firewalls and Wi-Fi, and optional Virtual CIO (vCIO) services for strategic planning. Hardware refreshes, software audits, and quarterly business reviews are built in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Blue Cap IT price managed IT services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing is per-user or per-device on a flat monthly subscription — not hourly. You know your IT cost going into each month, and we make money when your systems run smoothly, not when they break. Final pricing depends on your environment size, number of servers, and which add-ons you need (vCIO, advanced backup, cybersecurity through Coro or Huntress). We'll quote your specific situation after a free assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly does Blue Cap IT respond to support tickets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Within minutes — for both critical issues (systems down, email out, suspected ransomware) and routine requests (password resets, software questions, hardware issues). Our 24/7 monitoring often catches problems before your team even notices, so we can fix things before they hit your ticket queue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Blue Cap IT support remote employees and hybrid teams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our remote monitoring agents and helpdesk work the same whether your team is in the office, at home, or split. We secure remote endpoints, configure VPN and Zero Trust access, manage Microsoft 365 and cloud apps, and provide the same fast support regardless of where your employees sit. Most of our clients today run hybrid or fully remote operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is cybersecurity included in managed IT, or is it a separate service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Baseline cybersecurity — patch management, secure backups, Microsoft 365 security configuration, antivirus, and identity hygiene — is part of managed IT. For deeper protection like Managed Detection and Response (MDR), 24/7 SOC monitoring, endpoint behavioral analysis, email threat protection, and security awareness training, we add Coro or Huntress on top. Most clients combine both. Call (410) 858-4031 to talk through what level of protection you need."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Managed IT Services | Blue Cap IT — Your Outsourced IT Department" description="Blue Cap IT provides managed IT services including remote monitoring, helpdesk support, patch management, backup & disaster recovery, Microsoft 365 management, vCIO services, and more.">
+<MainLayout title="Managed IT Services | Blue Cap IT — Your Outsourced IT Department" description="Blue Cap IT provides managed IT services including remote monitoring, helpdesk support, patch management, backup & disaster recovery, Microsoft 365 management, vCIO services, and more." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/images/managed-services-hero.jpg" alt="Real-time monitoring dashboard showing IT service metrics and analytics" style="width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:1rem;margin-bottom:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);" />
@@ -113,6 +160,51 @@ import { Icon } from 'astro-icon/components';
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="managed-services-faq-heading">
+    <h2 id="managed-services-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Blue Cap IT's managed IT services — remote monitoring, helpdesk, patching, backup, Microsoft 365, network management, and vCIO — for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What's included in Blue Cap IT's managed IT services?</summary>
+      <div class="bcit-faq__answer">
+        <p>A flat monthly subscription covers 24/7 remote monitoring, unlimited helpdesk support for your employees, automated patch management across operating systems and applications, backup and disaster recovery, Microsoft 365 administration (user provisioning, security, licensing), network management for firewalls and Wi-Fi, and optional Virtual CIO (vCIO) services for strategic planning. Hardware refreshes, software audits, and quarterly business reviews are built in.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does Blue Cap IT price managed IT services?</summary>
+      <div class="bcit-faq__answer">
+        <p>Pricing is per-user or per-device on a flat monthly subscription — not hourly. You know your IT cost going into each month, and we make money when your systems run smoothly, not when they break. Final pricing depends on your environment size, number of servers, and which add-ons you need (vCIO, advanced backup, cybersecurity through Coro or Huntress). We'll quote your specific situation after a free assessment.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How quickly does Blue Cap IT respond to support tickets?</summary>
+      <div class="bcit-faq__answer">
+        <p>Within minutes — for both critical issues (systems down, email out, suspected ransomware) and routine requests (password resets, software questions, hardware issues). Our 24/7 monitoring often catches problems before your team even notices, so we can fix things before they hit your ticket queue.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can Blue Cap IT support remote employees and hybrid teams?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Our remote monitoring agents and helpdesk work the same whether your team is in the office, at home, or split. We secure remote endpoints, configure VPN and Zero Trust access, manage Microsoft 365 and cloud apps, and provide the same fast support regardless of where your employees sit. Most of our clients today run hybrid or fully remote operations.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Is cybersecurity included in managed IT, or is it a separate service?</summary>
+      <div class="bcit-faq__answer">
+        <p>Baseline cybersecurity — patch management, secure backups, Microsoft 365 security configuration, antivirus, and identity hygiene — is part of managed IT. For deeper protection like Managed Detection and Response (MDR), 24/7 SOC monitoring, endpoint behavioral analysis, email threat protection, and security awareness training, we add Coro or Huntress on top. Most clients combine both. Call (410) 858-4031 to talk through what level of protection you need.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free assessment</a> — we'll map your current IT environment and show you exactly what managed IT would look like for your business.</p>
     </div>
   </section>
 
