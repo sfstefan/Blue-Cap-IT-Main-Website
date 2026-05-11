@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does natural language search actually work — can I really just type what I'm looking for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. As spot.ai's AI processes camera footage, it tags every frame with detected objects, people, vehicles, motion events, and contextual attributes. Those tags become searchable. You type queries the way you'd describe what you're looking for to a colleague — \"red truck in the parking lot Tuesday afternoon,\" \"person at the back door after 10 PM,\" \"forklift in the receiving area\" — and the system returns matching video clips in seconds. You don't need to know exact timestamps, camera names, or pre-tag anything in advance. The deep-learning models do the indexing automatically as footage is captured."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can spot.ai's AI find in my footage that I'd miss manually?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Patterns that are impossible to spot watching individual cameras. A few real examples: a forklift that consistently idles for 20 minutes during shifts (operational inefficiency), an employee who's the only one near a missing inventory item across three separate days (loss prevention), customer foot-traffic peaks that don't align with staffing levels (scheduling), or vehicles that have visited a parking lot multiple times after hours over weeks (security investigation). The AI surfaces these patterns automatically — humans can't watch 50 cameras simultaneously across weeks of footage and notice them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I search historical footage, or only video from after spot.ai was installed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After installation. spot.ai indexes footage as the IVR captures it, so anything recorded on the system from day one is fully searchable. Older footage from a legacy NVR/DVR that predates the IVR isn't automatically searchable — but you can selectively import historical clips into spot.ai for analysis if needed. Most clients use the cutover date as the practical starting line: everything after install is AI-searchable; older incidents still get reviewed the old-fashioned way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the AI — should I expect a lot of false positives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modern deep-learning models have come a long way. For mainstream detections — people, vehicles, motion in restricted areas, basic objects — accuracy is high and false positive rates are low. For more specialized detections (PPE compliance, license plate reads in poor lighting, very small or partially obscured objects), accuracy depends on camera quality, angle, and lighting. spot.ai's models continuously improve, and detection rules are tunable per camera and zone so you can dial sensitivity up or down. We tune the rules with you during onboarding so alerts match what you actually care about."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does trend reporting work, and what kinds of insights does spot.ai deliver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "spot.ai's trend reporting runs on top of the same AI indexing that powers search. As the platform tags footage continuously, it builds statistical models of what's normal for each camera, location, and time of day — and surfaces what isn't. You get automatic dashboard reports on foot traffic patterns by hour and day, occupancy trends across spaces, vehicle activity at gates and lots, safety event frequencies (slip-and-falls, PPE violations, near-misses), and anomalies like after-hours access or unusual entry patterns. The reports are designed to answer business questions — \"is the cafe getting busier on Fridays?\", \"are we staffing the warehouse to traffic levels?\", \"are slip risks concentrated in one area?\" — without anyone manually compiling data."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Video Intelligence | spot.ai Analytics & Search — Blue Cap IT" description="spot.ai Video Intelligence uses deep learning to search, analyze, and extract insights from your camera footage. Object detection, people counting, license plate recognition, and trend reporting — all AI-powered.">
+<MainLayout title="Video Intelligence | spot.ai Analytics & Search — Blue Cap IT" description="spot.ai Video Intelligence uses deep learning to search, analyze, and extract insights from your camera footage. Object detection, people counting, license plate recognition, and trend reporting — all AI-powered." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/spotai/spotai-logo.png" alt="spot.ai" style="max-height:50px;width:auto;margin-bottom:1.5rem;"/>
@@ -45,6 +92,51 @@ import { Icon } from 'astro-icon/components';
           </li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="spotai-video-intelligence-faq-heading">
+    <h2 id="spotai-video-intelligence-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about spot.ai Video Intelligence from Blue Cap IT — natural language video search, people counting, license plate recognition, deep-learning analytics, and automatic trend reporting for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>How does natural language search actually work — can I really just type what I'm looking for?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. As spot.ai's AI processes camera footage, it tags every frame with detected objects, people, vehicles, motion events, and contextual attributes. Those tags become searchable. You type queries the way you'd describe what you're looking for to a colleague — "red truck in the parking lot Tuesday afternoon," "person at the back door after 10 PM," "forklift in the receiving area" — and the system returns matching video clips in seconds. You don't need to know exact timestamps, camera names, or pre-tag anything in advance. The deep-learning models do the indexing automatically as footage is captured.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What can spot.ai's AI find in my footage that I'd miss manually?</summary>
+      <div class="bcit-faq__answer">
+        <p>Patterns that are impossible to spot watching individual cameras. A few real examples: a forklift that consistently idles for 20 minutes during shifts (operational inefficiency), an employee who's the only one near a missing inventory item across three separate days (loss prevention), customer foot-traffic peaks that don't align with staffing levels (scheduling), or vehicles that have visited a parking lot multiple times after hours over weeks (security investigation). The AI surfaces these patterns automatically — humans can't watch 50 cameras simultaneously across weeks of footage and notice them.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can I search historical footage, or only video from after spot.ai was installed?</summary>
+      <div class="bcit-faq__answer">
+        <p>After installation. spot.ai indexes footage as the IVR captures it, so anything recorded on the system from day one is fully searchable. Older footage from a legacy NVR/DVR that predates the IVR isn't automatically searchable — but you can selectively import historical clips into spot.ai for analysis if needed. Most clients use the cutover date as the practical starting line: everything after install is AI-searchable; older incidents still get reviewed the old-fashioned way.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How accurate is the AI — should I expect a lot of false positives?</summary>
+      <div class="bcit-faq__answer">
+        <p>Modern deep-learning models have come a long way. For mainstream detections — people, vehicles, motion in restricted areas, basic objects — accuracy is high and false positive rates are low. For more specialized detections (PPE compliance, license plate reads in poor lighting, very small or partially obscured objects), accuracy depends on camera quality, angle, and lighting. spot.ai's models continuously improve, and detection rules are tunable per camera and zone so you can dial sensitivity up or down. We tune the rules with you during onboarding so alerts match what you actually care about.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does trend reporting work, and what kinds of insights does spot.ai deliver?</summary>
+      <div class="bcit-faq__answer">
+        <p>spot.ai's trend reporting runs on top of the same AI indexing that powers search. As the platform tags footage continuously, it builds statistical models of what's normal for each camera, location, and time of day — and surfaces what isn't. You get automatic dashboard reports on foot traffic patterns by hour and day, occupancy trends across spaces, vehicle activity at gates and lots, safety event frequencies (slip-and-falls, PPE violations, near-misses), and anomalies like after-hours access or unusual entry patterns. The reports are designed to answer business questions — "is the cafe getting busier on Fridays?", "are we staffing the warehouse to traffic levels?", "are slip risks concentrated in one area?" — without anyone manually compiling data.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free video intelligence demo</a> — we'll show you what spot.ai can detect in real footage and quote your full deployment with itemized pricing.</p>
     </div>
   </section>
 
