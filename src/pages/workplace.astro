@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's included in Verkada Workplace beyond a basic visitor sign-in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Workplace is a complete front-of-house platform, not just a sign-in iPad. It covers digital visitor check-in with NDA signing and automatic host notifications, on-demand visitor badge printing with photo and expiration, mailroom and package management with full chain-of-custody tracking, guest pre-registration with QR code access, background check and watchlist screening, and native integration with Verkada access control so visitors get temporary credentials that expire automatically at checkout. Everything is managed from the same Verkada Command dashboard as your cameras and doors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the mailroom and package tracking feature work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Packages get scanned at the receiving point — a quick barcode scan logs the carrier, sender, and recipient. The recipient gets an automatic notification (email, SMS, or Slack) that something has arrived. When they come to pick up, a second scan confirms handoff and timestamps it. You end up with a full chain-of-custody record for every package — useful when something goes missing or arrives damaged and you need to prove when it changed hands. For high-volume mailrooms, this typically eliminates several hours of weekly admin work and dramatically reduces lost or misdelivered packages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can guests pre-register before arriving so they skip the kiosk line?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Employees pre-register expected visitors from their desktop or phone — name, email, arrival time, host, any required documents. The system emails the guest a QR code before their visit. On arrival, they scan the code on the kiosk and check in instantly without retyping anything. This works especially well for executive meetings, scheduled client visits, contractors, and event check-ins where you don't want guests waiting in a lobby queue. Calendar integration can auto-create pre-registrations from meeting invites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Workplace include background checks and watchlist screening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Verkada Workplace integrates with background check services to screen visitors against industry watchlists and run on-demand background checks where required (typical use cases: contractors entering secure facilities, school visitors, healthcare environments, government buildings). Flagged individuals trigger alerts to security staff before access is granted. The visitor's identity can also be verified by scanning their driver's license at the kiosk. The screening level is configurable per site and per visitor type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Workplace replace a full-time receptionist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For many businesses, yes — the kiosk handles check-in, host notifications, badge printing, pre-registration, and basic visitor questions without staff intervention. For others, Workplace doesn't replace the receptionist but frees them up to focus on the parts of the job that actually need a human (greeting key clients, answering complex questions, handling deliveries). Both patterns work. We help you think through which approach fits your building's traffic, security requirements, and culture during the free assessment."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Verkada Workplace | Blue Cap IT — Gold Partner" description="Blue Cap IT deploys Verkada Workplace solutions — visitor management, mailroom tracking, badge printing, and guest pre-registration. Official Verkada Gold Partner. Call (410) 858-4031.">
+<MainLayout title="Verkada Workplace | Blue Cap IT — Gold Partner" description="Blue Cap IT deploys Verkada Workplace solutions — visitor management, mailroom tracking, badge printing, and guest pre-registration. Official Verkada Gold Partner. Call (410) 858-4031." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <a href="verkada.html">Verkada Solutions</a> <span>/</span> Workplace</div>
@@ -126,6 +173,51 @@ import { Icon } from 'astro-icon/components';
           <p>Verkada Workplace connects directly to Verkada access control. Visitors receive temporary credentials at check-in that are automatically revoked at checkout.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="workplace-faq-heading">
+    <h2 id="workplace-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Verkada Workplace from Blue Cap IT, an official Verkada Gold Partner — digital visitor check-in, mailroom and package tracking, badge printing, guest pre-registration, and access control integration for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What's included in Verkada Workplace beyond a basic visitor sign-in?</summary>
+      <div class="bcit-faq__answer">
+        <p>Workplace is a complete front-of-house platform, not just a sign-in iPad. It covers digital visitor check-in with NDA signing and automatic host notifications, on-demand visitor badge printing with photo and expiration, mailroom and package management with full chain-of-custody tracking, guest pre-registration with QR code access, background check and watchlist screening, and native integration with Verkada access control so visitors get temporary credentials that expire automatically at checkout. Everything is managed from the same Verkada Command dashboard as your cameras and doors.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does the mailroom and package tracking feature work?</summary>
+      <div class="bcit-faq__answer">
+        <p>Packages get scanned at the receiving point — a quick barcode scan logs the carrier, sender, and recipient. The recipient gets an automatic notification (email, SMS, or Slack) that something has arrived. When they come to pick up, a second scan confirms handoff and timestamps it. You end up with a full chain-of-custody record for every package — useful when something goes missing or arrives damaged and you need to prove when it changed hands. For high-volume mailrooms, this typically eliminates several hours of weekly admin work and dramatically reduces lost or misdelivered packages.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can guests pre-register before arriving so they skip the kiosk line?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Employees pre-register expected visitors from their desktop or phone — name, email, arrival time, host, any required documents. The system emails the guest a QR code before their visit. On arrival, they scan the code on the kiosk and check in instantly without retyping anything. This works especially well for executive meetings, scheduled client visits, contractors, and event check-ins where you don't want guests waiting in a lobby queue. Calendar integration can auto-create pre-registrations from meeting invites.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Does Workplace include background checks and watchlist screening?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Verkada Workplace integrates with background check services to screen visitors against industry watchlists and run on-demand background checks where required (typical use cases: contractors entering secure facilities, school visitors, healthcare environments, government buildings). Flagged individuals trigger alerts to security staff before access is granted. The visitor's identity can also be verified by scanning their driver's license at the kiosk. The screening level is configurable per site and per visitor type.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can Workplace replace a full-time receptionist?</summary>
+      <div class="bcit-faq__answer">
+        <p>For many businesses, yes — the kiosk handles check-in, host notifications, badge printing, pre-registration, and basic visitor questions without staff intervention. For others, Workplace doesn't replace the receptionist but frees them up to focus on the parts of the job that actually need a human (greeting key clients, answering complex questions, handling deliveries). Both patterns work. We help you think through which approach fits your building's traffic, security requirements, and culture during the free assessment.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free Workplace assessment</a> — we'll walk your lobby and mailroom, recommend kiosk and printer placement, and quote your full deployment with itemized pricing.</p>
     </div>
   </section>
 
