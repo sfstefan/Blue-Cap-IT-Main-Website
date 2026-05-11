@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is a Verkada video intercom different from a traditional buzzer or doorbell system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional buzzer systems route to a single fixed station (usually a reception desk) and just transmit audio. Verkada intercoms have an HD camera built in, transmit two-way video and audio, and route the call to whoever is on duty — desktop, mobile app, or a physical receiver station — based on time-of-day rules and team schedules. When someone presses the button at the door, your team sees who's there, talks to them, and remotely unlocks the door without leaving their desk or chair. The whole interaction is logged with video for later review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my employees answer the intercom from their phones, or only from a reception desk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either. Calls ring on the Verkada mobile app, the Command web dashboard, or on dedicated desk and wall receivers — and you can route them differently by time of day or by which entry was used. A reception team might handle daytime calls at a receiver station, the front-desk manager picks up at lunch from their phone, and after-hours calls go straight to the on-call employee's mobile. No one has to be physically near the door."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the digital visitor check-in work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Visitors arrive, tap to check in on an iPad kiosk in your lobby, type their name and host, sign any required documents (NDAs, safety briefings, visitor agreements), and the kiosk takes a photo for a printed badge. The host gets an instant push notification with the visitor's name, photo, and a one-tap \"unlock door\" button. The entire visit is logged — timestamp, photo, signed documents, host — and searchable later for compliance audits or post-incident review. Most clients use this to eliminate the need for a dedicated receptionist while still maintaining a professional, secure check-in process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are emergency blue light towers typically used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "College and university campuses, hospital and clinic parking lots, corporate parking garages, transit stations, and multi-building corporate campuses are the common deployments. Anywhere people might walk after dark or in isolated areas where a visible, immediately accessible emergency call station matters. The towers have built-in cameras (so the call is automatically tied to video evidence), one-touch calling, and high-visibility lighting. They integrate with Verkada Command the same way intercoms do — so the on-call security team responds with full video context."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can visitors get temporary access automatically — for example, repeat contractors or delivery drivers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Verkada's visitor management integrates with access control to issue time-limited credentials. You can pre-approve a contractor for specific dates and door access, and the system emails them a QR code that opens the right doors during the right hours. For one-off visitors, the host can grant access remotely from the mobile app. For recurring vendors like cleaning crews or HVAC techs, you can set up scheduled access that opens specific doors during their normal service window — no badge to hand out, no key to track, and a full audit trail of who entered when."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Verkada Intercom &amp; Visitor Management | Blue Cap IT — Gold Partner" description="Verkada video intercoms with two-way audio, remote unlock, and digital visitor check-in. Cloud-managed intercom and visitor management through Blue Cap IT.">
+<MainLayout title="Verkada Intercom &amp; Visitor Management | Blue Cap IT — Gold Partner" description="Verkada video intercoms with two-way audio, remote unlock, and digital visitor check-in. Cloud-managed intercom and visitor management through Blue Cap IT." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <a href="verkada.html">Verkada Solutions</a> <span>/</span> Intercom &amp; Visitor Management</div>
@@ -56,6 +103,51 @@ import { Icon } from 'astro-icon/components';
           <p>Indoor stations for reception desks, two-way audio and video, instant door unlock capability.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+<!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="intercom-faq-heading">
+    <h2 id="intercom-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Verkada video intercoms and digital visitor management from Blue Cap IT, an official Verkada Gold Partner — video intercoms, emergency blue light towers, iPad check-in kiosks, and host notifications for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>How is a Verkada video intercom different from a traditional buzzer or doorbell system?</summary>
+      <div class="bcit-faq__answer">
+        <p>Traditional buzzer systems route to a single fixed station (usually a reception desk) and just transmit audio. Verkada intercoms have an HD camera built in, transmit two-way video and audio, and route the call to whoever is on duty — desktop, mobile app, or a physical receiver station — based on time-of-day rules and team schedules. When someone presses the button at the door, your team sees who's there, talks to them, and remotely unlocks the door without leaving their desk or chair. The whole interaction is logged with video for later review.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can my employees answer the intercom from their phones, or only from a reception desk?</summary>
+      <div class="bcit-faq__answer">
+        <p>Either. Calls ring on the Verkada mobile app, the Command web dashboard, or on dedicated desk and wall receivers — and you can route them differently by time of day or by which entry was used. A reception team might handle daytime calls at a receiver station, the front-desk manager picks up at lunch from their phone, and after-hours calls go straight to the on-call employee's mobile. No one has to be physically near the door.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does the digital visitor check-in work?</summary>
+      <div class="bcit-faq__answer">
+        <p>Visitors arrive, tap to check in on an iPad kiosk in your lobby, type their name and host, sign any required documents (NDAs, safety briefings, visitor agreements), and the kiosk takes a photo for a printed badge. The host gets an instant push notification with the visitor's name, photo, and a one-tap "unlock door" button. The entire visit is logged — timestamp, photo, signed documents, host — and searchable later for compliance audits or post-incident review. Most clients use this to eliminate the need for a dedicated receptionist while still maintaining a professional, secure check-in process.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Where are emergency blue light towers typically used?</summary>
+      <div class="bcit-faq__answer">
+        <p>College and university campuses, hospital and clinic parking lots, corporate parking garages, transit stations, and multi-building corporate campuses are the common deployments. Anywhere people might walk after dark or in isolated areas where a visible, immediately accessible emergency call station matters. The towers have built-in cameras (so the call is automatically tied to video evidence), one-touch calling, and high-visibility lighting. They integrate with Verkada Command the same way intercoms do — so the on-call security team responds with full video context.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can visitors get temporary access automatically — for example, repeat contractors or delivery drivers?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Verkada's visitor management integrates with access control to issue time-limited credentials. You can pre-approve a contractor for specific dates and door access, and the system emails them a QR code that opens the right doors during the right hours. For one-off visitors, the host can grant access remotely from the mobile app. For recurring vendors like cleaning crews or HVAC techs, you can set up scheduled access that opens specific doors during their normal service window — no badge to hand out, no key to track, and a full audit trail of who entered when.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free intercom and visitor management assessment</a> — we'll walk your entry points, recommend the right intercom and receiver layout, and quote your full project with itemized pricing.</p>
     </div>
   </section>
 
