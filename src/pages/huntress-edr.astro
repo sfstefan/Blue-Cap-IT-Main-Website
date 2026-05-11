@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between Huntress Managed EDR and other endpoint protection like Coro Endpoint or built-in Windows Defender?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Different parts of the stack. Windows Defender (or any signature-based AV) catches known malware — useful but limited. Coro Endpoint adds AI-driven behavioral analytics and automated response — better, but the response is automated software making decisions. Huntress Managed EDR layers a 24/7 human SOC on top of behavioral analytics: every alert is reviewed by a real analyst before action is taken, and the SOC can isolate endpoints, kill processes, and respond to incidents in minutes. Many of our clients run Defender or Coro for broad coverage and add Huntress for the SOC-backed response on top — defense in depth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the Huntress agent actually do on my devices, and will it slow them down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The agent is a small, lightweight process that watches what's happening on the endpoint — process executions, file changes, network connections, registry modifications, persistence mechanisms — and streams selected telemetry back to Huntress for analysis. It doesn't scan files in real time like traditional AV (that's why it stays light), and it doesn't sit in the middle of network traffic. In practice, users don't notice it's running. The agent works on Windows, macOS, and Linux desktops, laptops, and servers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is \"fileless malware\" or a \"living-off-the-land\" attack — and why does Huntress catch it when antivirus doesn't?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are techniques attackers use to avoid antivirus. Fileless malware runs entirely in memory — there's no malicious file on disk for AV to scan, just a legitimate-looking PowerShell or scripting host doing malicious things. \"Living-off-the-land\" attacks abuse tools that are already installed on every Windows machine (PowerShell, WMI, scheduled tasks, certutil) to do the attacker's bidding — the binaries are legitimate, so AV doesn't flag them. Huntress catches both by watching behavior rather than file identity: when PowerShell is doing something a normal admin script wouldn't (encoding payloads, reaching out to suspicious domains, modifying autostart entries), that pattern triggers a SOC investigation regardless of which legitimate binary is doing it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which operating systems and devices does Huntress EDR protect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Windows, macOS, and Linux — desktops, laptops, and servers (physical, virtual, and cloud). The agent runs on Windows 10/11 and Windows Server 2016 and later, recent macOS releases, and the major Linux distributions. Huntress EDR is one of the few platforms that genuinely treats Mac and Linux as first-class targets rather than afterthoughts — important if you have engineers on Macs or run Linux servers for development or production workloads. We'll inventory your specific device fleet during a free assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "With Huntress running the SOC and platform, what does Blue Cap IT actually do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several things you'd otherwise have to do yourself. We design the rollout — which devices get the agent first, how to handle servers vs. workstations, what to do about contractor and BYOD devices. We deploy the agent across your fleet using RMM tools or Group Policy. We integrate Huntress with Microsoft 365 / Google Workspace identity. We translate Huntress's incident reports into plain English when something happens, follow up with you on any required action, and tune policies over time. Huntress is the platform and SOC; Blue Cap IT is your single point of contact who knows your environment and handles the operational side."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Managed EDR | Huntress Endpoint Detection & Response — Blue Cap IT" description="Huntress Managed EDR provides 24/7 endpoint detection and response backed by a world-class SOC. Behavioral analytics, automated remediation, and an 8-minute mean time to respond — deployed by Blue Cap IT.">
+<MainLayout title="Managed EDR | Huntress Endpoint Detection & Response — Blue Cap IT" description="Huntress Managed EDR provides 24/7 endpoint detection and response backed by a world-class SOC. Behavioral analytics, automated remediation, and an 8-minute mean time to respond — deployed by Blue Cap IT." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/Huntress/huntress-logo-teal.png" alt="Huntress" style="max-height:50px;width:auto;margin-bottom:1.5rem;"/>
@@ -87,6 +134,51 @@ import { Icon } from 'astro-icon/components';
           <p>Clear, detailed reports for every incident — what happened, what was done, and what to monitor going forward.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="huntress-edr-faq-heading">
+    <h2 id="huntress-edr-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Huntress Managed EDR from Blue Cap IT — 24/7 SOC-backed endpoint detection and response, behavioral analytics, threat hunting, and 8-minute mean time to respond for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What's the difference between Huntress Managed EDR and other endpoint protection like Coro Endpoint or built-in Windows Defender?</summary>
+      <div class="bcit-faq__answer">
+        <p>Different parts of the stack. Windows Defender (or any signature-based AV) catches known malware — useful but limited. Coro Endpoint adds AI-driven behavioral analytics and automated response — better, but the response is automated software making decisions. Huntress Managed EDR layers a 24/7 human SOC on top of behavioral analytics: every alert is reviewed by a real analyst before action is taken, and the SOC can isolate endpoints, kill processes, and respond to incidents in minutes. Many of our clients run Defender or Coro for broad coverage and add Huntress for the SOC-backed response on top — defense in depth.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What does the Huntress agent actually do on my devices, and will it slow them down?</summary>
+      <div class="bcit-faq__answer">
+        <p>The agent is a small, lightweight process that watches what's happening on the endpoint — process executions, file changes, network connections, registry modifications, persistence mechanisms — and streams selected telemetry back to Huntress for analysis. It doesn't scan files in real time like traditional AV (that's why it stays light), and it doesn't sit in the middle of network traffic. In practice, users don't notice it's running. The agent works on Windows, macOS, and Linux desktops, laptops, and servers.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What is "fileless malware" or a "living-off-the-land" attack — and why does Huntress catch it when antivirus doesn't?</summary>
+      <div class="bcit-faq__answer">
+        <p>Both are techniques attackers use to avoid antivirus. Fileless malware runs entirely in memory — there's no malicious file on disk for AV to scan, just a legitimate-looking PowerShell or scripting host doing malicious things. "Living-off-the-land" attacks abuse tools that are already installed on every Windows machine (PowerShell, WMI, scheduled tasks, certutil) to do the attacker's bidding — the binaries are legitimate, so AV doesn't flag them. Huntress catches both by watching behavior rather than file identity: when PowerShell is doing something a normal admin script wouldn't (encoding payloads, reaching out to suspicious domains, modifying autostart entries), that pattern triggers a SOC investigation regardless of which legitimate binary is doing it.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Which operating systems and devices does Huntress EDR protect?</summary>
+      <div class="bcit-faq__answer">
+        <p>Windows, macOS, and Linux — desktops, laptops, and servers (physical, virtual, and cloud). The agent runs on Windows 10/11 and Windows Server 2016 and later, recent macOS releases, and the major Linux distributions. Huntress EDR is one of the few platforms that genuinely treats Mac and Linux as first-class targets rather than afterthoughts — important if you have engineers on Macs or run Linux servers for development or production workloads. We'll inventory your specific device fleet during a free assessment.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>With Huntress running the SOC and platform, what does Blue Cap IT actually do?</summary>
+      <div class="bcit-faq__answer">
+        <p>Several things you'd otherwise have to do yourself. We design the rollout — which devices get the agent first, how to handle servers vs. workstations, what to do about contractor and BYOD devices. We deploy the agent across your fleet using RMM tools or Group Policy. We integrate Huntress with Microsoft 365 / Google Workspace identity. We translate Huntress's incident reports into plain English when something happens, follow up with you on any required action, and tune policies over time. Huntress is the platform and SOC; Blue Cap IT is your single point of contact who knows your environment and handles the operational side.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free endpoint security assessment</a> — we'll inventory your devices, evaluate your current endpoint protection, and quote Huntress Managed EDR with itemized pricing.</p>
     </div>
   </section>
 
