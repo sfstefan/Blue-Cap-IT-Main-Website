@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is Coro Email Security different from the spam filters built into Microsoft 365 or Google Workspace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Microsoft and Google's built-in filters are competent at catching obvious spam and known bad senders, but they're tuned for the average tenant and miss targeted attacks — spear phishing addressed to specific employees, business email compromise from spoofed executive accounts, malicious links that pass reputation checks at delivery and turn hostile later, and well-crafted phishing that uses legitimate sending services. Coro adds a dedicated AI layer on top: it analyzes the content, sender behavior, and link destinations, runs attachments through a sandbox, and re-checks every link at click time. Many of our clients run Coro alongside the native M365/Google filters, not as a replacement — defense in depth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to change my MX records or have email downtime to deploy it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Coro connects to Microsoft 365 and Google Workspace through their APIs — no MX record changes, no mail flow rerouting, no downtime during setup. The deployment looks like authorizing a Coro service principal in your tenant; it then sees mail in your tenant in near-real-time, scans inbound and outbound messages, and quarantines threats. Because there's no rerouting, the cutover is reversible — you can disable the integration any time and email flow is unaffected. Most deployments are live within an hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is business email compromise (BEC), and how does Coro stop it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BEC is one of the most expensive attack types — an attacker impersonates someone trusted (CEO, CFO, key vendor, business partner) and convinces an employee to wire funds, share credentials, change banking details, or buy gift cards. There's often no malicious attachment or link, just a well-crafted email asking for a routine business action. Coro detects BEC by analyzing the sender's relationship to the recipient (is this how the CEO normally writes? does the domain match prior legitimate correspondence?), looking for impersonation signals (spoofed display names, look-alike domains), and flagging high-risk requests (wire transfers, banking changes, gift card purchases) for review. Suspicious BEC attempts are quarantined or flagged before the employee acts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to legitimate emails that get caught as false positives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quarantined messages don't disappear. Users get a daily quarantine digest listing what was held and why, with a one-click option to release a message they were expecting. Admins (or Blue Cap IT, if we manage the platform for you) can review quarantine in bulk, release messages, and tune detection rules to prevent future false positives from the same sender or pattern. Senders that get incorrectly flagged repeatedly can be added to an allowlist. The false positive rate on Coro is low compared to legacy filters, but the workflow when it does happen is fast and self-service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Coro Email Security work with both Microsoft 365 and Google Workspace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — and many businesses run both (M365 in headquarters, Google Workspace at a subsidiary, or vice versa). Coro connects to each via the native API and protects them under the same dashboard and policies. Outbound DLP, phishing detection, attachment scanning, link rewriting, and quarantine all work identically across both platforms. We'll map your specific environment during a free assessment and configure the right integration pattern."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Email Security | Coro Cybersecurity — Blue Cap IT" description="Coro email security blocks phishing, business email compromise, malware, and spam before they reach your inbox. Works with Microsoft 365 and Google Workspace.">
+<MainLayout title="Email Security | Coro Cybersecurity — Blue Cap IT" description="Coro email security blocks phishing, business email compromise, malware, and spam before they reach your inbox. Works with Microsoft 365 and Google Workspace." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/images/coro-email-hero.jpg" alt="Blue 3D mail icon representing secure email communication" style="width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:1rem;margin-bottom:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);" />
@@ -86,6 +133,51 @@ import { Icon } from 'astro-icon/components';
           <p>Connects directly to Microsoft 365 and Google Workspace via API — no MX record changes, no mail flow disruptions, no downtime during setup.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="coro-email-faq-heading">
+    <h2 id="coro-email-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Coro Email Security from Blue Cap IT — phishing prevention, business email compromise protection, attachment sandboxing, URL protection, and outbound DLP for Microsoft 365 and Google Workspace users across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>How is Coro Email Security different from the spam filters built into Microsoft 365 or Google Workspace?</summary>
+      <div class="bcit-faq__answer">
+        <p>Microsoft and Google's built-in filters are competent at catching obvious spam and known bad senders, but they're tuned for the average tenant and miss targeted attacks — spear phishing addressed to specific employees, business email compromise from spoofed executive accounts, malicious links that pass reputation checks at delivery and turn hostile later, and well-crafted phishing that uses legitimate sending services. Coro adds a dedicated AI layer on top: it analyzes the content, sender behavior, and link destinations, runs attachments through a sandbox, and re-checks every link at click time. Many of our clients run Coro alongside the native M365/Google filters, not as a replacement — defense in depth.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Do I have to change my MX records or have email downtime to deploy it?</summary>
+      <div class="bcit-faq__answer">
+        <p>No. Coro connects to Microsoft 365 and Google Workspace through their APIs — no MX record changes, no mail flow rerouting, no downtime during setup. The deployment looks like authorizing a Coro service principal in your tenant; it then sees mail in your tenant in near-real-time, scans inbound and outbound messages, and quarantines threats. Because there's no rerouting, the cutover is reversible — you can disable the integration any time and email flow is unaffected. Most deployments are live within an hour.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What is business email compromise (BEC), and how does Coro stop it?</summary>
+      <div class="bcit-faq__answer">
+        <p>BEC is one of the most expensive attack types — an attacker impersonates someone trusted (CEO, CFO, key vendor, business partner) and convinces an employee to wire funds, share credentials, change banking details, or buy gift cards. There's often no malicious attachment or link, just a well-crafted email asking for a routine business action. Coro detects BEC by analyzing the sender's relationship to the recipient (is this how the CEO normally writes? does the domain match prior legitimate correspondence?), looking for impersonation signals (spoofed display names, look-alike domains), and flagging high-risk requests (wire transfers, banking changes, gift card purchases) for review. Suspicious BEC attempts are quarantined or flagged before the employee acts.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What happens to legitimate emails that get caught as false positives?</summary>
+      <div class="bcit-faq__answer">
+        <p>Quarantined messages don't disappear. Users get a daily quarantine digest listing what was held and why, with a one-click option to release a message they were expecting. Admins (or Blue Cap IT, if we manage the platform for you) can review quarantine in bulk, release messages, and tune detection rules to prevent future false positives from the same sender or pattern. Senders that get incorrectly flagged repeatedly can be added to an allowlist. The false positive rate on Coro is low compared to legacy filters, but the workflow when it does happen is fast and self-service.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Does Coro Email Security work with both Microsoft 365 and Google Workspace?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes — and many businesses run both (M365 in headquarters, Google Workspace at a subsidiary, or vice versa). Coro connects to each via the native API and protects them under the same dashboard and policies. Outbound DLP, phishing detection, attachment scanning, link rewriting, and quarantine all work identically across both platforms. We'll map your specific environment during a free assessment and configure the right integration pattern.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free email security assessment</a> — we'll review your current email protection (M365 Defender, Google's filters, or any add-ons), identify what's getting through, and quote Coro Email Security with itemized pricing.</p>
     </div>
   </section>
 
