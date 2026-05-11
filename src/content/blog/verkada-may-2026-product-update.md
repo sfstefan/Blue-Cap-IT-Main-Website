@@ -105,6 +105,7 @@ There's a simpler way. Blue Cap IT delivers your entire enterprise network as a 
 - **Wi-Fi 7 access points, PoE++ switches, enterprise firewalls, and 5G failover** all included
 - **Automatic upgrades and refreshes** — when hardware ages out, we swap it without a new purchase order
 - **24/7 monitoring and management, so your team never has to babysit the network**
+- **Full ISP relationship management** — we negotiate carrier contracts, coordinate installs and renewals, and act as your single point of contact for outages, so your network has one accountable owner from cable to cloud
 - **Redundancy and failover** built in — automatic firewall failover, cellular ISP backup, and out-of-band remote management
 - **AI-powered Meter Dashboard** for natural-language network management
 
