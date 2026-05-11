@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can Verkada access control replace my existing card reader and door lock system, or do I have to start over?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, you can reuse existing hardware. Verkada's door controllers (AC12 for single doors, AC42 for multi-door installations) speak OSDP and legacy Wiegand, so they're compatible with most existing card readers, electric strikes, magnetic locks, panic bars, gate controllers, and elevator interfaces. The cloud management, mobile credentials, video integration, and audit trails are what you're adding — not necessarily a hardware tear-out. We'll audit your current door hardware during a free site assessment and tell you exactly what carries over."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What credentials can my employees and visitors use to unlock doors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pretty much any credential you want. RFID cards and fobs work like a traditional system. Mobile credentials in the Verkada Pass app turn smartphones into badges — tap to enter, no app to open. Apple Watch and other wearables are supported. PIN code entry on touch keypads works for shared spaces. QR codes can be generated for visitors and contractors with time-limited access. Biometric options (fingerprint and facial recognition) are available where compliance and security requirements demand them. You can mix and match — different doors can use different credential types."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to door access if my internet goes down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Doors keep working. Verkada controllers store a local copy of your access policies and continue authorizing badges, mobile credentials, and PIN codes even when disconnected from the cloud. Door events queue locally and sync to Verkada Command once connectivity returns, so you don't lose audit history. If you have a 5G cellular gateway or backup ISP, the controllers fall back to those automatically. The cloud is the brain — but the doors don't go offline if the brain takes a nap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Verkada access control integrate with cameras and alarms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every door event automatically links to camera footage from cameras covering that door. When someone badges in, the system attaches the video clip — so you can see who actually walked through, not just whose credential was used. Tailgating alerts fire when more people enter than badges scanned. Forced-door and door-held-open events trigger camera clips and Command alerts in real time. Access control also integrates natively with Verkada alarms and environmental sensors, so a door opening after-hours can arm or disarm the alarm panel automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I start with one or two doors and add more later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The AC12 controls a single door; the AC42 controls four. Both are PoE-powered (no separate power supply), tamper-detected, and managed through the same Verkada Command dashboard as your other doors and cameras. You can start with the front entrance, add server room and exterior doors next quarter, then layer in elevator control or gate controllers later — all under one license model and one dashboard. There's no rip-and-replace when you expand."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Verkada Access Control | Blue Cap IT — Gold Partner" description="Cloud-managed access control from Verkada. Blue Cap IT installs door controllers, card readers, and mobile credentials. Verkada Gold Partner. Call (410) 858-4031.">
+<MainLayout title="Verkada Access Control | Blue Cap IT — Gold Partner" description="Cloud-managed access control from Verkada. Blue Cap IT installs door controllers, card readers, and mobile credentials. Verkada Gold Partner. Call (410) 858-4031." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <a href="verkada.html">Verkada Solutions</a> <span>/</span> Access Control</div>
@@ -86,6 +133,51 @@ import { Icon } from 'astro-icon/components';
         <div class="spec-card"><h4>🔒 Door Hardware</h4><ul><li>Electric strikes &amp; maglocks</li><li>Panic bar integration</li><li>Glass door compatibility</li><li>Elevator control support</li><li>Gate controller options</li></ul></div>
         <div class="spec-card"><img src="/verkada/access-control/apple-wallet.png" alt="Apple Wallet mobile credential for Verkada access control" style="width:100%;border-radius:0.5rem;margin-bottom:0.75rem;" /><h4>Biometric Readers</h4><ul><li>Fingerprint readers</li><li>Facial recognition entry</li><li>HIPAA-compliant options</li><li>Anti-spoofing technology</li><li>Cloud-enrolled biometrics</li></ul></div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="access-control-faq-heading">
+    <h2 id="access-control-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Verkada cloud-managed access control from Blue Cap IT, an official Verkada Gold Partner — door controllers, card readers, mobile credentials, and biometric entry for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>Can Verkada access control replace my existing card reader and door lock system, or do I have to start over?</summary>
+      <div class="bcit-faq__answer">
+        <p>In most cases, you can reuse existing hardware. Verkada's door controllers (AC12 for single doors, AC42 for multi-door installations) speak OSDP and legacy Wiegand, so they're compatible with most existing card readers, electric strikes, magnetic locks, panic bars, gate controllers, and elevator interfaces. The cloud management, mobile credentials, video integration, and audit trails are what you're adding — not necessarily a hardware tear-out. We'll audit your current door hardware during a free site assessment and tell you exactly what carries over.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What credentials can my employees and visitors use to unlock doors?</summary>
+      <div class="bcit-faq__answer">
+        <p>Pretty much any credential you want. RFID cards and fobs work like a traditional system. Mobile credentials in the Verkada Pass app turn smartphones into badges — tap to enter, no app to open. Apple Watch and other wearables are supported. PIN code entry on touch keypads works for shared spaces. QR codes can be generated for visitors and contractors with time-limited access. Biometric options (fingerprint and facial recognition) are available where compliance and security requirements demand them. You can mix and match — different doors can use different credential types.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What happens to door access if my internet goes down?</summary>
+      <div class="bcit-faq__answer">
+        <p>Doors keep working. Verkada controllers store a local copy of your access policies and continue authorizing badges, mobile credentials, and PIN codes even when disconnected from the cloud. Door events queue locally and sync to Verkada Command once connectivity returns, so you don't lose audit history. If you have a 5G cellular gateway or backup ISP, the controllers fall back to those automatically. The cloud is the brain — but the doors don't go offline if the brain takes a nap.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does Verkada access control integrate with cameras and alarms?</summary>
+      <div class="bcit-faq__answer">
+        <p>Every door event automatically links to camera footage from cameras covering that door. When someone badges in, the system attaches the video clip — so you can see who actually walked through, not just whose credential was used. Tailgating alerts fire when more people enter than badges scanned. Forced-door and door-held-open events trigger camera clips and Command alerts in real time. Access control also integrates natively with Verkada alarms and environmental sensors, so a door opening after-hours can arm or disarm the alarm panel automatically.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can I start with one or two doors and add more later?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. The AC12 controls a single door; the AC42 controls four. Both are PoE-powered (no separate power supply), tamper-detected, and managed through the same Verkada Command dashboard as your other doors and cameras. You can start with the front entrance, add server room and exterior doors next quarter, then layer in elevator control or gate controllers later — all under one license model and one dashboard. There's no rip-and-replace when you expand.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free access control assessment</a> — we'll evaluate your existing door hardware, recommend the right Verkada controllers and readers, and quote your full project with itemized pricing.</p>
     </div>
   </section>
 
