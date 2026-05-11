@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Verkada's environmental sensor actually measure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The BC51 wall-mounted sensor monitors temperature, humidity, CO₂, VOCs (volatile organic compounds), and PM2.5 particulate matter — the core indoor air quality and environmental signals. Verkada also offers water leak sensors for early intrusion detection in server rooms and utility areas, PIR motion sensors that integrate with cameras and alarms, and door/window contacts for perimeter awareness. All readings flow into the same Verkada Command dashboard alongside your cameras, doors, and alarms — one login, one view of everything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should I place sensors in my facility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Air quality sensors go in occupied spaces — open offices, conference rooms, classrooms, healthcare exam rooms, and lobbies — where CO₂ buildup and indoor air quality affect occupant health and productivity. Temperature and humidity sensors go in server rooms, IDF/MDF closets, storage areas with sensitive equipment, and labs. Water leak sensors go under HVAC units, near plumbing, and on server room floors. We'll walk your facility during a free assessment and identify the right number and placement of sensors for your needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from a smart thermostat or HVAC monitoring system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smart thermostats control HVAC; Verkada sensors monitor outcomes. The two work together but solve different problems. A thermostat sets a target temperature; a Verkada sensor tells you when your server room hit 90°F at 2 AM because the air handler failed — and sends an alert with full historical context. The same sensor also watches humidity, CO₂, and VOCs that a thermostat ignores. Verkada doesn't replace your HVAC controls; it tells you when they're failing, well before equipment damage or occupant complaints."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can sensors trigger cameras and alarms automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — that's the point of the unified platform. A water leak sensor triggering can record a clip from the camera covering that area, send a mobile alert with video attached, and notify your facilities team. A motion sensor firing after hours can trigger camera recording and arm-state checks on your alarm panel. CO₂ spikes can flag rooms for HVAC attention. The sensors aren't just data collectors — they're triggers for the rest of your security and operations stack."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Verkada sensors suitable for healthcare, schools, and other regulated environments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Indoor air quality monitoring is increasingly required or strongly recommended for healthcare facilities, K-12 and higher education, food service, and any environment where occupant health matters. Verkada's sensors record continuous 90-day historical data per metric — useful for compliance documentation, OSHA inquiries, ASHRAE air quality reporting, and post-incident analysis. Healthcare clients use them to monitor temperature-sensitive medication storage; schools use them to track classroom CO₂ and air quality through the day; offices use them to validate that HVAC investments are actually working."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Verkada Air Quality Sensors | Blue Cap IT — Gold Partner" description="Monitor air quality, temperature, humidity, CO2, and VOCs in real time with Verkada environmental sensors. Cloud-managed with instant alerts through Blue Cap IT.">
+<MainLayout title="Verkada Air Quality Sensors | Blue Cap IT — Gold Partner" description="Monitor air quality, temperature, humidity, CO2, and VOCs in real time with Verkada environmental sensors. Cloud-managed with instant alerts through Blue Cap IT." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <a href="verkada.html">Verkada Solutions</a> <span>/</span> Air Quality</div>
@@ -67,6 +114,51 @@ import { Icon } from 'astro-icon/components';
         <div class="product-card"><div class="pcard-icon"><Icon name="lucide:door-open" /></div><h3>Door &amp; Window Contacts</h3><p>Know instantly when any door or window is opened or left ajar. Works in tandem with alarms and access control for complete perimeter awareness.</p></div>
         <div class="product-card"><div class="pcard-icon"><Icon name="lucide:bar-chart-3" /></div><h3>Unified Dashboard</h3><p>All sensor data lives in Verkada Command alongside your cameras and access control. One login, one view, complete situational awareness.</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="sensors-faq-heading">
+    <h2 id="sensors-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Verkada environmental sensors from Blue Cap IT, an official Verkada Gold Partner — air quality, temperature, humidity, CO₂, VOC, water leak, motion, and door contact monitoring for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What does Verkada's environmental sensor actually measure?</summary>
+      <div class="bcit-faq__answer">
+        <p>The BC51 wall-mounted sensor monitors temperature, humidity, CO₂, VOCs (volatile organic compounds), and PM2.5 particulate matter — the core indoor air quality and environmental signals. Verkada also offers water leak sensors for early intrusion detection in server rooms and utility areas, PIR motion sensors that integrate with cameras and alarms, and door/window contacts for perimeter awareness. All readings flow into the same Verkada Command dashboard alongside your cameras, doors, and alarms — one login, one view of everything.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Where should I place sensors in my facility?</summary>
+      <div class="bcit-faq__answer">
+        <p>Air quality sensors go in occupied spaces — open offices, conference rooms, classrooms, healthcare exam rooms, and lobbies — where CO₂ buildup and indoor air quality affect occupant health and productivity. Temperature and humidity sensors go in server rooms, IDF/MDF closets, storage areas with sensitive equipment, and labs. Water leak sensors go under HVAC units, near plumbing, and on server room floors. We'll walk your facility during a free assessment and identify the right number and placement of sensors for your needs.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How is this different from a smart thermostat or HVAC monitoring system?</summary>
+      <div class="bcit-faq__answer">
+        <p>Smart thermostats control HVAC; Verkada sensors monitor outcomes. The two work together but solve different problems. A thermostat sets a target temperature; a Verkada sensor tells you when your server room hit 90°F at 2 AM because the air handler failed — and sends an alert with full historical context. The same sensor also watches humidity, CO₂, and VOCs that a thermostat ignores. Verkada doesn't replace your HVAC controls; it tells you when they're failing, well before equipment damage or occupant complaints.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can sensors trigger cameras and alarms automatically?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes — that's the point of the unified platform. A water leak sensor triggering can record a clip from the camera covering that area, send a mobile alert with video attached, and notify your facilities team. A motion sensor firing after hours can trigger camera recording and arm-state checks on your alarm panel. CO₂ spikes can flag rooms for HVAC attention. The sensors aren't just data collectors — they're triggers for the rest of your security and operations stack.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Are Verkada sensors suitable for healthcare, schools, and other regulated environments?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Indoor air quality monitoring is increasingly required or strongly recommended for healthcare facilities, K-12 and higher education, food service, and any environment where occupant health matters. Verkada's sensors record continuous 90-day historical data per metric — useful for compliance documentation, OSHA inquiries, ASHRAE air quality reporting, and post-incident analysis. Healthcare clients use them to monitor temperature-sensitive medication storage; schools use them to track classroom CO₂ and air quality through the day; offices use them to validate that HVAC investments are actually working.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free environmental assessment</a> — we'll evaluate your facility, identify where monitoring adds value, and quote your full project with itemized pricing.</p>
     </div>
   </section>
 
