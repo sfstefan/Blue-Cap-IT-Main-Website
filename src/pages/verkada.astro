@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Verkada, and how is it different from traditional security camera systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verkada is a cloud-managed physical security platform — cameras, access control, alarms, sensors, and intercoms — that's managed entirely through one web dashboard called Verkada Command. Unlike traditional NVR-based systems that require on-site servers, complex configuration, and clunky software, every Verkada device stores footage locally and connects directly to the cloud. You view live and recorded video from any browser or phone, anywhere in the world, with no port forwarding, no dynamic DNS, and no IT headaches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it mean that Blue Cap IT is a Verkada Gold Partner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verkada Gold is one of the highest partner tiers — earned through certified training, demonstrated installation expertise, and ongoing volume with Verkada. As a Gold Partner, Blue Cap IT gets direct access to Verkada engineering for escalations, early access to new products, and competitive pricing that we pass through to our clients. We're not a reseller forwarding tickets — we're a certified team that designs, installs, configures, and supports the full Verkada stack ourselves across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an NVR or on-site server to use Verkada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every Verkada camera has built-in solid-state storage — typically 30 to 365 days of continuous local recording depending on the model. The cameras connect directly to Verkada Command in the cloud, so there's no NVR, DVR, or server to buy, maintain, or replace when it fails. If your internet goes down, the cameras keep recording locally and sync once connectivity returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add Verkada products one at a time, or do I have to buy the full platform?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can start with any single product line and add others as you grow. Most clients start with cameras, then layer on access control, alarms, environmental sensors, intercoms, and visitor management over time — all managed from the same Verkada Command dashboard. There's no rip-and-replace when you expand: every Verkada product is designed to work together natively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Verkada pricing work — hardware plus license, subscription, or both?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. You purchase the hardware up front (cameras, door controllers, sensors, etc.) and pay an annual or multi-year license per device that includes cloud storage, software updates, AI analytics, and warranty. Blue Cap IT handles the licensing paperwork, tracks renewal dates, and notifies you ahead of expiration so you never have an unexpected lapse. We'll quote your full project — hardware, licenses, installation, and configuration — with itemized pricing after a free site assessment."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Verkada Products | Blue Cap IT — Gold Partner" description="Explore Verkada's 9 product lines through Blue Cap IT. Cameras, access control, air quality sensors, alarms, intercoms, command software, command connector, workplace, and connectivity. Official Gold Partner.">
+<MainLayout title="Verkada Products | Blue Cap IT — Gold Partner" description="Explore Verkada's 9 product lines through Blue Cap IT. Cameras, access control, air quality sensors, alarms, intercoms, command software, command connector, workplace, and connectivity. Official Gold Partner." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> Verkada Products</div>
@@ -107,6 +154,51 @@ import { Icon } from 'astro-icon/components';
         <a href="/verkada/docs/verkada-platform.pdf" target="_blank" class="btn-ghost" style="display:inline-flex;align-items:center;gap:0.5rem;"><Icon name="lucide:file-text" /> Verkada Platform Overview</a>
         <a href="/verkada/docs/case-study-offices.pdf" target="_blank" class="btn-ghost" style="display:inline-flex;align-items:center;gap:0.5rem;"><Icon name="lucide:file-text" /> Case Study: Offices</a>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="verkada-faq-heading">
+    <h2 id="verkada-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Verkada cloud-managed security cameras, access control, alarms, sensors, intercoms, and visitor management from Blue Cap IT, an official Verkada Gold Partner serving Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is Verkada, and how is it different from traditional security camera systems?</summary>
+      <div class="bcit-faq__answer">
+        <p>Verkada is a cloud-managed physical security platform — cameras, access control, alarms, sensors, and intercoms — that's managed entirely through one web dashboard called Verkada Command. Unlike traditional NVR-based systems that require on-site servers, complex configuration, and clunky software, every Verkada device stores footage locally and connects directly to the cloud. You view live and recorded video from any browser or phone, anywhere in the world, with no port forwarding, no dynamic DNS, and no IT headaches.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What does it mean that Blue Cap IT is a Verkada Gold Partner?</summary>
+      <div class="bcit-faq__answer">
+        <p>Verkada Gold is one of the highest partner tiers — earned through certified training, demonstrated installation expertise, and ongoing volume with Verkada. As a Gold Partner, Blue Cap IT gets direct access to Verkada engineering for escalations, early access to new products, and competitive pricing that we pass through to our clients. We're not a reseller forwarding tickets — we're a certified team that designs, installs, configures, and supports the full Verkada stack ourselves across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Do I need an NVR or on-site server to use Verkada?</summary>
+      <div class="bcit-faq__answer">
+        <p>No. Every Verkada camera has built-in solid-state storage — typically 30 to 365 days of continuous local recording depending on the model. The cameras connect directly to Verkada Command in the cloud, so there's no NVR, DVR, or server to buy, maintain, or replace when it fails. If your internet goes down, the cameras keep recording locally and sync once connectivity returns.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can I add Verkada products one at a time, or do I have to buy the full platform?</summary>
+      <div class="bcit-faq__answer">
+        <p>You can start with any single product line and add others as you grow. Most clients start with cameras, then layer on access control, alarms, environmental sensors, intercoms, and visitor management over time — all managed from the same Verkada Command dashboard. There's no rip-and-replace when you expand: every Verkada product is designed to work together natively.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does Verkada pricing work — hardware plus license, subscription, or both?</summary>
+      <div class="bcit-faq__answer">
+        <p>Both. You purchase the hardware up front (cameras, door controllers, sensors, etc.) and pay an annual or multi-year license per device that includes cloud storage, software updates, AI analytics, and warranty. Blue Cap IT handles the licensing paperwork, tracks renewal dates, and notifies you ahead of expiration so you never have an unexpected lapse. We'll quote your full project — hardware, licenses, installation, and configuration — with itemized pricing after a free site assessment.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free site assessment</a> — we'll walk your facility, identify coverage needs, and recommend the right Verkada products and licenses for your business.</p>
     </div>
   </section>
 
