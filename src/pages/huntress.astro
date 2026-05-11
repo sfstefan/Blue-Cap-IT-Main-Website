@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Huntress, and how is it different from traditional antivirus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Huntress is a managed cybersecurity platform that combines lightweight software agents with a 24/7 human Security Operations Center. Traditional antivirus tries to block known malware signatures and stops when something gets past the filter. Huntress assumes attackers will get in — and watches for the behaviors they exhibit after a breach (persistence mechanisms, lateral movement, credential theft, ransomware staging). When real threats are confirmed, Huntress contains and remediates them on your behalf — endpoints are isolated, malicious processes killed, and damage is prevented before it spreads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it mean that Huntress is \"SOC-backed,\" and what is a SOC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A SOC is a Security Operations Center — a team of dedicated analysts who monitor security alerts around the clock, separate real threats from false positives, and respond to incidents in real time. Most small and mid-sized businesses can't afford to staff a SOC internally (24/7 coverage requires roughly 8-10 analysts at $150K+ each). Huntress runs the SOC for you as part of every subscription. When an alert fires at 3 AM on a Sunday, a real human analyst at Huntress is the one investigating it — not your team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Huntress achieve an 8-minute mean time to respond?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mean Time to Respond (MTTR) measures how long it takes from when a threat is detected to when it's actively contained. Huntress hits 8 minutes through a combination of AI-assisted triage (flagging high-confidence threats automatically), pre-approved response playbooks (the SOC can isolate endpoints and kill processes without waiting for your approval on textbook attacks), and 24/7 staffing of senior analysts. For context: industry average MTTR is measured in hours or days. The 8-minute number is what consistently keeps a single compromised laptop from turning into ransomware across your whole network."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Huntress different from Coro, and do I need both?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coro is a unified cybersecurity software platform — it automates protection across endpoints, email, cloud apps, and network from one agent. Huntress is the 24/7 human SOC that watches for threats Coro (or any other tool) might miss, especially the targeted attacks designed to evade automated systems. Many of our clients run both: Coro as the broad platform handling routine threats automatically, Huntress as the SOC handling the hard cases — targeted intrusions, identity compromise, and active incidents. Call (410) 858-4031 and we'll walk through which combination fits your risk profile and budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we need our own security team to use Huntress, or does Blue Cap IT manage it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You don't need a security team. Huntress is designed to run without one — the SOC handles detection and response, and Blue Cap IT handles deployment, agent rollouts, integration with Microsoft 365 and Google Workspace, policy tuning, and incident communication. When something happens, you get a clear written incident report from us explaining what was detected, what was done about it, and what (if anything) you need to act on. No security jargon, no fire drills."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Huntress Managed Security | Blue Cap IT — Huntress Partner" description="Blue Cap IT partners with Huntress to deliver 24/7 managed cybersecurity. SOC-backed EDR, identity threat detection, SIEM, and security awareness training — purpose-built for SMBs and backed by a world-class Security Operations Center.">
+<MainLayout title="Huntress Managed Security | Blue Cap IT — Huntress Partner" description="Blue Cap IT partners with Huntress to deliver 24/7 managed cybersecurity. SOC-backed EDR, identity threat detection, SIEM, and security awareness training — purpose-built for SMBs and backed by a world-class Security Operations Center." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/images/huntress-hero.jpg" alt="Security operations center analyst monitoring a wall of dashboards and surveillance feeds" style="width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:1rem;margin-bottom:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);" />
@@ -130,6 +177,51 @@ import { Icon } from 'astro-icon/components';
           <p>You get clear, actionable incident reports explaining what happened, what was done, and what to watch for — no jargon, no guesswork.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="huntress-faq-heading">
+    <h2 id="huntress-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Huntress managed cybersecurity from Blue Cap IT — Managed EDR, Identity Threat Detection (ITDR), SIEM, and Security Awareness Training — for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is Huntress, and how is it different from traditional antivirus?</summary>
+      <div class="bcit-faq__answer">
+        <p>Huntress is a managed cybersecurity platform that combines lightweight software agents with a 24/7 human Security Operations Center. Traditional antivirus tries to block known malware signatures and stops when something gets past the filter. Huntress assumes attackers will get in — and watches for the behaviors they exhibit after a breach (persistence mechanisms, lateral movement, credential theft, ransomware staging). When real threats are confirmed, Huntress contains and remediates them on your behalf — endpoints are isolated, malicious processes killed, and damage is prevented before it spreads.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What does it mean that Huntress is "SOC-backed," and what is a SOC?</summary>
+      <div class="bcit-faq__answer">
+        <p>A SOC is a Security Operations Center — a team of dedicated analysts who monitor security alerts around the clock, separate real threats from false positives, and respond to incidents in real time. Most small and mid-sized businesses can't afford to staff a SOC internally (24/7 coverage requires roughly 8-10 analysts at $150K+ each). Huntress runs the SOC for you as part of every subscription. When an alert fires at 3 AM on a Sunday, a real human analyst at Huntress is the one investigating it — not your team.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does Huntress achieve an 8-minute mean time to respond?</summary>
+      <div class="bcit-faq__answer">
+        <p>Mean Time to Respond (MTTR) measures how long it takes from when a threat is detected to when it's actively contained. Huntress hits 8 minutes through a combination of AI-assisted triage (flagging high-confidence threats automatically), pre-approved response playbooks (the SOC can isolate endpoints and kill processes without waiting for your approval on textbook attacks), and 24/7 staffing of senior analysts. For context: industry average MTTR is measured in hours or days. The 8-minute number is what consistently keeps a single compromised laptop from turning into ransomware across your whole network.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How is Huntress different from Coro, and do I need both?</summary>
+      <div class="bcit-faq__answer">
+        <p>Coro is a unified cybersecurity software platform — it automates protection across endpoints, email, cloud apps, and network from one agent. Huntress is the 24/7 human SOC that watches for threats Coro (or any other tool) might miss, especially the targeted attacks designed to evade automated systems. Many of our clients run both: Coro as the broad platform handling routine threats automatically, Huntress as the SOC handling the hard cases — targeted intrusions, identity compromise, and active incidents. Call (410) 858-4031 and we'll walk through which combination fits your risk profile and budget.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Do we need our own security team to use Huntress, or does Blue Cap IT manage it?</summary>
+      <div class="bcit-faq__answer">
+        <p>You don't need a security team. Huntress is designed to run without one — the SOC handles detection and response, and Blue Cap IT handles deployment, agent rollouts, integration with Microsoft 365 and Google Workspace, policy tuning, and incident communication. When something happens, you get a clear written incident report from us explaining what was detected, what was done about it, and what (if anything) you need to act on. No security jargon, no fire drills.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free security assessment</a> — we'll evaluate your current posture, identify gaps, and recommend the Huntress modules (and optional Coro platform) that fit your business.</p>
     </div>
   </section>
 
