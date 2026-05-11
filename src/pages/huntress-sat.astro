@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes Huntress Security Awareness Training different from other training programs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two things. First, the content quality — Huntress hired Emmy Award-winning animators to produce the training, so it actually holds attention. Most security training is dry compliance slides employees click through to mark complete; Huntress training is genuinely watchable. Second, the content is built by Huntress's own cybersecurity experts using current real-world threat intelligence, not generic best-practice templates. When the SOC sees a new attack pattern in the wild, that intelligence informs the training. So employees learn to recognize the attacks that are actually happening right now, not theoretical examples."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are \"tradecraft simulations,\" and how are they different from regular training videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tradecraft simulations put employees in the attacker's seat — they walk through what a phishing campaign actually looks like from the criminal's perspective, how social engineering works, how credential theft is executed. Conventional training tells employees what not to do; tradecraft simulations show how attackers think so employees recognize the patterns earlier. The result is stickier behavior change — employees who've seen the attack from the other side spot real attempts faster than employees who've only read warnings about them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does \"fully managed\" mean — does Blue Cap IT run the program, or do I have to?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Huntress designs and develops the training content and phishing campaigns. Blue Cap IT handles the operational side for your organization: provisioning employees into the program, configuring training schedules and phishing simulation cadence, reviewing results monthly, escalating high-risk users to you, and producing the reports you'd show leadership or auditors. You don't need to assign someone on your team to run the program — we treat it like any other managed service, and you just receive the outcomes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I pick Huntress SAT or Coro Security Awareness Training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are solid programs. The deciding factor is usually platform consolidation: if you're already running Huntress for managed EDR or ITDR, adding Huntress SAT means one platform, one dashboard, and one identity integration. If you're already running Coro for endpoint, email, or cloud app security, Coro SAT plugs into the same Coro dashboard. Content quality is comparable — Huntress leans more toward engaging production value and tradecraft simulations; Coro leans more toward broad library coverage and tight platform integration. Call (410) 858-4031 and we'll help you pick."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Huntress SAT integrate with Microsoft 365 or Google Workspace for user provisioning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Huntress SAT connects to your Microsoft 365 or Google Workspace tenant via API, so new employees automatically enroll in the appropriate training campaigns when their identity is created, and departing employees are deprovisioned when they leave. No manual user list maintenance. The integration also lets phishing simulations use realistic sender patterns that mirror what your team actually sees in their inbox — making the tests more representative of real threats."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Security Awareness Training | Huntress Managed SAT — Blue Cap IT" description="Huntress Managed Security Awareness Training reduces human risk with engaging, expert-backed training built on real-world threat intelligence. Hands-on simulations, phishing tests, and gamification — deployed by Blue Cap IT.">
+<MainLayout title="Security Awareness Training | Huntress Managed SAT — Blue Cap IT" description="Huntress Managed Security Awareness Training reduces human risk with engaging, expert-backed training built on real-world threat intelligence. Hands-on simulations, phishing tests, and gamification — deployed by Blue Cap IT." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/Huntress/huntress-logo-teal.png" alt="Huntress" style="max-height:50px;width:auto;margin-bottom:1.5rem;"/>
@@ -76,6 +123,51 @@ import { Icon } from 'astro-icon/components';
           <p>Handling sensitive data, recognizing data exfiltration attempts, and understanding compliance responsibilities.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="huntress-sat-faq-heading">
+    <h2 id="huntress-sat-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Huntress Security Awareness Training (SAT) from Blue Cap IT — Emmy-winning training content, tradecraft simulations, phishing tests, and fully-managed program delivery for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What makes Huntress Security Awareness Training different from other training programs?</summary>
+      <div class="bcit-faq__answer">
+        <p>Two things. First, the content quality — Huntress hired Emmy Award-winning animators to produce the training, so it actually holds attention. Most security training is dry compliance slides employees click through to mark complete; Huntress training is genuinely watchable. Second, the content is built by Huntress's own cybersecurity experts using current real-world threat intelligence, not generic best-practice templates. When the SOC sees a new attack pattern in the wild, that intelligence informs the training. So employees learn to recognize the attacks that are actually happening right now, not theoretical examples.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What are "tradecraft simulations," and how are they different from regular training videos?</summary>
+      <div class="bcit-faq__answer">
+        <p>Tradecraft simulations put employees in the attacker's seat — they walk through what a phishing campaign actually looks like from the criminal's perspective, how social engineering works, how credential theft is executed. Conventional training tells employees what not to do; tradecraft simulations show how attackers think so employees recognize the patterns earlier. The result is stickier behavior change — employees who've seen the attack from the other side spot real attempts faster than employees who've only read warnings about them.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What does "fully managed" mean — does Blue Cap IT run the program, or do I have to?</summary>
+      <div class="bcit-faq__answer">
+        <p>Huntress designs and develops the training content and phishing campaigns. Blue Cap IT handles the operational side for your organization: provisioning employees into the program, configuring training schedules and phishing simulation cadence, reviewing results monthly, escalating high-risk users to you, and producing the reports you'd show leadership or auditors. You don't need to assign someone on your team to run the program — we treat it like any other managed service, and you just receive the outcomes.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Should I pick Huntress SAT or Coro Security Awareness Training?</summary>
+      <div class="bcit-faq__answer">
+        <p>Both are solid programs. The deciding factor is usually platform consolidation: if you're already running Huntress for managed EDR or ITDR, adding Huntress SAT means one platform, one dashboard, and one identity integration. If you're already running Coro for endpoint, email, or cloud app security, Coro SAT plugs into the same Coro dashboard. Content quality is comparable — Huntress leans more toward engaging production value and tradecraft simulations; Coro leans more toward broad library coverage and tight platform integration. Call (410) 858-4031 and we'll help you pick.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Does Huntress SAT integrate with Microsoft 365 or Google Workspace for user provisioning?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. Huntress SAT connects to your Microsoft 365 or Google Workspace tenant via API, so new employees automatically enroll in the appropriate training campaigns when their identity is created, and departing employees are deprovisioned when they leave. No manual user list maintenance. The integration also lets phishing simulations use realistic sender patterns that mirror what your team actually sees in their inbox — making the tests more representative of real threats.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free training program assessment</a> — we'll review your current security awareness practices, identify gaps, and quote Huntress Security Awareness Training with itemized pricing.</p>
     </div>
   </section>
 
