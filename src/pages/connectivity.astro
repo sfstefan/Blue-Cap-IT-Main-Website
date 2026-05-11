@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between Verkada Connectivity and a full network solution like Meter NaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They solve different problems. Meter Network as a Service replaces your entire enterprise network — the switches, Wi-Fi, firewalls, gateway, and ISP management that carry every device in your building. Verkada Connectivity is purpose-built for your Verkada physical security devices — keeping cameras, access controllers, sensors, and intercoms online through dedicated cellular failover and Verkada-managed PoE switches that auto-provision in Verkada Command. Most clients run both: Meter as the building's primary network for office use, Verkada Connectivity as the dedicated lifeline that keeps physical security online if the main network fails. Call (410) 858-4031 and we'll help you decide which combination fits your environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do I need a Verkada cellular gateway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three common scenarios. First, when uptime matters: cellular failover (the GC31 indoor or GC31-E outdoor) keeps your Verkada devices online if your wired ISP drops, so cameras keep recording to the cloud and access events keep syncing. Second, for remote or temporary sites: construction sites, pop-up locations, parking lots, and storage yards often have no wired internet — a cellular gateway is the primary connection. Third, for compliance or insurance requirements that mandate continuous monitoring. Most office and retail deployments use cellular as backup; remote and temporary sites use it as primary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need Verkada switches if I already have a network in place?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Verkada cameras, controllers, and sensors work on any PoE-capable network — Cisco, Aruba, Meter, Ubiquiti, anything that delivers Power over Ethernet. You'd add Verkada's cloud-managed switches when you want unified visibility (every port and device in the same Verkada Command dashboard), simpler PoE budgeting for high-power Verkada devices, or zero-touch deployment for new sites where you don't want to ship someone in to configure switches. For an established office with a working network, layering in Verkada switches is optional, not required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the LTE/5G failover actually work in practice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cellular gateway sits inline with your network and continuously monitors the wired WAN connection. When the primary internet goes down — ISP outage, cable cut, router failure — the gateway automatically switches Verkada device traffic to LTE or 5G without any manual intervention. Cameras keep recording to the cloud, access control keeps logging events to Verkada Command, alarm panels keep communicating. When wired service returns, the gateway switches back automatically and the cellular session goes idle. You see all of this in the Command dashboard, including data usage and signal strength."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a Verkada cellular gateway as the primary internet for a remote site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The GC31-E outdoor gateway is purpose-built for construction sites, storage yards, remote facilities, and pop-up locations where running fiber or coax doesn't make sense. It's weatherproof, PoE-powered through a single cable, and supports an extended temperature range for harsh environments. Cellular LTE/5G handles the bandwidth needs of typical Verkada deployments (a handful of cameras, an access controller, and some sensors). For larger sites with heavy bandwidth needs, we'll discuss the right mix during a free assessment."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Verkada Connectivity | Blue Cap IT — Gold Partner" description="Verkada cellular gateways, managed switches, and network connectivity solutions. LTE/5G failover and zero-touch deployment. Blue Cap IT — Verkada Gold Partner. Call (410) 858-4031.">
+<MainLayout title="Verkada Connectivity | Blue Cap IT — Gold Partner" description="Verkada cellular gateways, managed switches, and network connectivity solutions. LTE/5G failover and zero-touch deployment. Blue Cap IT — Verkada Gold Partner. Call (410) 858-4031." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <a href="verkada.html">Verkada Solutions</a> <span>/</span> Connectivity</div>
@@ -92,6 +139,51 @@ import { Icon } from 'astro-icon/components';
         </div>
         <div class="spec-card"><h4>⚡ Zero-Touch Deployment</h4><ul><li>Plug in and auto-provision</li><li>No CLI or manual configuration</li><li>Managed in Verkada Command</li><li>Remote diagnostics &amp; troubleshooting</li><li>Automatic security patches</li></ul></div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="connectivity-faq-heading">
+    <h2 id="connectivity-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Verkada Connectivity from Blue Cap IT, an official Verkada Gold Partner — cellular gateways and cloud-managed switches that keep Verkada cameras, access control, and sensors online for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What's the difference between Verkada Connectivity and a full network solution like Meter NaaS?</summary>
+      <div class="bcit-faq__answer">
+        <p>They solve different problems. Meter Network as a Service replaces your entire enterprise network — the switches, Wi-Fi, firewalls, gateway, and ISP management that carry every device in your building. Verkada Connectivity is purpose-built for your Verkada physical security devices — keeping cameras, access controllers, sensors, and intercoms online through dedicated cellular failover and Verkada-managed PoE switches that auto-provision in Verkada Command. Most clients run both: Meter as the building's primary network for office use, Verkada Connectivity as the dedicated lifeline that keeps physical security online if the main network fails. Call (410) 858-4031 and we'll help you decide which combination fits your environment.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>When do I need a Verkada cellular gateway?</summary>
+      <div class="bcit-faq__answer">
+        <p>Three common scenarios. First, when uptime matters: cellular failover (the GC31 indoor or GC31-E outdoor) keeps your Verkada devices online if your wired ISP drops, so cameras keep recording to the cloud and access events keep syncing. Second, for remote or temporary sites: construction sites, pop-up locations, parking lots, and storage yards often have no wired internet — a cellular gateway is the primary connection. Third, for compliance or insurance requirements that mandate continuous monitoring. Most office and retail deployments use cellular as backup; remote and temporary sites use it as primary.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Do I need Verkada switches if I already have a network in place?</summary>
+      <div class="bcit-faq__answer">
+        <p>Not necessarily. Verkada cameras, controllers, and sensors work on any PoE-capable network — Cisco, Aruba, Meter, Ubiquiti, anything that delivers Power over Ethernet. You'd add Verkada's cloud-managed switches when you want unified visibility (every port and device in the same Verkada Command dashboard), simpler PoE budgeting for high-power Verkada devices, or zero-touch deployment for new sites where you don't want to ship someone in to configure switches. For an established office with a working network, layering in Verkada switches is optional, not required.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How does the LTE/5G failover actually work in practice?</summary>
+      <div class="bcit-faq__answer">
+        <p>The cellular gateway sits inline with your network and continuously monitors the wired WAN connection. When the primary internet goes down — ISP outage, cable cut, router failure — the gateway automatically switches Verkada device traffic to LTE or 5G without any manual intervention. Cameras keep recording to the cloud, access control keeps logging events to Verkada Command, alarm panels keep communicating. When wired service returns, the gateway switches back automatically and the cellular session goes idle. You see all of this in the Command dashboard, including data usage and signal strength.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can I use a Verkada cellular gateway as the primary internet for a remote site?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes. The GC31-E outdoor gateway is purpose-built for construction sites, storage yards, remote facilities, and pop-up locations where running fiber or coax doesn't make sense. It's weatherproof, PoE-powered through a single cable, and supports an extended temperature range for harsh environments. Cellular LTE/5G handles the bandwidth needs of typical Verkada deployments (a handful of cameras, an access controller, and some sensors). For larger sites with heavy bandwidth needs, we'll discuss the right mix during a free assessment.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free connectivity assessment</a> — we'll evaluate your sites, identify where cellular failover or Verkada switches add value, and quote your full deployment with itemized pricing.</p>
     </div>
   </section>
 
