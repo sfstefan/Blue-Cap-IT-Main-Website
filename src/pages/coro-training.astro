@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is security awareness training, and why does my business need it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Security awareness training teaches employees to recognize and avoid common cyber threats — phishing emails, social engineering calls, suspicious links, password mistakes, and risky data handling. The reason it matters: even with strong endpoint protection, email security, and a SOC, the vast majority of successful attacks still start with an employee clicking something they shouldn't. Training is the single highest-leverage investment for most small and mid-sized businesses because it addresses the attack vector that technology alone can't fully close — human error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do phishing simulations work — won't they trick my employees and damage trust?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simulations are carefully designed to teach, not embarrass. Coro sends realistic but harmless test phishing emails — fake delivery notifications, fake password reset requests, fake invoice attachments — and tracks who clicks. Employees who fall for them aren't called out publicly; they get a short, friendly training module right in the moment that explains what they missed. Over time, click rates drop dramatically as employees recognize the patterns. The whole program is framed as \"let's get better together,\" not \"let's catch people doing wrong\" — and that framing matters for buy-in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does training take, and will it be a burden on my team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modules are short — typically 3 to 7 minutes — and designed to fit into a normal workday. Most clients run an initial onboarding sequence (about an hour total spread across a week or two), then monthly micro-learning campaigns that take five minutes a month. Phishing simulations happen in the background without any employee time investment. The ROI on time spent is high: a single avoided ransomware incident saves orders of magnitude more time than the entire training program costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Coro Security Awareness Training and Huntress's training program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are solid, and the choice often comes down to which platform you're already using. Coro SAT is part of the Coro modular platform — if you already have Coro Endpoint, Email, or Cloud App Security, training plugs into the same dashboard, the same user directory, and the same reporting. Huntress SAT is part of the Huntress managed security suite — if Huntress is already running your SOC and managed EDR, their training integrates with that. Content quality is comparable; the differentiator is platform consolidation. We'll recommend whichever fits your existing stack during a free assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this help with cyber insurance requirements or compliance audits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it's often required. Most cyber insurance carriers now require documented security awareness training as a condition of coverage or for preferred premiums. Compliance frameworks like HIPAA, PCI-DSS, SOC 2, and NIST CSF explicitly call for it. Coro's reporting generates the documentation insurers and auditors ask for — training completion rates per employee, phishing simulation results over time, and risk scores by department. We help you map the program to your specific insurer's or auditor's requirements."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Security Awareness Training | Coro Cybersecurity — Blue Cap IT" description="Coro security awareness training educates your employees with engaging training modules and simulated phishing campaigns. Turn your team into your first line of defense.">
+<MainLayout title="Security Awareness Training | Coro Cybersecurity — Blue Cap IT" description="Coro security awareness training educates your employees with engaging training modules and simulated phishing campaigns. Turn your team into your first line of defense." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/images/coro-training-hero.jpg" alt="Business professional presenting security awareness training to employees in a modern office" style="width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:1rem;margin-bottom:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);" />
@@ -86,6 +133,51 @@ import { Icon } from 'astro-icon/components';
           <p>When an employee fails a phishing simulation, they immediately receive a short, targeted training module on what they missed — turning mistakes into learning moments.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="coro-training-faq-heading">
+    <h2 id="coro-training-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Coro Security Awareness Training from Blue Cap IT — interactive training modules, simulated phishing campaigns, risk scoring, and compliance reporting for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is security awareness training, and why does my business need it?</summary>
+      <div class="bcit-faq__answer">
+        <p>Security awareness training teaches employees to recognize and avoid common cyber threats — phishing emails, social engineering calls, suspicious links, password mistakes, and risky data handling. The reason it matters: even with strong endpoint protection, email security, and a SOC, the vast majority of successful attacks still start with an employee clicking something they shouldn't. Training is the single highest-leverage investment for most small and mid-sized businesses because it addresses the attack vector that technology alone can't fully close — human error.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How do phishing simulations work — won't they trick my employees and damage trust?</summary>
+      <div class="bcit-faq__answer">
+        <p>Simulations are carefully designed to teach, not embarrass. Coro sends realistic but harmless test phishing emails — fake delivery notifications, fake password reset requests, fake invoice attachments — and tracks who clicks. Employees who fall for them aren't called out publicly; they get a short, friendly training module right in the moment that explains what they missed. Over time, click rates drop dramatically as employees recognize the patterns. The whole program is framed as "let's get better together," not "let's catch people doing wrong" — and that framing matters for buy-in.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How long does training take, and will it be a burden on my team?</summary>
+      <div class="bcit-faq__answer">
+        <p>Modules are short — typically 3 to 7 minutes — and designed to fit into a normal workday. Most clients run an initial onboarding sequence (about an hour total spread across a week or two), then monthly micro-learning campaigns that take five minutes a month. Phishing simulations happen in the background without any employee time investment. The ROI on time spent is high: a single avoided ransomware incident saves orders of magnitude more time than the entire training program costs.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What's the difference between Coro Security Awareness Training and Huntress's training program?</summary>
+      <div class="bcit-faq__answer">
+        <p>Both are solid, and the choice often comes down to which platform you're already using. Coro SAT is part of the Coro modular platform — if you already have Coro Endpoint, Email, or Cloud App Security, training plugs into the same dashboard, the same user directory, and the same reporting. Huntress SAT is part of the Huntress managed security suite — if Huntress is already running your SOC and managed EDR, their training integrates with that. Content quality is comparable; the differentiator is platform consolidation. We'll recommend whichever fits your existing stack during a free assessment.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Does this help with cyber insurance requirements or compliance audits?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes, and it's often required. Most cyber insurance carriers now require documented security awareness training as a condition of coverage or for preferred premiums. Compliance frameworks like HIPAA, PCI-DSS, SOC 2, and NIST CSF explicitly call for it. Coro's reporting generates the documentation insurers and auditors ask for — training completion rates per employee, phishing simulation results over time, and risk scores by department. We help you map the program to your specific insurer's or auditor's requirements.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free training program assessment</a> — we'll review your current security awareness practices, identify gaps, and quote Coro Security Awareness Training with itemized pricing.</p>
     </div>
   </section>
 
