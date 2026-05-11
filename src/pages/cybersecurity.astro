@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Coro, and why does Blue Cap IT recommend it for cybersecurity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coro is an all-in-one cybersecurity platform built specifically for small and mid-sized businesses — protecting endpoints, email, cloud apps, networks, and data from one agent and one dashboard. Most cybersecurity tools were designed for large enterprises with dedicated security teams; Coro was designed for businesses that don't have one. As a Coro Partner, Blue Cap IT handles deployment, configuration, ongoing policy tuning, and threat response — so you get enterprise-grade protection without having to staff a security operations center."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pick and choose Coro modules, or is it all-or-nothing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coro is fully modular. You can start with one module (most clients start with endpoint protection or email security), then add cloud app security, network security with Zero Trust, data governance, or security awareness training as your needs grow. You're not paying for protection you don't need today, and there's no rip-and-replace when you expand — just turn on the next module from the same dashboard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Coro replace my existing antivirus and email security tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, yes. Coro's endpoint protection is next-generation antivirus plus EDR (Endpoint Detection and Response) in one — replacing legacy AV products like Symantec, McAfee, or Webroot. Coro Email Security replaces add-on products like Mimecast or Proofpoint for Microsoft 365 / Google Workspace. We'll audit what you have today and only recommend swaps that close a gap or save you money — no churn for the sake of it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Coro and Huntress, and do I need both?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coro is a unified cybersecurity platform — software you deploy that automates threat detection and response across endpoints, email, cloud, and network. Huntress adds a 24/7 human Security Operations Center (SOC) on top — real analysts who triage alerts, hunt for threats, and respond to incidents around the clock. Coro handles the volume; Huntress handles the hard calls. Many of our clients run both: Coro as the platform, Huntress as the SOC. Call (410) 858-4031 and we'll walk you through which combination fits your risk profile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does Coro take to deploy, and do I need a security team to manage it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most deployments are live in under a day — one lightweight agent rolls out to endpoints, email and cloud connections are configured through API integrations, and policies are tuned to your environment. You do not need an internal security team. Blue Cap IT manages the platform for you: ongoing policy updates, alert review, incident response, and quarterly security posture reviews. You see what's happening through the dashboard, but the day-to-day operation is on us."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Cybersecurity | Blue Cap IT — Coro Partner" description="Blue Cap IT partners with Coro to deliver all-in-one cybersecurity for small and mid-sized businesses. Endpoint protection, email security, cloud app security, network protection, and more — one platform, one agent.">
+<MainLayout title="Cybersecurity | Blue Cap IT — Coro Partner" description="Blue Cap IT partners with Coro to deliver all-in-one cybersecurity for small and mid-sized businesses. Endpoint protection, email security, cloud app security, network protection, and more — one platform, one agent." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/images/cybersecurity-hero.jpg" alt="Close-up of an illuminated laptop keyboard glowing blue — symbolizing digital security" style="width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:1rem;margin-bottom:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);" />
@@ -143,6 +190,51 @@ import { Icon } from 'astro-icon/components';
         <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:shield" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">Coro Partner</div><div style="font-size:0.8rem;color:var(--text-muted);">Authorized Coro Reseller</div></div>
         <div class="spec-card" style="text-align:center;padding:1.8rem 1rem;"><div style="font-size:2rem;margin-bottom:0.7rem;color:var(--elec);"><Icon name="lucide:bot" /></div><div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:var(--navy);margin-bottom:0.3rem;">AI-Driven</div><div style="font-size:0.8rem;color:var(--text-muted);">Automated Threat Resolution</div></div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="cybersecurity-faq-heading">
+    <h2 id="cybersecurity-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Coro cybersecurity from Blue Cap IT — endpoint protection, email security, cloud app security, network security, data governance, and security awareness training — for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is Coro, and why does Blue Cap IT recommend it for cybersecurity?</summary>
+      <div class="bcit-faq__answer">
+        <p>Coro is an all-in-one cybersecurity platform built specifically for small and mid-sized businesses — protecting endpoints, email, cloud apps, networks, and data from one agent and one dashboard. Most cybersecurity tools were designed for large enterprises with dedicated security teams; Coro was designed for businesses that don't have one. As a Coro Partner, Blue Cap IT handles deployment, configuration, ongoing policy tuning, and threat response — so you get enterprise-grade protection without having to staff a security operations center.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Can I pick and choose Coro modules, or is it all-or-nothing?</summary>
+      <div class="bcit-faq__answer">
+        <p>Coro is fully modular. You can start with one module (most clients start with endpoint protection or email security), then add cloud app security, network security with Zero Trust, data governance, or security awareness training as your needs grow. You're not paying for protection you don't need today, and there's no rip-and-replace when you expand — just turn on the next module from the same dashboard.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Does Coro replace my existing antivirus and email security tools?</summary>
+      <div class="bcit-faq__answer">
+        <p>In most cases, yes. Coro's endpoint protection is next-generation antivirus plus EDR (Endpoint Detection and Response) in one — replacing legacy AV products like Symantec, McAfee, or Webroot. Coro Email Security replaces add-on products like Mimecast or Proofpoint for Microsoft 365 / Google Workspace. We'll audit what you have today and only recommend swaps that close a gap or save you money — no churn for the sake of it.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What's the difference between Coro and Huntress, and do I need both?</summary>
+      <div class="bcit-faq__answer">
+        <p>Coro is a unified cybersecurity platform — software you deploy that automates threat detection and response across endpoints, email, cloud, and network. Huntress adds a 24/7 human Security Operations Center (SOC) on top — real analysts who triage alerts, hunt for threats, and respond to incidents around the clock. Coro handles the volume; Huntress handles the hard calls. Many of our clients run both: Coro as the platform, Huntress as the SOC. Call (410) 858-4031 and we'll walk you through which combination fits your risk profile.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>How long does Coro take to deploy, and do I need a security team to manage it?</summary>
+      <div class="bcit-faq__answer">
+        <p>Most deployments are live in under a day — one lightweight agent rolls out to endpoints, email and cloud connections are configured through API integrations, and policies are tuned to your environment. You do not need an internal security team. Blue Cap IT manages the platform for you: ongoing policy updates, alert review, incident response, and quarterly security posture reviews. You see what's happening through the dashboard, but the day-to-day operation is on us.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free cybersecurity assessment</a> — we'll review your current security posture, identify gaps, and recommend the Coro modules (and optional Huntress SOC) that fit your business.</p>
     </div>
   </section>
 
