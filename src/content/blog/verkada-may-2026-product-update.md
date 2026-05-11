@@ -99,7 +99,7 @@ Verkada now includes **emergency scenario functionality based on the Standard Re
 
 The Verkada platform — and every other modern business tool — only works as well as the network underneath it. As your camera count grows, your access controllers multiply, your team adds Wi-Fi 7 devices, and your cloud apps demand more bandwidth, the network has to keep up. Most businesses end up patching together switches from one vendor, Wi-Fi from another, a firewall from a third, and an ISP relationship that nobody actively manages.
 
-There's a simpler way. Blue Cap IT delivers your entire enterprise network as a single monthly subscription through our **Meter** partnership — **Network as a Service** (NaaS):
+There's a simpler way. Blue Cap IT delivers your entire enterprise network as a single monthly subscription through our [**Meter**](../meter.html) partnership — [**Network as a Service**](../naas.html) (NaaS):
 
 - **One predictable monthly cost** instead of unpredictable capital expenses for switches, access points, firewalls, and cellular gateways
 - **Wi-Fi 7 access points, PoE++ switches, enterprise firewalls, and 5G failover** all included
