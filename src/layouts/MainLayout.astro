@@ -35,18 +35,54 @@ import { Icon } from 'astro-icon/components';
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
-  <!-- Schema.org Organization -->
+  <!-- Schema.org ProfessionalService -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "Blue Cap IT",
+    "legalName": "Blue Cap IT Enterprises Corporation",
     "url": "https://bluecapit.com",
     "telephone": "+1-410-858-4031",
     "email": "info@bluecapit.com",
     "description": "Boutique managed IT partner serving Maryland businesses. Managed IT, Network as a Service, cybersecurity, physical security, and AI video intelligence. Verkada Gold Partner, Coro Partner, Huntress Partner, spot.ai Partner, and Meter Partner.",
-    "image": "https://bluecapit.com/images/BLUECAPTwitter.jpg",
-    "areaServed": "United States",
-    "serviceType": ["Managed IT Services", "Network as a Service", "Cybersecurity", "Managed Detection and Response", "Physical Security", "AI Video Intelligence"]
+    "logo": "https://bluecapit.com/logo.svg",
+    "image": "https://bluecapit.com/logo.svg",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2631 Housley Road, Suite 1072",
+      "addressLocality": "Annapolis",
+      "addressRegion": "MD",
+      "postalCode": "21401",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.9784,
+      "longitude": -76.5021
+    },
+    "areaServed": [
+      { "@type": "State", "name": "Maryland" },
+      { "@type": "AdministrativeArea", "name": "District of Columbia" },
+      { "@type": "State", "name": "Delaware" },
+      { "@type": "State", "name": "New Jersey" },
+      { "@type": "State", "name": "Pennsylvania" },
+      { "@type": "State", "name": "Virginia" },
+      { "@type": "State", "name": "North Carolina" },
+      { "@type": "State", "name": "South Carolina" }
+    ],
+    "serviceType": ["Managed IT Services", "Network as a Service", "Cybersecurity", "Managed Detection and Response", "Physical Security", "AI Video Intelligence"],
+    "sameAs": [
+      "https://www.linkedin.com/company/bluecapit",
+      "https://x.com/blue_cap_it",
+      "https://www.instagram.com/blue_cap_it/"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
   })}></script>
   {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>}
   <!-- Google tag (gtag.js) -->
