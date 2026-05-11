@@ -1,8 +1,55 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is data governance, and why does a small or mid-sized business need it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Data governance is knowing where your sensitive data lives, who can access it, and how it's being shared — and enforcing policies to keep it from leaking. Most small and mid-sized businesses underestimate how much regulated data they actually have: customer Social Security numbers in HR files, credit card details in finance spreadsheets, health information in benefits records, signed contracts on shared drives. A single mishandled export can trigger a regulatory fine, a breach notification, or a lost customer. Data governance gives you visibility and automated controls before something goes wrong."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of sensitive data does Coro automatically discover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coro recognizes the common regulated data types out of the box: Personally Identifiable Information (PII like SSN, driver's license, passport), Protected Health Information (PHI), payment card data (credit card numbers, CVVs, bank account numbers), and financial records. It also discovers signed legal documents, source code, intellectual property, and you can define custom patterns for your industry — like patient ID formats, customer account numbers, or any other data unique to your business. Scans run continuously across endpoints, email, and cloud storage, with results in one dashboard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when an employee tries to send sensitive data outside the company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depends on the policy you've configured. Coro can simply audit (log the event for review), warn the user with an in-app prompt before they proceed, block the action entirely, or quarantine the email or upload for admin review. Policies can be different per channel — for example, warn on email, block on USB, audit on personal cloud storage uploads. The key is graduated response: legitimate business operations don't get blocked, but high-risk patterns (mass exports, unusual recipients, after-hours sharing of regulated data) do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Coro Data Governance help with HIPAA, PCI-DSS, or other compliance requirements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it's one of the main reasons clients adopt it. Coro includes pre-built policy templates for HIPAA (healthcare), PCI-DSS (payment card data), GDPR (EU data privacy), and other major frameworks — so you start with industry-standard controls rather than building rules from scratch. The reporting side generates compliance-ready exports showing where regulated data exists, who has access, what's encrypted, and what's been shared externally. This is the documentation auditors and regulators ask for, packaged in a few clicks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does Coro scan for sensitive data — just endpoints, or also in the cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. Coro Data Governance scans endpoints (Windows, macOS, Linux desktops and laptops, plus servers), cloud storage (SharePoint, OneDrive, Google Drive), email (Microsoft 365 and Google Workspace inbox and sent items), and the integrated cloud apps Coro already monitors. Discovery is continuous — new files are scanned as they're created, and existing data is rescanned on a configurable schedule. You see everything in one dashboard, regardless of where the data lives."
+      }
+    }
+  ]
+};
 ---
-<MainLayout title="Data Governance | Coro Cybersecurity — Blue Cap IT" description="Coro data governance helps you discover, classify, and protect sensitive data across your organization. Enforce data loss prevention policies and maintain compliance.">
+<MainLayout title="Data Governance | Coro Cybersecurity — Blue Cap IT" description="Coro data governance helps you discover, classify, and protect sensitive data across your organization. Enforce data loss prevention policies and maintain compliance." schema={faqSchema}>
   <div class="inner-hero">
     <div class="section-inner">
       <img src="/images/coro-data-hero.jpg" alt="Golden padlock resting on a keyboard symbolizing data protection" style="width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:1rem;margin-bottom:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);" />
@@ -86,6 +133,51 @@ import { Icon } from 'astro-icon/components';
           <p>Pre-built policy templates for common compliance frameworks. Customize to match your industry's specific requirements.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcit-faq" aria-labelledby="coro-data-faq-heading">
+    <h2 id="coro-data-faq-heading" class="bcit-faq__heading">Frequently Asked Questions</h2>
+    <p class="bcit-faq__intro">Common questions about Coro Data Governance from Blue Cap IT — sensitive data discovery, classification, Data Loss Prevention (DLP), encryption enforcement, and compliance reporting for HIPAA, PCI-DSS, and GDPR for businesses across Maryland, DC, Delaware, New Jersey, Pennsylvania, Virginia, North Carolina, and South Carolina.</p>
+
+    <details class="bcit-faq__item">
+      <summary>What is data governance, and why does a small or mid-sized business need it?</summary>
+      <div class="bcit-faq__answer">
+        <p>Data governance is knowing where your sensitive data lives, who can access it, and how it's being shared — and enforcing policies to keep it from leaking. Most small and mid-sized businesses underestimate how much regulated data they actually have: customer Social Security numbers in HR files, credit card details in finance spreadsheets, health information in benefits records, signed contracts on shared drives. A single mishandled export can trigger a regulatory fine, a breach notification, or a lost customer. Data governance gives you visibility and automated controls before something goes wrong.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What types of sensitive data does Coro automatically discover?</summary>
+      <div class="bcit-faq__answer">
+        <p>Coro recognizes the common regulated data types out of the box: Personally Identifiable Information (PII like SSN, driver's license, passport), Protected Health Information (PHI), payment card data (credit card numbers, CVVs, bank account numbers), and financial records. It also discovers signed legal documents, source code, intellectual property, and you can define custom patterns for your industry — like patient ID formats, customer account numbers, or any other data unique to your business. Scans run continuously across endpoints, email, and cloud storage, with results in one dashboard.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>What happens when an employee tries to send sensitive data outside the company?</summary>
+      <div class="bcit-faq__answer">
+        <p>Depends on the policy you've configured. Coro can simply audit (log the event for review), warn the user with an in-app prompt before they proceed, block the action entirely, or quarantine the email or upload for admin review. Policies can be different per channel — for example, warn on email, block on USB, audit on personal cloud storage uploads. The key is graduated response: legitimate business operations don't get blocked, but high-risk patterns (mass exports, unusual recipients, after-hours sharing of regulated data) do.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Does Coro Data Governance help with HIPAA, PCI-DSS, or other compliance requirements?</summary>
+      <div class="bcit-faq__answer">
+        <p>Yes, it's one of the main reasons clients adopt it. Coro includes pre-built policy templates for HIPAA (healthcare), PCI-DSS (payment card data), GDPR (EU data privacy), and other major frameworks — so you start with industry-standard controls rather than building rules from scratch. The reporting side generates compliance-ready exports showing where regulated data exists, who has access, what's encrypted, and what's been shared externally. This is the documentation auditors and regulators ask for, packaged in a few clicks.</p>
+      </div>
+    </details>
+
+    <details class="bcit-faq__item">
+      <summary>Where does Coro scan for sensitive data — just endpoints, or also in the cloud?</summary>
+      <div class="bcit-faq__answer">
+        <p>Both. Coro Data Governance scans endpoints (Windows, macOS, Linux desktops and laptops, plus servers), cloud storage (SharePoint, OneDrive, Google Drive), email (Microsoft 365 and Google Workspace inbox and sent items), and the integrated cloud apps Coro already monitors. Discovery is continuous — new files are scanned as they're created, and existing data is rescanned on a configurable schedule. You see everything in one dashboard, regardless of where the data lives.</p>
+      </div>
+    </details>
+
+    <div class="bcit-faq__cta">
+      <p><strong>Still have questions?</strong> Call <a href="tel:4108584031">(410) 858-4031</a> or <a href="/contact">request a free data governance assessment</a> — we'll scan your environment for unprotected sensitive data, identify compliance gaps, and quote Coro Data Governance with itemized pricing.</p>
     </div>
   </section>
 
