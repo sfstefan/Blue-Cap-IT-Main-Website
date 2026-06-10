@@ -47,9 +47,10 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-/* Keep aspect ratio when width/height attributes are present (layout-shift fix);
-   later rules with explicit heights (e.g. nav logo) still override this. */
-img[width][height] { height: auto; }
+/* Keep aspect ratio when width/height attributes are present (layout-shift fix).
+   :where() keeps specificity at zero so ANY other size rule (nav logo, footer
+   badges, partner ribbons) overrides this. */
+:where(img[width][height]) { height: auto; }
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--white);
