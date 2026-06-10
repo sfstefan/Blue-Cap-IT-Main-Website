@@ -256,18 +256,30 @@ import { Icon } from 'astro-icon/components';
 
   <footer>
     <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html"><img src="/logo.svg" alt="Blue Cap IT" style="height:72px;margin:0 0 1rem;display:block;filter:drop-shadow(0 2px 8px rgba(43,125,233,0.25));" width="755" height="382" loading="lazy" decoding="async" /></a>
-        <p>Official Verkada Gold Partner, Coro Partner, Huntress Partner, spot.ai Partner, Meter Partner, Cisco Select Partner, and Microsoft Silver Partner. Full-service security, cybersecurity, video intelligence, networking, and managed IT.</p>
-        <a href="tel:4108584031" style="color:rgba(255,255,255,0.8);font-weight:600;font-size:0.9rem;text-decoration:none;display:block;"><Icon name="lucide:phone" /> (410) 858-4031</a>
-        <a href="mailto:info@bluecapit.com" style="color:rgba(255,255,255,0.8);font-weight:600;font-size:0.9rem;text-decoration:none;display:block;margin-top:0.4rem;"><Icon name="lucide:mail" /> info@bluecapit.com</a>
-        <div style="margin-top:0.9rem;display:flex;align-items:center;gap:0.6rem;">
+      <div class="footer-brand" style="text-align:center;">
+        <a href="index.html"><img src="/logo.svg" alt="Blue Cap IT" style="height:120px;margin:0 auto 1.2rem;display:block;filter:drop-shadow(0 2px 8px rgba(43,125,233,0.25));" width="755" height="382" loading="lazy" decoding="async" /></a>
+        <p style="max-width:100%;text-align:center;margin:0 auto 1rem;">Official Verkada Gold Partner, Coro Partner, Huntress Partner, spot.ai Partner, Meter Partner, Cisco Select Partner, and Microsoft Silver Partner. We provide full-service security, cybersecurity, video intelligence, networking, and managed IT solutions.</p>
+        <a href="tel:4108584031" style="color:rgba(255,255,255,0.8);font-weight:600;font-size:0.9rem;text-decoration:none;display:block;text-align:center;"><Icon name="lucide:phone" /> (410) 858-4031</a>
+        <a href="mailto:info@bluecapit.com" style="color:rgba(255,255,255,0.8);font-weight:600;font-size:0.9rem;text-decoration:none;display:block;margin-top:0.4rem;text-align:center;"><Icon name="lucide:mail" /> info@bluecapit.com</a>
+        <div style="margin-top:0.9rem;display:flex;align-items:center;justify-content:center;gap:0.6rem;">
           <span style="color:rgba(255,255,255,0.55);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;font-family:'Sora',sans-serif;font-weight:600;">Follow</span>
           <a href="https://x.com/blue_cap_it" target="_blank" rel="noopener noreferrer" aria-label="Follow Blue Cap IT on X" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.08);color:#fff;text-decoration:none;transition:background 0.18s;">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:16px;height:16px;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
         </div>
-        <a href="blog.html#subscribe" class="footer-subscribe-btn">Subscribe to News</a>
+        <div style="margin-top:1.5rem;text-align:center;">
+          <h5 style="color:#fff;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;font-family:'Sora',sans-serif;font-weight:700;border-bottom:2px solid var(--elec);display:inline-block;padding-bottom:0.4rem;">Strategic Partnerships</h5>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;">
+          <a href="verkada.html"><img src="/images/verkada-partner.webp" alt="Verkada Authorized Reseller — physical security platform partner" style="height:36px;width:auto;" width="1600" height="226" loading="lazy" decoding="async" /></a>
+          <a href="cybersecurity.html"><img src="/Coro/coro-partner-transparent.webp" alt="Coro Official Partner — all-in-one cybersecurity" style="height:60px;width:auto;" width="1030" height="736" loading="lazy" decoding="async" /></a>
+          <img src="/Channel_Select_87px_225_BW.webp" alt="Cisco Select Partner badge" style="height:52px;width:auto;" width="87" height="87" loading="lazy" decoding="async" />
+          <img src="/MicrosoftSilverPartnerLogo.webp" alt="Microsoft Silver Partner badge" style="height:52px;width:auto;" width="660" height="498" loading="lazy" decoding="async" />
+          <img src="/cisco-meraki-logo.webp" alt="Cisco Meraki networking partner" style="height:40px;width:auto;" width="1600" height="311" loading="lazy" decoding="async" />
+          <a href="meter.html"><img src="/meter/Meter.webp" alt="Meter Network Partner — Network as a Service" style="height:40px;width:auto;" width="1600" height="600" loading="lazy" decoding="async" /></a>
+          <a href="huntress.html"><img src="/Huntress/huntress-logo-teal.webp" alt="Huntress Partner — 24/7 managed security" style="height:36px;width:auto;" width="1600" height="394" loading="lazy" decoding="async" /></a>
+          <a href="spotai.html"><img src="/spotai/spotai-logo-white.webp" alt="spot.ai Partner — AI video intelligence" style="height:36px;width:auto;" width="454" height="111" loading="lazy" decoding="async" /></a>
+        </div>
       </div>
       <div class="footer-col">
         <h5>Verkada Solutions</h5>
@@ -295,9 +307,7 @@ import { Icon } from 'astro-icon/components';
           <li><a href="coro-data.html">Data Governance</a></li>
           <li><a href="coro-training.html">Security Awareness Training</a></li>
         </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Huntress Security</h5>
+        <h5 style="margin-top:1.5rem;">Huntress Security</h5>
         <ul>
           <li><a href="huntress.html">Huntress Overview</a></li>
           <li><a href="huntress-edr.html">Managed EDR</a></li>
@@ -313,9 +323,28 @@ import { Icon } from 'astro-icon/components';
           <li><a href="spotai-video-intelligence.html">Video Intelligence</a></li>
           <li><a href="spotai-alerts.html">Real-Time Alerts</a></li>
         </ul>
+        <h5 style="margin-top:1.5rem;">Managed IT</h5>
+        <ul>
+          <li><a href="managed-services.html">Managed IT Services</a></li>
+        </ul>
       </div>
       <div class="footer-col">
-        <h5>Network as a Service</h5>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:4108584031">(410) 858-4031</a></li>
+          <li><a href="mailto:info@bluecapit.com">info@bluecapit.com</a></li>
+          <li><a href="https://bluecapit.com">bluecapit.com</a></li>
+          <li><a href="https://www.verkada.com" target="_blank">Verkada.com ↗</a></li>
+        </ul>
+        <a href="blog.html#subscribe" class="footer-subscribe-btn">Subscribe to News</a>
+        <h5 style="margin-top:1.5rem;">Company</h5>
+        <ul>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="about.html">About Blue Cap IT</a></li>
+          <li><a href="blog.html">News & Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <h5 style="margin-top:1.5rem;">Network as a Service</h5>
         <ul>
           <li><a href="naas.html">NaaS Overview</a></li>
           <li><a href="meter.html">Powered by Meter</a></li>
@@ -325,37 +354,7 @@ import { Icon } from 'astro-icon/components';
           <li><a href="meter-gateway.html">5G Gateway</a></li>
           <li><a href="meter-dashboard.html">Dashboard &amp; Command</a></li>
         </ul>
-        <h5 style="margin-top:1.5rem;">Managed IT</h5>
-        <ul>
-          <li><a href="managed-services.html">Managed IT Services</a></li>
-        </ul>
       </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="services.html">Our Services</a></li>
-          <li><a href="about.html">About Blue Cap IT</a></li>
-          <li><a href="blog.html">News & Blog</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <h5 style="margin-top:1.5rem;">Contact</h5>
-        <ul>
-          <li><a href="tel:4108584031">(410) 858-4031</a></li>
-          <li><a href="mailto:info@bluecapit.com">info@bluecapit.com</a></li>
-          <li><a href="https://www.verkada.com" target="_blank">Verkada.com ↗</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-partners">
-      <span class="footer-partners-label">Strategic Partnerships</span>
-      <a href="verkada.html"><img src="/images/verkada-partner.webp" alt="Verkada Authorized Reseller — physical security platform partner" style="height:30px;width:auto;" width="1600" height="226" loading="lazy" decoding="async" /></a>
-      <a href="cybersecurity.html"><img src="/Coro/coro-partner-transparent.webp" alt="Coro Official Partner — all-in-one cybersecurity" style="height:44px;width:auto;" width="1030" height="736" loading="lazy" decoding="async" /></a>
-      <img src="/Channel_Select_87px_225_BW.webp" alt="Cisco Select Partner badge" style="height:40px;width:auto;" width="87" height="87" loading="lazy" decoding="async" />
-      <img src="/MicrosoftSilverPartnerLogo.webp" alt="Microsoft Silver Partner badge" style="height:40px;width:auto;" width="660" height="498" loading="lazy" decoding="async" />
-      <img src="/cisco-meraki-logo.webp" alt="Cisco Meraki networking partner" style="height:30px;width:auto;" width="1600" height="311" loading="lazy" decoding="async" />
-      <a href="meter.html"><img src="/meter/Meter.webp" alt="Meter Network Partner — Network as a Service" style="height:30px;width:auto;" width="1600" height="600" loading="lazy" decoding="async" /></a>
-      <a href="huntress.html"><img src="/Huntress/huntress-logo-teal.webp" alt="Huntress Partner — 24/7 managed security" style="height:28px;width:auto;" width="1600" height="394" loading="lazy" decoding="async" /></a>
-      <a href="spotai.html"><img src="/spotai/spotai-logo-white.webp" alt="spot.ai Partner — AI video intelligence" style="height:28px;width:auto;" width="454" height="111" loading="lazy" decoding="async" /></a>
     </div>
     <div class="footer-bottom">
       <p>© {new Date().getFullYear()} Blue Cap IT. All rights reserved. <a href="legal.html" style="color:rgba(255,255,255,0.5);text-decoration:none;margin-left:1rem;">Terms of Service</a> <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none;margin-left:1rem;">Privacy Policy</a></p>
