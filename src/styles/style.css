@@ -274,6 +274,19 @@ section { padding: 6rem 4%; }
 .why-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-top-color: var(--sky); }
 .why-icon { font-size: 1.9rem; margin-bottom: 1rem; line-height: 1; }
 .why-icon svg { width: 1.9rem; height: 1.9rem; color: var(--elec); display: inline-block; }
+/* Icon bullet lists (.why-list/.why-item) — icon sits in a rounded badge,
+   vertically centered beside the text instead of riding the baseline */
+.why-list { list-style: none; margin: 2.5rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+.why-item { display: flex; align-items: center; gap: 1rem; }
+.why-item .why-icon {
+  margin: 0; flex-shrink: 0;
+  width: 46px; height: 46px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--elec-light); border-radius: 10px;
+}
+.why-item .why-icon svg { width: 1.35rem; height: 1.35rem; }
+.why-item h4 { font-size: 1rem; margin: 0 0 0.25rem; }
+.why-item p { font-size: 0.89rem; color: var(--text-muted); line-height: 1.65; margin: 0; }
 .why-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
 .why-card p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.7; }
 
