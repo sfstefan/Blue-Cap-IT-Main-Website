@@ -3,6 +3,42 @@
   publish = "dist"
   functions = "netlify/functions"
 
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Astro's hashed build assets never change — cache for a year
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Images: cache for 30 days (filenames are stable but occasionally replaced)
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
 # Cousin-domain rewrites: bluecap-it.com and bluecap-it.net are domain aliases
 # on this site, but serve a minimal one-page layout instead of the full
 # bluecapit.com site. status=200 with force=true is a rewrite (URL stays as-is

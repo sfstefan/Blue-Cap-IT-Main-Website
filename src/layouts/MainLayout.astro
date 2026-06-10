@@ -3,9 +3,13 @@ interface Props {
   title: string;
   description?: string;
   schema?: object;
+  ogImage?: string;
 }
 
-const { title, description, schema } = Astro.props;
+const { title, description, schema, ogImage } = Astro.props;
+const ogImageUrl = ogImage
+  ? `https://bluecapit.com${ogImage}`
+  : 'https://bluecapit.com/images/BLUECAPTwitter.jpg';
 
 import '../styles/style.css';
 import { Icon } from 'astro-icon/components';
@@ -21,14 +25,14 @@ import { Icon } from 'astro-icon/components';
   <meta property="og:type" content="website"/>
   <meta property="og:title" content={title}/>
   {description && <meta property="og:description" content={description}/>}
-  <meta property="og:image" content="https://bluecapit.com/images/BLUECAPTwitter.jpg"/>
+  <meta property="og:image" content={ogImageUrl}/>
   <meta property="og:url" content={`https://bluecapit.com${Astro.url.pathname}`}/>
   <meta property="og:site_name" content="Blue Cap IT"/>
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content={title}/>
   {description && <meta name="twitter:description" content={description}/>}
-  <meta name="twitter:image" content="https://bluecapit.com/images/BLUECAPTwitter.jpg"/>
+  <meta name="twitter:image" content={ogImageUrl}/>
   <link rel="canonical" href={`https://bluecapit.com${Astro.url.pathname}`}/>
   <link rel="icon" href="/favicon.ico" sizes="any"/>
   <link rel="icon" href="/icon.svg" type="image/svg+xml"/>
