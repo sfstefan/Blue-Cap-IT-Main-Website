@@ -279,6 +279,16 @@ section { padding: 6rem 4%; }
 
 /* ─── PRODUCT CARDS ─── */
 .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.2rem; margin-top: 3rem; }
+/* Even rows: card grids holding exactly 6, 9, or 12 items use 3 columns on
+   desktop so rows stay balanced (3+3 instead of 4+2). !important beats the
+   per-page inline auto-fit styles; older browsers without :has() keep auto-fit. */
+@media (min-width: 961px) {
+  :is(.products-grid, .why-grid, .specs-grid, .trust-pillars, .cards-grid):has(> :nth-child(6):last-child),
+  :is(.products-grid, .why-grid, .specs-grid, .trust-pillars, .cards-grid):has(> :nth-child(9):last-child),
+  :is(.products-grid, .why-grid, .specs-grid, .trust-pillars, .cards-grid):has(> :nth-child(12):last-child) {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
 .product-card {
   display: block; text-decoration: none;
   background: var(--white); border: 1.5px solid var(--border);
