@@ -357,7 +357,7 @@ import { Icon } from 'astro-icon/components';
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Blue Cap IT. All rights reserved. <a href="legal.html" style="color:rgba(255,255,255,0.5);text-decoration:none;margin-left:1rem;">Terms of Service</a> <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none;margin-left:1rem;">Privacy Policy</a></p>
+      <p>© {new Date().getFullYear()} Blue Cap IT. All rights reserved. <a href="legal.html" style="color:rgba(255,255,255,0.5);text-decoration:none;margin-left:1rem;">Terms of Service</a> <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none;margin-left:1rem;">Privacy Policy</a></p>
     </div>
   </footer>
 </div>
@@ -376,6 +376,29 @@ import { Icon } from 'astro-icon/components';
       document.body.style.overflow = '';
     });
   });
+</script>
+<script is:inline>
+  // Scroll reveal: sections gently fade up as they enter the viewport.
+  // Classes are added by JS only, so content stays visible without JS,
+  // and nothing animates for users who prefer reduced motion.
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var targets = document.querySelectorAll('section .section-inner');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    targets.forEach(function (el) {
+      if (el.closest('.hero') || el.closest('.inner-hero')) return; // hero has its own animation
+      el.classList.add('reveal-init');
+      io.observe(el);
+    });
+  })();
 </script>
 </body>
 </html>
