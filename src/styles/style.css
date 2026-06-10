@@ -288,6 +288,17 @@ section { padding: 6rem 4%; }
   :is(.products-grid, .why-grid, .specs-grid, .trust-pillars, .cards-grid):has(> :nth-child(12):last-child) {
     grid-template-columns: repeat(3, 1fr) !important;
   }
+  /* 4 cards: one even row of 4 (fixes 3+1 wraps in narrower containers) */
+  :is(.products-grid, .specs-grid, .trust-pillars, .cards-grid):has(> :nth-child(4):last-child) {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+/* 5 or 10 cards: rows of 5 — only on wide screens where 5 columns fit */
+@media (min-width: 1200px) {
+  :is(.products-grid, .specs-grid, .trust-pillars, .cards-grid):has(> :nth-child(5):last-child),
+  :is(.products-grid, .specs-grid, .trust-pillars, .cards-grid):has(> :nth-child(10):last-child) {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
 }
 .product-card {
   display: block; text-decoration: none;
