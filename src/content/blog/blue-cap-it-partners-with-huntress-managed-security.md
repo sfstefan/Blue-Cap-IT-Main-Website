@@ -5,7 +5,7 @@ date: "2026-04-24"
 author: "Blue Cap IT"
 ---
 
-<a href="../huntress.html"><img src="/Huntress/huntress-logo-teal.png" alt="Huntress" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
+<a href="../huntress.html"><img src="/Huntress/huntress-logo-teal.webp" alt="Huntress" style="max-height:50px;width:auto;margin-bottom:2rem;" width="1600" height="394" fetchpriority="high" /></a>
 
 We're thrilled to announce that Blue Cap IT is now an **official Huntress Partner** — adding 24/7 SOC-backed managed security to our growing portfolio of cybersecurity and IT solutions.
 

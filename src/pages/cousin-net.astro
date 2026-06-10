@@ -4,13 +4,13 @@ const mainSite = "https://www.bluecapit.com";
 // Assets load from the primary domain so the cousin-domain catch-all rewrite doesn't intercept them.
 const asset = (path: string) => `${mainSite}${path}`;
 const partners = [
-  { name: "Verkada Gold Partner", src: asset("/images/verkada-partner.png"), href: `${mainSite}/verkada.html`, cls: "partner-verkada" },
-  { name: "Cisco Meraki",          src: asset("/cisco-meraki-logo.png"),        href: `${mainSite}/`,             cls: "partner-meraki"  },
-  { name: "Meter",                 src: asset("/meter/Meter-purple.png"),        href: `${mainSite}/meter.html`,   cls: "partner-meter"   },
-  { name: "Coro",                  src: asset("/Coro/coro-logo-wide-indigo.png"), href: `${mainSite}/cybersecurity.html`, cls: "partner-coro"  },
-  { name: "Huntress",              src: asset("/Huntress/huntress-logo-teal.png"), href: `${mainSite}/huntress.html`, cls: "partner-huntress" },
-  { name: "Spot AI",               src: asset("/spotai/spotai-logo.png"),         href: `${mainSite}/spotai.html`, cls: "partner-spotai"  },
-  { name: "Microsoft Silver Partner", src: asset("/MicrosoftSilverPartnerLogo.png"), href: `${mainSite}/managed-services.html`, cls: "partner-microsoft" },
+  { name: "Verkada Gold Partner", src: asset("/images/verkada-partner.webp"), href: `${mainSite}/verkada.html`, cls: "partner-verkada" },
+  { name: "Cisco Meraki",          src: asset("/cisco-meraki-logo.webp"),        href: `${mainSite}/`,             cls: "partner-meraki"  },
+  { name: "Meter",                 src: asset("/meter/Meter-purple.webp"),        href: `${mainSite}/meter.html`,   cls: "partner-meter"   },
+  { name: "Coro",                  src: asset("/Coro/coro-logo-wide-indigo.webp"), href: `${mainSite}/cybersecurity.html`, cls: "partner-coro"  },
+  { name: "Huntress",              src: asset("/Huntress/huntress-logo-teal.webp"), href: `${mainSite}/huntress.html`, cls: "partner-huntress" },
+  { name: "Spot AI",               src: asset("/spotai/spotai-logo.webp"),         href: `${mainSite}/spotai.html`, cls: "partner-spotai"  },
+  { name: "Microsoft Silver Partner", src: asset("/MicrosoftSilverPartnerLogo.webp"), href: `${mainSite}/managed-services.html`, cls: "partner-microsoft" },
 ];
 ---
 <!DOCTYPE html>
@@ -282,7 +282,7 @@ const partners = [
       <div class="partner-row">
         {partners.map((p) => (
           <a class={`partner-link ${p.cls}`} href={p.href} aria-label={p.name}>
-            <img src={p.src} alt={p.name} loading="lazy"/>
+            <img src={p.src} alt={p.name} loading="lazy" decoding="async" />
           </a>
         ))}
       </div>

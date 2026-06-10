@@ -5,7 +5,7 @@ date: "2026-05-11"
 author: "Blue Cap IT"
 ---
 
-<a href="../verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
+<a href="../verkada.html"><img src="/images/verkada-partner.webp" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" width="1600" height="226" fetchpriority="high" /></a>
 
 Verkada's May 2026 product update lands with general availability on May 14, bringing a brand-new generation of bullet cameras, expanded AI capabilities, next-generation access controllers, and a slate of refinements across Command, Intercoms, Workplace, and Connectivity. Here's everything that's new.
 

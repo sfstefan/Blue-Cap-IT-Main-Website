@@ -5,7 +5,7 @@ date: "2026-04-11"
 author: "Blue Cap IT"
 ---
 
-<a href="../cybersecurity.html"><img src="/Coro/coro-logo-wide-indigo.png" alt="Coro" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
+<a href="../cybersecurity.html"><img src="/Coro/coro-logo-wide-indigo.webp" alt="Coro" style="max-height:50px;width:auto;margin-bottom:2rem;" width="1348" height="447" fetchpriority="high" /></a>
 
 We're excited to announce that Blue Cap IT is now an **official Coro Partner** — adding enterprise-grade cybersecurity to our portfolio of security solutions for small and mid-sized businesses.
 

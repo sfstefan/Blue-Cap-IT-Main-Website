@@ -5,7 +5,7 @@ date: "2025-08-15"
 author: "Blue Cap IT"
 ---
 
-<a href="../verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
+<a href="../verkada.html"><img src="/images/verkada-partner.webp" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" width="1600" height="226" fetchpriority="high" /></a>
 
 Verkada's August 2025 product update delivers meaningful upgrades across cameras, alarms, and access control — with a strong emphasis on government compliance, operational visibility, and third-party integration. Here's a full breakdown of everything in this release.
 

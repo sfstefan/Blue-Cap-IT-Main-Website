@@ -5,7 +5,7 @@ date: "2024-10-15"
 author: "Blue Cap IT"
 ---
 
-<a href="../verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
+<a href="../verkada.html"><img src="/images/verkada-partner.webp" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" width="1600" height="226" fetchpriority="high" /></a>
 
 Verkada's October 2024 product update delivers major advancements across the entire platform — from next-generation cameras with dramatically improved image quality to AI-powered alerts you can configure in plain English. Here's a complete breakdown of everything new.
 

@@ -5,7 +5,7 @@ date: "2025-10-15"
 author: "Blue Cap IT"
 ---
 
-<a href="../verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
+<a href="../verkada.html"><img src="/images/verkada-partner.webp" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" width="1600" height="226" fetchpriority="high" /></a>
 
 Verkada's October 2025 product update is a massive release that introduces new hardware across nearly every product line and delivers powerful AI-driven intelligence features. From fully wireless LTE cameras to redesigned alarm sensors and a new wireless access control lock, here's everything you need to know.
 

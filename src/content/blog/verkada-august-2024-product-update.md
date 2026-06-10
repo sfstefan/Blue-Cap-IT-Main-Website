@@ -5,7 +5,7 @@ date: "2024-08-15"
 author: "Blue Cap IT"
 ---
 
-<a href="../verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
+<a href="../verkada.html"><img src="/images/verkada-partner.webp" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" width="1600" height="226" fetchpriority="high" /></a>
 
 Verkada's August 2024 product update delivers a sweeping set of improvements across the entire platform. Highlights include the ability to bring non-Verkada cameras into the Command platform, Apple Wallet integration for access control, smarter AI-powered video search, and a new fourth-generation door reader. Here is a full breakdown of everything in this release.
 

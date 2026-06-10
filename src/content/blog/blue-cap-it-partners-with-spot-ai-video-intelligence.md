@@ -5,7 +5,7 @@ date: "2026-04-24"
 author: "Blue Cap IT"
 ---
 
-<a href="../spotai.html"><img src="/spotai/spotai-logo.png" alt="spot.ai" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
+<a href="../spotai.html"><img src="/spotai/spotai-logo.webp" alt="spot.ai" style="max-height:50px;width:auto;margin-bottom:2rem;" width="454" height="111" fetchpriority="high" /></a>
 
 We're excited to announce that Blue Cap IT is now an **official spot.ai Partner** — adding AI-powered video intelligence to our comprehensive suite of IT and security solutions.
 

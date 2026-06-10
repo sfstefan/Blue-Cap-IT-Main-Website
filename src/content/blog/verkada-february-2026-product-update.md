@@ -5,7 +5,7 @@ date: "2026-03-14"
 author: "Blue Cap IT"
 ---
 
-<a href="../verkada.html"><img src="/images/verkada-partner.png" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" /></a>
+<a href="../verkada.html"><img src="/images/verkada-partner.webp" alt="Verkada Gold Partner" style="max-height:50px;width:auto;margin-bottom:2rem;" width="1600" height="226" fetchpriority="high" /></a>
 
 Verkada's February 2026 product update is one of the most feature-packed releases yet, delivering powerful new capabilities across the entire platform. From AI-powered deterrence that stops intruders in their tracks to live translation on intercoms, here's everything you need to know.
 
