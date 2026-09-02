@@ -14,7 +14,6 @@ const DELETE = process.argv.includes('--delete');
 const EXCLUDE = new Set([
   '/logo.png',
   '/apple-touch-icon.png',
-  '/images/BLUECAPTwitter.jpg',
 ]);
 const EXCLUDE_DIRS = ['/social/'];
 
