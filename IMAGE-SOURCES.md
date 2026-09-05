@@ -84,9 +84,10 @@ Two things to keep in mind:
 - **Only display a badge you currently hold.** A lapsed designation is both a trademark
   problem and a potential misrepresentation to customers.
 
-`public/meter/` was downloaded directly from meter.com's public asset server rather than
-from a partner portal. **Still open:** request the official Meter partner media kit and
-written confirmation of use, then replace those files.
+`public/meter/` (14 files) was downloaded directly from meter.com's public asset server
+rather than from a partner portal. **Cleared** — Blue Cap IT confirmed in September 2026
+that use of Meter's product imagery is authorised under the partner relationship. No
+change needed. Standard partner conditions above still apply.
 
 ---
 
