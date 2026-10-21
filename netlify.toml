@@ -80,6 +80,17 @@
   status = 200
   force = true
 
+# /terms is a common guess for the Terms and Conditions page, which lives at /legal.
+[[redirects]]
+  from = "/terms"
+  to = "/legal"
+  status = 301
+
+[[redirects]]
+  from = "/terms.html"
+  to = "/legal"
+  status = 301
+
 # Case-insensitive redirects for the Network as a Service page.
 # Netlify URL matching is case-sensitive by default, so common
 # acronym capitalizations of /naas all redirect to the canonical
